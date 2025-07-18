@@ -10,14 +10,9 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Dark Gradient Background */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroBg} 
-          alt="Professional workspace" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 hero-gradient opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900"></div>
       </div>
       
       {/* Content */}
@@ -25,7 +20,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Profile Photo */}
           <div className="flex justify-center mb-8">
-            <div className="futuristic-border w-32 h-32 md:w-40 md:h-40">
+            <div className="futuristic-border w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
               <img 
                 src={profilePlaceholder} 
                 alt="Chiara de Saram" 
