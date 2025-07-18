@@ -163,4 +163,68 @@ All colors MUST be HSL.
   .nav-link.active::after {
     width: 100%;
   }
+  
+  .futuristic-border {
+    position: relative;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(45deg, 
+      hsl(258 90% 66%), 
+      hsl(280 100% 70%), 
+      hsl(258 90% 66%), 
+      hsl(320 100% 75%),
+      hsl(258 90% 66%)
+    );
+    background-size: 300% 300%;
+    animation: futuristic-glow 3s ease-in-out infinite;
+  }
+  
+  .futuristic-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+      transparent, 
+      hsl(258 90% 66% / 0.3), 
+      transparent, 
+      hsl(280 100% 70% / 0.3),
+      transparent
+    );
+    border-radius: 50%;
+    animation: futuristic-rotate 4s linear infinite;
+    z-index: -1;
+  }
+  
+  .futuristic-border img {
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@keyframes futuristic-glow {
+  0%, 100% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 20px hsl(258 90% 66% / 0.4);
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0 0 40px hsl(258 90% 66% / 0.6), 0 0 60px hsl(280 100% 70% / 0.3);
+  }
+}
+
+@keyframes futuristic-rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
 }

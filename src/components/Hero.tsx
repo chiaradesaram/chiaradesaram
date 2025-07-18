@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Mail, Linkedin, Github } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import profilePlaceholder from "@/assets/profile-placeholder.jpg";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -22,6 +23,17 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <div className="max-w-4xl mx-auto space-y-8">
+          {/* Profile Photo */}
+          <div className="flex justify-center mb-8">
+            <div className="futuristic-border w-32 h-32 md:w-40 md:h-40">
+              <img 
+                src={profilePlaceholder} 
+                alt="Chiara de Saram" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
             Chiara de Saram
           </h1>
