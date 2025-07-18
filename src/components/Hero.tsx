@@ -49,15 +49,6 @@ const Hero = () => {
           </p>
           
         </div>
-        
-        {/* Scroll Indicator */}
-        <button
-          onClick={() => scrollToSection('about')}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70 hover:text-white transition-colors animate-bounce"
-          aria-label="Scroll to next section"
-        >
-          <ArrowDown className="h-6 w-6" />
-        </button>
       </div>
     </section>
   );
