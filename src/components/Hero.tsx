@@ -49,16 +49,6 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              variant="hero" 
-              size="lg"
-              onClick={() => scrollToSection('contact')}
-              className="text-lg px-8"
-            >
-              <Mail className="mr-2" />
-              Let's Work Together
-            </Button>
-            
             <div className="flex gap-4">
               <Button variant="ghost" size="icon" className="text-white hover:bg-white/20">
                 <Linkedin className="h-5 w-5" />
