@@ -48,16 +48,6 @@ const Hero = () => {
             insights into powerful, usable, and measurable outcomes.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <div className="flex gap-4">
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/20">
-                <Linkedin className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-white/20">
-                <Github className="h-5 w-5" />
-              </Button>
-            </div>
-          </div>
         </div>
         
         {/* Scroll Indicator */}
