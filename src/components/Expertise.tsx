@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { BarChart3, Users, Cog, Search, Layers, TrendingUp } from "lucide-react";
 const Expertise = () => {
@@ -7,31 +6,26 @@ const Expertise = () => {
     icon: TrendingUp,
     title: "CX Strategy",
     description: "Designing customer experience strategies that drive business growth and satisfaction",
-    level: 95,
     tools: ["Journey Mapping", "CX Metrics", "Feedback Loop", "Experimentation"]
   }, {
     icon: BarChart3,
     title: "Business Analysis",
     description: "Translating business needs into actionable requirements and solutions",
-    level: 92,
     tools: ["Requirements Gathering", "Process Modeling", "Gap Analysis", "Stakeholder Management"]
   }, {
     icon: Cog,
     title: "Process Optimisation",
     description: "Streamlining operations and workflows for maximum efficiency and impact",
-    level: 88,
     tools: ["Process Mining", "Workflow Design", "Automation", "Performance Metrics"]
   }, {
     icon: Search,
     title: "User Research",
     description: "Uncovering user insights that inform product and business decisions",
-    level: 90,
     tools: ["User Interviews", "Usability Testing", "Surveys", "Behavioral Analysis"]
   }, {
     icon: Layers,
     title: "Product Ops",
     description: "Supporting product teams with processes, tools, and insights for success",
-    level: 85,
     tools: ["Product Analytics", "Team Coordination", "Tool Integration", "Process Design"]
   }];
   return <section id="expertise" className="py-20 bg-background">
@@ -65,27 +59,18 @@ const Expertise = () => {
                     </div>
                     <p className="text-muted-foreground">{skill.description}</p>
                   </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      <div className="space-y-2">
-                        <div className="flex justify-between text-sm">
-                          <span>Proficiency</span>
-                          <span>{skill.level}%</span>
-                        </div>
-                        <Progress value={skill.level} className="h-2" />
-                      </div>
-                      <div className="space-y-2">
-                        <span className="text-sm font-medium">Key Methods</span>
-                        <div className="flex flex-wrap gap-2">
-                          {skill.tools.map((tool, toolIndex) => (
-                            <Badge key={toolIndex} variant="secondary" className="text-xs">
-                              {tool}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
+                   <CardContent>
+                     <div className="space-y-2">
+                       <span className="text-sm font-medium">Key Methods</span>
+                       <div className="flex flex-wrap gap-2">
+                         {skill.tools.map((tool, toolIndex) => (
+                           <Badge key={toolIndex} variant="secondary" className="text-xs">
+                             {tool}
+                           </Badge>
+                         ))}
+                       </div>
+                     </div>
+                   </CardContent>
                 </Card>
               );
             })}
