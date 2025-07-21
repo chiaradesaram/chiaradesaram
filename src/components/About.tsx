@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Zap, Target, Users, TrendingUp } from "lucide-react";
+import { Heart, Zap, Target, Users } from "lucide-react";
 const About = () => {
   const values = [{
     icon: Heart,
@@ -18,10 +18,6 @@ const About = () => {
     icon: Users,
     title: "Team Enabler",
     description: "Swiss army knife helping product teams succeed"
-  }, {
-    icon: TrendingUp,
-    title: "Growth-Minded",
-    description: "Embrace feedback and seek opportunities to grow"
   }];
   return <section id="about" className="py-20 bg-gray-900 text-white">
       <div className="container mx-auto px-6">
@@ -35,20 +31,6 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto mb-16">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
-              <div className="text-2xl font-bold text-orange-400 mb-1">8+ Years</div>
-              <div className="text-sm text-gray-300">Experience</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
-              <div className="text-lg font-semibold text-orange-400 mb-1">Startups to Fortune 500</div>
-              <div className="text-sm text-gray-300">Scale Range</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
-              <div className="text-lg font-semibold text-orange-400 mb-1">Multiple</div>
-              <div className="text-sm text-gray-300">Industries</div>
-            </div>
-          </div>
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold">My Approach</h3>
@@ -62,6 +44,12 @@ const About = () => {
                 bringing together business analysis, user research, and process optimization 
                 to help bring good products to life.
               </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
+                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Startups → Fortune 500</Badge>
+                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
+                
+              </div>
             </div>
 
             <div className="space-y-6">
