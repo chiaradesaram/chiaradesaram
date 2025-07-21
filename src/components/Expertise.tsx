@@ -112,11 +112,17 @@ const Expertise = () => {
                     <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
                       {skill.description}
                     </p>
-                    <div className="flex flex-wrap gap-3">
+                    <div className="space-y-3">
                       {skill.tools.map((tool, toolIndex) => (
-                        <Badge key={toolIndex} variant="outline" className="text-sm py-1 px-3">
-                          {tool}
-                        </Badge>
+                        <div key={toolIndex} className="flex items-center gap-3">
+                          <div 
+                            className="w-3 h-3 rounded-full flex-shrink-0"
+                            style={{
+                              backgroundColor: `hsl(${(toolIndex * 60 + index * 30) % 360}, 70%, 60%)`
+                            }}
+                          />
+                          <span className="text-sm text-muted-foreground">{tool}</span>
+                        </div>
                       ))}
                     </div>
                   </CardContent>
