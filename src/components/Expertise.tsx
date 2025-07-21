@@ -6,7 +6,7 @@ const Expertise = () => {
     icon: TrendingUp,
     title: "CX Strategy",
     description: "Designing customer experience strategies that drive business growth and satisfaction",
-    tools: ["Journey Mapping", "CX Metrics", "Feedback Loop", "Experimentation"]
+    tools: ["Customer Journey Mapping", "Service Blueprinting", "Experience Redesign", "Personas", "Cross‑functional Alignment", "KPI & Metrics", "Journey Prioritization Frameworks"]
   }, {
     icon: BarChart3,
     title: "Business Analysis",
