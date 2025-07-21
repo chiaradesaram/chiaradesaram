@@ -24,7 +24,7 @@ const Experience = () => {
     highlights: ["0-1 product development", "Lean processes", "Resource optimization"],
     color: "bg-purple-50 border-purple-200"
   }];
-  const industries = ["Financial Services", "Healthcare", "E-commerce", "SaaS", "Manufacturing", "Retail", "Technology", "B2B Services"];
+  const industries = ["Fintech", "Legal", "Compliance", "FMCG", "Telecommunications"];
   const timeline = [{
     year: "2016",
     milestone: "Started as an Economic Analyst in Private Equity",
