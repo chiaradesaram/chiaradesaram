@@ -27,19 +27,22 @@ const Experience = () => {
   const industries = ["Financial Services", "Healthcare", "E-commerce", "SaaS", "Manufacturing", "Retail", "Technology", "B2B Services"];
   const timeline = [{
     year: "2016",
-    milestone: "Started as Business Analyst"
+    milestone: "Started as an Economic Analyst in Private Equity, building strong analytical foundations"
   }, {
     year: "2018",
-    milestone: "Expanded into CX Strategy"
+    milestone: "Moved into Fintech, gaining experience in fast‑paced product environments"
+  }, {
+    year: "2019",
+    milestone: "Pivoted to Tech and Business Analysis, translating needs into actionable solutions"
   }, {
     year: "2020",
-    milestone: "Added User Research expertise"
+    milestone: "Drove Product Development and Discovery initiatives"
   }, {
-    year: "2022",
-    milestone: "Leading Product Operations"
+    year: "2021",
+    milestone: "Expanded into CX Strategy and User Research"
   }, {
     year: "2024",
-    milestone: "Senior Consultant & Advisor"
+    milestone: "Added Product Operations knowledge while helping set up and shape that stream"
   }];
   return <section id="experience" className="py-20 bg-background">
       <div className="container mx-auto px-6">
@@ -53,7 +56,36 @@ const Experience = () => {
 
           {/* Company Types */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {experiences.map((exp, index) => {})}
+            {experiences.map((exp, index) => (
+              <Card key={index} className={`${exp.color} transition-all duration-300 hover:shadow-lg hover:scale-105`}>
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="p-3 bg-white rounded-lg shadow-sm">
+                      <exp.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">{exp.type}</h3>
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {exp.companies.map((company, idx) => (
+                          <Badge key={idx} variant="secondary" className="text-xs">
+                            {company}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground mb-4">{exp.description}</p>
+                  <div className="space-y-2">
+                    {exp.highlights.map((highlight, idx) => (
+                      <div key={idx} className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        <span className="text-sm">{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
           {/* Timeline & Industries */}
