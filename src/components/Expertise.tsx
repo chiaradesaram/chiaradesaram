@@ -54,8 +54,8 @@ const Expertise = () => {
                   {/* Decorative border accent */}
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
                   
-                  <CardHeader className="relative">
-                    <div className="flex items-center gap-4 mb-3">
+                  <CardHeader className="relative p-8">
+                    <div className="flex items-center gap-4 mb-4">
                       <div className="p-2.5 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 group-hover:border-primary/30 transition-colors duration-300">
                         <Icon className="h-5 w-5 text-primary group-hover:text-accent transition-colors duration-300" />
                       </div>
@@ -64,13 +64,13 @@ const Expertise = () => {
                     <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 leading-relaxed">{skill.description}</p>
                   </CardHeader>
                   
-                  <CardContent className="relative">
-                    <div className="space-y-3">
+                  <CardContent className="relative p-8 pt-0">
+                    <div className="space-y-4">
                       <div className="flex items-center gap-2">
                         <span className="text-sm font-semibold text-primary">Key Methods</span>
                         <div className="h-px flex-1 bg-gradient-to-r from-primary/20 to-transparent" />
                       </div>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2.5">
                         {skill.tools.map((tool, toolIndex) => (
                           <Badge 
                             key={toolIndex} 
