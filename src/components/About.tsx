@@ -52,52 +52,46 @@ const About = () => {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
+          <div className="flex justify-center gap-8 mb-12">
             {stats.map((stat, index) => (
-              <div key={index} className="group relative bg-white/5 backdrop-blur-md rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10">
-                <div className="text-2xl font-bold text-shimmer mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-sm font-medium">
-                  {stat.label && <div>{stat.label}</div>}
-                  {stat.subtitle && <div className="text-xs text-gray-400 mt-1">{stat.subtitle}</div>}
+              <div key={index} className="text-center group">
+                <div className="text-xl font-bold text-shimmer mb-1">{stat.number}</div>
+                <div className="text-gray-400 text-xs">
+                  {stat.label} {stat.subtitle}
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold">My Approach</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="text-xl font-semibold mb-4">My Approach</h3>
+              <p className="text-gray-300 leading-relaxed mb-6">
                 With 8 years of experience spanning startups to Fortune 500 companies, 
                 I've learned that the best products come from deeply understanding customer needs 
                 and translating those insights into actionable strategies.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 I love all things product and act as a Swiss army knife for teams, 
                 bringing together business analysis, user research, and process optimization 
                 to help bring good products to life.
               </p>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Startups → Fortune 500</Badge>
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
-                
-              </div>
             </div>
 
-            <div className="space-y-6">
-              {values.map((value, index) => <div key={index} className="flex items-center gap-4 animate-fade-in opacity-0" style={{
-              animationDelay: `${index * 150}ms`,
-              animationFillMode: 'forwards'
-            }}>
-                  <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <value.icon className="h-5 w-5 text-orange-400" />
-                  </div>
+            {/* Values */}
+            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+              {values.map((value, index) => (
+                <div key={index} className="flex items-center gap-3 animate-fade-in opacity-0" style={{
+                  animationDelay: `${index * 100}ms`,
+                  animationFillMode: 'forwards'
+                }}>
+                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
                   <div>
-                    <span className="font-semibold text-white">{value.title}</span>
-                    <span className="text-gray-300 ml-2">— {value.description}</span>
+                    <span className="font-medium text-white text-sm">{value.title}</span>
+                    <span className="text-gray-400 text-sm ml-2">— {value.description}</span>
                   </div>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
 
