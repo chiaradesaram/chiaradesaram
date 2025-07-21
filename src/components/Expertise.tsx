@@ -11,7 +11,7 @@ const Expertise = () => {
     icon: BarChart3,
     title: "Business Analysis",
     description: "Translating business needs into actionable requirements and solutions",
-    tools: ["Requirements Gathering", "Process Modeling", "Gap Analysis", "Stakeholder Management"]
+    tools: ["Stakeholder Interviews", "Process Mapping", "User Story Writing", "Prioritization", "Product Discovery", "Roadmapping", "OKRs & KPI Setting", "Competitor & Market Analysis"]
   }, {
     icon: Search,
     title: "User Research",
