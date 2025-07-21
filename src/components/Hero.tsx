@@ -18,8 +18,7 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-6xl md:text-7xl font-bold tracking-tight">
-                Hi,<br />
-                I am<br />
+                Hi, I am<br />
                 <span className="text-gradient whitespace-nowrap">Chiara de Saram</span>
               </h1>
               
