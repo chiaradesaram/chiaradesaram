@@ -60,10 +60,7 @@ const Expertise = () => {
                   }}
                 >
                   <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                        <Icon className="h-6 w-6" />
-                      </div>
+                    <div className="mb-2">
                       <CardTitle className="text-xl">{skill.title}</CardTitle>
                     </div>
                     <p className="text-muted-foreground">{skill.description}</p>
