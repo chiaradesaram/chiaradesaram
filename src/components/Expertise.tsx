@@ -21,7 +21,7 @@ const Expertise = () => {
     icon: Search,
     title: "User Research",
     description: "Uncovering user insights that inform product and business decisions",
-    tools: ["User Interviews", "Usability Testing", "Surveys", "Behavioral Analysis"]
+    tools: ["Experiments", "User Interviews", "Beta and POC Testing", "Usability Testing", "Surveys", "Jobs‑to‑Be‑Done", "Card Sorting & Tree Testing", "A/B Testing", "Usage and Product Analytics"]
   }, {
     icon: Layers,
     title: "Product Ops",
