@@ -36,15 +36,15 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto mb-16">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
               <div className="text-2xl font-bold text-orange-400 mb-1">8+</div>
               <div className="text-sm text-gray-300">Years Experience</div>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
               <div className="text-lg font-semibold text-orange-400 mb-1">Startups → Fortune 500</div>
               <div className="text-sm text-gray-300">Scale Range</div>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
               <div className="text-lg font-semibold text-orange-400 mb-1">Multiple</div>
               <div className="text-sm text-gray-300">Industries</div>
             </div>
