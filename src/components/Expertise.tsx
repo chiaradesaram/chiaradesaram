@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { BarChart3, Users, Cog, Search, Layers, TrendingUp } from "lucide-react";
 
 const Expertise = () => {
@@ -49,45 +48,46 @@ const Expertise = () => {
             </p>
           </div>
 
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-5xl mx-auto"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {skills.map((skill, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="card-hover group h-full">
-                    <CardHeader className="pb-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                        <skill.icon className="h-6 w-6 text-primary" />
+          <div className="relative max-w-4xl mx-auto">
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className="relative mb-8 last:mb-0"
+                style={{
+                  transform: `translateY(-${index * 20}px)`,
+                  zIndex: skills.length - index,
+                }}
+              >
+                <Card className="card-hover group sticky top-20 shadow-2xl bg-card/95 backdrop-blur-sm border-2">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center gap-4">
+                      <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                        <skill.icon className="h-8 w-8 text-primary" />
                       </div>
-                      <CardTitle className="text-xl">{skill.title}</CardTitle>
-                      <div className="w-full h-0.5 bg-primary"></div>
-                    </CardHeader>
-                    <CardContent className="pt-0">
-                      <p className="text-muted-foreground mb-4 leading-relaxed">
-                        {skill.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {skill.tools.map((tool, toolIndex) => (
-                          <Badge key={toolIndex} variant="outline" className="text-xs">
-                            {tool}
-                          </Badge>
-                        ))}
+                      <div className="flex-1">
+                        <CardTitle className="text-2xl mb-2">{skill.title}</CardTitle>
+                        <div className="w-full h-0.5 bg-primary"></div>
                       </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
+                      {skill.description}
+                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      {skill.tools.map((tool, toolIndex) => (
+                        <Badge key={toolIndex} variant="outline" className="text-sm py-1 px-3">
+                          {tool}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
 
-          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 mt-16">
+          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 mt-32">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-2xl font-semibold mb-4">The Swiss Army Knife Approach</h3>
