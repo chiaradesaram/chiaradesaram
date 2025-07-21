@@ -68,7 +68,20 @@ const About = () => {
             </div>
           </div>
 
-          
+          <div className="border-t border-gray-700 pt-12">
+            <h3 className="text-2xl font-semibold mb-8 text-center">My Values</h3>
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="text-center">
+                <p className="text-lg font-medium text-white mb-2">Honesty and transparency</p>
+              </div>
+              <div className="text-center">
+                <p className="text-lg font-medium text-white mb-2">Teamwork and collaboration are key</p>
+              </div>
+              <div className="text-center">
+                <p className="text-lg font-medium text-white mb-2">Be humble and keep learning</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>;
