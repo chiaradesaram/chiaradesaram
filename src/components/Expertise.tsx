@@ -48,13 +48,28 @@ const Expertise = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {skills.map((skill, index) => <Card key={index} className="card-hover group">
-                
+            {skills.map((skill, index) => (
+              <Card key={index} className="card-hover group">
+                <CardHeader className="pb-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <skill.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-xl mb-2">{skill.title}</CardTitle>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {skill.description}
+                  </p>
+                </CardHeader>
                 <CardContent className="pt-0">
-                  
-                  
+                  <div className="flex flex-wrap gap-2">
+                    {skill.tools.map((tool, toolIndex) => (
+                      <Badge key={toolIndex} variant="secondary" className="text-xs">
+                        {tool}
+                      </Badge>
+                    ))}
+                  </div>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
 
           <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8">
