@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { BarChart3, Users, Cog, Search, Layers, TrendingUp } from "lucide-react";
 
 const Expertise = () => {
@@ -49,33 +49,45 @@ const Expertise = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {skills.map((skill, index) => (
-              <Card key={index} className="card-hover group">
-                <CardHeader className="pb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                    <skill.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">{skill.title}</CardTitle>
-                  <div className="w-full h-0.5 bg-primary"></div>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {skill.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {skill.tools.map((tool, toolIndex) => (
-                      <Badge key={toolIndex} variant="outline" className="text-xs">
-                        {tool}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-5xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {skills.map((skill, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="card-hover group h-full">
+                    <CardHeader className="pb-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <skill.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <CardTitle className="text-xl">{skill.title}</CardTitle>
+                      <div className="w-full h-0.5 bg-primary"></div>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                        {skill.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {skill.tools.map((tool, toolIndex) => (
+                          <Badge key={toolIndex} variant="outline" className="text-xs">
+                            {tool}
+                          </Badge>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
 
-          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 mt-16">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-2xl font-semibold mb-4">The Swiss Army Knife Approach</h3>
