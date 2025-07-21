@@ -16,7 +16,7 @@ const Expertise = () => {
     },
     {
       icon: BarChart3,
-      title: "Business Analysis",
+      title: "Business Analysis & Product Management",
       description: "Translating business needs into actionable requirements and solutions",
       level: 92,
       tools: ["Requirements Gathering", "Process Modeling", "Gap Analysis", "Stakeholder Management"]
