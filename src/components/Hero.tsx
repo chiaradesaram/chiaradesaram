@@ -33,6 +33,9 @@ const Hero = () => {
               <Badge variant="secondary" className="px-4 py-2 text-sm">Business Analysis</Badge>
               <Badge variant="outline" className="px-4 py-2 text-sm">User Research</Badge>
               <Badge variant="secondary" className="px-4 py-2 text-sm">Process Optimization</Badge>
+              <Badge variant="outline" className="px-4 py-2 text-sm">Product Management</Badge>
+              <Badge variant="secondary" className="px-4 py-2 text-sm">Product Operations</Badge>
+              <Badge variant="outline" className="px-4 py-2 text-sm">CX Strategy</Badge>
             </div>
             
             {/* Action Buttons */}
