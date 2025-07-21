@@ -27,7 +27,8 @@ const About = () => {
               About <span className="text-gradient">Me</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          </p>
+              Product manager passionate about solving complex problems through data-driven insights and user-centered design.
+            </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -44,22 +45,22 @@ const About = () => {
                 to help bring good products to life.
               </p>
               <div className="flex flex-wrap gap-2">
-                
-                
+                <Badge variant="secondary" className="px-3 py-1">8+ Years Experience</Badge>
                 <Badge variant="secondary" className="px-3 py-1">Startups → Fortune 500</Badge>
                 <Badge variant="secondary" className="px-3 py-1">Multiple Industries</Badge>
+                <Badge variant="secondary" className="px-3 py-1">Product Strategy</Badge>
               </div>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
               {values.map((value, index) => (
-                <Card key={index} className="animate-fade-in opacity-0 hover:shadow-lg transition-all duration-300" style={{
+                <Card key={index} className="animate-fade-in opacity-0 hover:shadow-lg transition-all duration-300 group" style={{
                   animationDelay: `${index * 150}ms`,
                   animationFillMode: 'forwards'
                 }}>
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
                         <value.icon className="h-6 w-6 text-primary" />
                       </div>
                       <div className="space-y-2">
