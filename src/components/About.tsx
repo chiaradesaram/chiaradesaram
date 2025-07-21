@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Zap, Target, Users } from "lucide-react";
+import { Heart, Zap, Target, Users, TrendingUp } from "lucide-react";
 const About = () => {
   const values = [{
     icon: Heart,
@@ -18,6 +18,10 @@ const About = () => {
     icon: Users,
     title: "Team Enabler",
     description: "Swiss army knife helping product teams succeed"
+  }, {
+    icon: TrendingUp,
+    title: "Growth-Minded",
+    description: "Embrace feedback and seek opportunities to grow"
   }];
   return <section id="about" className="py-20 bg-gray-900 text-white">
       <div className="container mx-auto px-6">
