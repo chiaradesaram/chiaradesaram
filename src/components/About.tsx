@@ -54,14 +54,11 @@ const About = () => {
           {/* Stats Cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {stats.map((stat, index) => (
-              <div key={index} className="group relative bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-xl rounded-2xl p-8 text-center border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10">
-                  <div className="text-4xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-3">{stat.number}</div>
-                  <div className="text-gray-300 font-medium">
-                    {stat.label && <div className="text-lg">{stat.label}</div>}
-                    {stat.subtitle && <div className="text-sm text-gray-400">{stat.subtitle}</div>}
-                  </div>
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center hover:bg-white/15 transition-all duration-300">
+                <div className="text-2xl font-bold text-coral-500 mb-2">{stat.number}</div>
+                <div className="text-gray-300 text-sm">
+                  {stat.label && <div>{stat.label}</div>}
+                  {stat.subtitle && <div>{stat.subtitle}</div>}
                 </div>
               </div>
             ))}
