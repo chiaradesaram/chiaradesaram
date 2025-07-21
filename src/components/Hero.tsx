@@ -19,7 +19,8 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-6xl md:text-7xl font-bold tracking-tight">
                 Hi,<br />
-                I am <span className="text-gradient whitespace-nowrap">Chiara de Saram</span>
+                I am<br />
+                <span className="text-gradient whitespace-nowrap">Chiara de Saram</span>
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
