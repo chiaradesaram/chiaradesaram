@@ -41,8 +41,7 @@ const About = () => {
               <div className="text-sm text-gray-300">Experience</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
-              <div className="text-lg font-semibold text-orange-400 mb-1">Startups → Fortune 500</div>
-              <div className="text-sm text-gray-300">Scale Range</div>
+              <div className="text-lg font-semibold text-orange-400 mb-1">Startups → Fortune 500 Scale Range</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
               <div className="text-lg font-semibold text-orange-400 mb-1">Multiple</div>
