@@ -23,7 +23,7 @@ const Hero = () => {
                 <span className="text-gradient whitespace-nowrap">Chiara de Saram</span>
               </h1>
               
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
+              <p className="text-xl text-white leading-relaxed max-w-lg">
                 Insight‑driven and customer‑focused, blending product strategy, business analysis, and user research to craft solutions that matter.
               </p>
             </div>
