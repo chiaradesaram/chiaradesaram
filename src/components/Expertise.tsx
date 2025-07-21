@@ -20,13 +20,6 @@ const Expertise = () => {
       tools: ["Requirements Gathering", "Process Modeling", "Gap Analysis", "Stakeholder Management"]
     },
     {
-      icon: Cog,
-      title: "Process Optimisation",
-      description: "Streamlining operations and workflows for maximum efficiency and impact",
-      level: 88,
-      tools: ["Process Mining", "Workflow Design", "Automation", "Performance Metrics"]
-    },
-    {
       icon: Search,
       title: "User Research",
       description: "Uncovering user insights that inform product and business decisions",
