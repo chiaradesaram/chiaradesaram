@@ -131,9 +131,12 @@ const Experience = () => {
                   to every engagement.
                 </p>
                 <div className="grid grid-cols-2 gap-3">
-                  {industries.map((industry, index) => <div key={index} className="bg-gradient-to-r from-primary/5 to-transparent p-3 rounded-lg border border-primary/10">
-                      <span className="text-sm font-medium">{industry}</span>
-                    </div>)}
+                  {industries.map((industry, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                      <span className="text-sm">{industry}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
