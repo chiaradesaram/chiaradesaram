@@ -30,24 +30,16 @@ const Expertise = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               My <span className="text-gradient">Expertise</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A comprehensive skill set honed across startups to Fortune 500 companies, 
-              helping teams build products that matter.
-            </p>
+            
           </div>
 
           <div className="space-y-6 mb-16 max-w-2xl mx-auto">
             {skills.map((skill, index) => {
-              const Icon = skill.icon;
-              return (
-                <Card 
-                  key={index} 
-                  className="group sticky top-20 transform transition-all duration-500 ease-out overflow-hidden border-0 bg-gradient-to-br from-card via-card/95 to-card/90 backdrop-blur-sm shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10"
-                  style={{
-                    zIndex: index + 1,
-                    transform: `translateY(${index * -20}px)`,
-                  }}
-                >
+            const Icon = skill.icon;
+            return <Card key={index} className="group sticky top-20 transform transition-all duration-500 ease-out overflow-hidden border-0 bg-gradient-to-br from-card via-card/95 to-card/90 backdrop-blur-sm shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10" style={{
+              zIndex: index + 1,
+              transform: `translateY(${index * -20}px)`
+            }}>
                   {/* Subtle gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-accent/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
@@ -71,50 +63,17 @@ const Expertise = () => {
                         <div className="h-px flex-1 bg-gradient-to-r from-primary/20 to-transparent" />
                       </div>
                       <div className="flex flex-wrap gap-2.5">
-                        {skill.tools.map((tool, toolIndex) => (
-                          <Badge 
-                            key={toolIndex} 
-                            variant="secondary" 
-                            className="text-xs px-3 py-1 bg-gradient-to-r from-secondary/80 to-secondary border border-primary/10 hover:border-primary/20 hover:from-primary/5 hover:to-accent/5 hover:shadow-sm transition-all duration-300 cursor-default"
-                          >
+                        {skill.tools.map((tool, toolIndex) => <Badge key={toolIndex} variant="secondary" className="text-xs px-3 py-1 bg-gradient-to-r from-secondary/80 to-secondary border border-primary/10 hover:border-primary/20 hover:from-primary/5 hover:to-accent/5 hover:shadow-sm transition-all duration-300 cursor-default">
                             {tool}
-                          </Badge>
-                        ))}
+                          </Badge>)}
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
 
-          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-semibold mb-4">The Swiss Army Knife Approach</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  What makes me unique is my ability to bridge different disciplines. I don't just 
-                  specialize in one area—I bring together business analysis, customer experience, 
-                  user research, and product operations to create holistic solutions.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <Users className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span>Cross-functional collaboration</span>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <TrendingUp className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span>Measurable business outcomes</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <Search className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span>Customer-centric solutions</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>;

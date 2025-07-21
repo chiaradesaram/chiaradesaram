@@ -26,36 +26,7 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               About <span className="text-gradient">Me</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Product manager passionate about solving complex problems through data-driven insights and user-centered design.
-            </p>
-          </div>
-
-          {/* Experience Cards */}
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            <Card className="bg-white/5 backdrop-blur-sm border-0 text-center p-6">
-              <CardContent className="p-0">
-                <div className="text-3xl font-bold text-orange-400 mb-2">8+</div>
-                <div className="text-white font-medium">Years</div>
-                <div className="text-gray-400 text-sm">Experience</div>
-              </CardContent>
-            </Card>
             
-            <Card className="bg-white/5 backdrop-blur-sm border-0 text-center p-6">
-              <CardContent className="p-0">
-                <div className="text-3xl font-bold text-orange-400 mb-2">7</div>
-                <div className="text-white font-medium">Client</div>
-                <div className="text-gray-400 text-sm">Engagements</div>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white/5 backdrop-blur-sm border-0 text-center p-6">
-              <CardContent className="p-0">
-                <div className="text-3xl font-bold text-orange-400 mb-2">5</div>
-                <div className="text-white font-medium">Industries</div>
-                <div className="text-gray-400 text-sm">Worked In</div>
-              </CardContent>
-            </Card>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -84,7 +55,9 @@ const About = () => {
               animationDelay: `${index * 150}ms`,
               animationFillMode: 'forwards'
             }}>
-                  <div className="w-3 h-3 bg-orange-400 rounded-full flex-shrink-0"></div>
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <value.icon className="h-5 w-5 text-orange-400" />
+                  </div>
                   <div>
                     <span className="font-semibold text-white">{value.title}</span>
                     <span className="text-gray-300 ml-2">— {value.description}</span>
