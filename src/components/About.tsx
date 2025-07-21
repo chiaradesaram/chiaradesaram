@@ -31,6 +31,33 @@ const About = () => {
             </p>
           </div>
 
+          {/* Experience Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10 text-center p-6">
+              <CardContent className="p-0">
+                <div className="text-3xl font-bold text-orange-400 mb-2">8+</div>
+                <div className="text-white font-medium">Years</div>
+                <div className="text-gray-400 text-sm">Experience</div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10 text-center p-6">
+              <CardContent className="p-0">
+                <div className="text-3xl font-bold text-orange-400 mb-2">50+</div>
+                <div className="text-white font-medium">Products</div>
+                <div className="text-gray-400 text-sm">Launched</div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10 text-center p-6">
+              <CardContent className="p-0">
+                <div className="text-3xl font-bold text-orange-400 mb-2">5</div>
+                <div className="text-white font-medium">Industries</div>
+                <div className="text-gray-400 text-sm">Worked In</div>
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold">My Approach</h3>
