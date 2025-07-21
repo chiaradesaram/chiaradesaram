@@ -75,7 +75,7 @@ const Expertise = () => {
                         <Progress value={skill.level} className="h-2" />
                       </div>
                       <div className="space-y-2">
-                        <span className="text-sm font-medium">Key Tools & Methods</span>
+                        <span className="text-sm font-medium">Key Methods</span>
                         <div className="flex flex-wrap gap-2">
                           {skill.tools.map((tool, toolIndex) => (
                             <Badge key={toolIndex} variant="secondary" className="text-xs">
