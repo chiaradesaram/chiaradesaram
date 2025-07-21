@@ -52,12 +52,13 @@ const About = () => {
           </div>
 
           {/* Stats Cards */}
-          <div className="flex justify-center gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-4 mb-12 max-w-2xl mx-auto">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="text-xl font-bold text-shimmer mb-1">{stat.number}</div>
-                <div className="text-gray-400 text-xs">
-                  {stat.label} {stat.subtitle}
+              <div key={index} className="bg-white/5 backdrop-blur-md rounded-lg p-4 text-center border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="text-lg font-bold text-shimmer mb-1">{stat.number}</div>
+                <div className="text-gray-300 text-xs">
+                  {stat.label && <div>{stat.label}</div>}
+                  {stat.subtitle && <div className="text-gray-400">{stat.subtitle}</div>}
                 </div>
               </div>
             ))}
