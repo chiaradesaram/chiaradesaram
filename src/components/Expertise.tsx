@@ -1,36 +1,70 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { BarChart3, Users, Cog, Search, Layers, TrendingUp } from "lucide-react";
+import { BarChart3, Users, Search, Layers, TrendingUp } from "lucide-react";
+import { useEffect, useRef } from "react";
 const Expertise = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
   const skills = [{
-    icon: TrendingUp,
     title: "CX Strategy",
     description: "Designing customer experience strategies that drive business growth and satisfaction",
-    level: 95,
     tools: ["Journey Mapping", "Voice of Customer", "CX Metrics", "Touchpoint Analysis"]
   }, {
-    icon: BarChart3,
     title: "Business Analysis & Product Management",
     description: "Translating business needs into actionable requirements and solutions",
-    level: 92,
     tools: ["Requirements Gathering", "Process Modeling", "Gap Analysis", "Stakeholder Management"]
   }, {
-    icon: Search,
     title: "User Research",
     description: "Uncovering user insights that inform product and business decisions",
-    level: 90,
     tools: ["User Interviews", "Usability Testing", "Surveys", "Behavioral Analysis"]
   }, {
-    icon: Layers,
     title: "Product Ops",
     description: "Supporting product teams with processes, tools, and insights for success",
-    level: 85,
     tools: ["Product Analytics", "Team Coordination", "Tool Integration", "Process Design"]
   }];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      
+      const containerRect = containerRef.current.getBoundingClientRect();
+      const containerTop = containerRect.top;
+      const windowHeight = window.innerHeight;
+      
+      cardsRef.current.forEach((card, index) => {
+        if (!card) return;
+        
+        const cardRect = card.getBoundingClientRect();
+        const cardTop = cardRect.top;
+        const cardHeight = cardRect.height;
+        
+        // Calculate scroll progress for each card
+        const scrollProgress = Math.max(0, Math.min(1, (windowHeight - cardTop) / (windowHeight + cardHeight)));
+        
+        // Calculate overlap amount based on cards below
+        const cardsBelow = skills.length - index - 1;
+        const overlapAmount = Math.min(scrollProgress * cardsBelow * 60, cardsBelow * 60);
+        
+        // Apply transforms
+        const scale = 0.95 + (scrollProgress * 0.05);
+        const translateY = -overlapAmount;
+        const zIndex = skills.length - index;
+        
+        card.style.transform = `translateY(${translateY}px) scale(${scale})`;
+        card.style.zIndex = zIndex.toString();
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [skills.length]);
+
   return <section id="expertise" className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               My <span className="text-gradient">Expertise</span>
@@ -41,28 +75,38 @@ const Expertise = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div ref={containerRef} className="relative space-y-8 mb-16">
             {skills.map((skill, index) => (
-              <Card key={index} className="card-hover group">
-                <CardHeader className="pb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                    <skill.icon className="h-6 w-6 text-primary" />
+              <div
+                key={index}
+                ref={(el) => cardsRef.current[index] = el}
+                className="relative"
+              >
+                <Card className="p-8 bg-card border border-border/50 backdrop-blur-sm shadow-lg">
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-2xl font-semibold mb-3">{skill.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {skill.description}
+                      </p>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-3">
+                      {skill.tools.map((tool, toolIndex) => (
+                        <div key={toolIndex} className="flex items-center gap-2">
+                          <div 
+                            className="w-2 h-2 rounded-full"
+                            style={{ 
+                              backgroundColor: `hsl(${(toolIndex * 60 + index * 40) % 360}, 70%, 60%)` 
+                            }}
+                          />
+                          <span className="text-sm text-foreground font-medium">{tool}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <CardTitle className="text-xl mb-2">{skill.title}</CardTitle>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {skill.description}
-                  </p>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <div className="flex flex-wrap gap-2">
-                    {skill.tools.map((tool, toolIndex) => (
-                      <Badge key={toolIndex} variant="secondary" className="text-xs">
-                        {tool}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                </Card>
+              </div>
             ))}
           </div>
 
