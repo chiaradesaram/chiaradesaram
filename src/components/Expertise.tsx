@@ -47,11 +47,51 @@ const Expertise = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {skills.map((skill, index) => <Card key={index} className="card-hover group">
-                
-                
-              </Card>)}
+          <div className="space-y-6 mb-16 max-w-2xl mx-auto">
+            {skills.map((skill, index) => {
+              const Icon = skill.icon;
+              return (
+                <Card 
+                  key={index} 
+                  className="card-hover group sticky top-20 transform transition-all duration-500 ease-out"
+                  style={{
+                    zIndex: skills.length - index,
+                    transform: `scale(${1 - index * 0.05}) translateY(${index * -20}px)`,
+                  }}
+                >
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                        <Icon className="h-6 w-6" />
+                      </div>
+                      <CardTitle className="text-xl">{skill.title}</CardTitle>
+                    </div>
+                    <p className="text-muted-foreground">{skill.description}</p>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span>Proficiency</span>
+                          <span>{skill.level}%</span>
+                        </div>
+                        <Progress value={skill.level} className="h-2" />
+                      </div>
+                      <div className="space-y-2">
+                        <span className="text-sm font-medium">Key Tools & Methods</span>
+                        <div className="flex flex-wrap gap-2">
+                          {skill.tools.map((tool, toolIndex) => (
+                            <Badge key={toolIndex} variant="secondary" className="text-xs">
+                              {tool}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
 
           <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8">
