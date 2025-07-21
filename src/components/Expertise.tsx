@@ -42,30 +42,47 @@ const Expertise = () => {
               return (
                 <Card 
                   key={index} 
-                  className="card-hover group sticky top-20 transform transition-all duration-500 ease-out"
+                  className="group sticky top-20 transform transition-all duration-500 ease-out overflow-hidden border-0 bg-gradient-to-br from-card via-card/95 to-card/90 backdrop-blur-sm shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10"
                   style={{
                     zIndex: index + 1,
                     transform: `translateY(${index * -20}px)`,
                   }}
                 >
-                  <CardHeader>
-                    <div className="mb-2">
-                      <CardTitle className="text-xl">{skill.title}</CardTitle>
+                  {/* Subtle gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-accent/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  {/* Decorative border accent */}
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  <CardHeader className="relative">
+                    <div className="flex items-center gap-4 mb-3">
+                      <div className="p-2.5 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 group-hover:border-primary/30 transition-colors duration-300">
+                        <Icon className="h-5 w-5 text-primary group-hover:text-accent transition-colors duration-300" />
+                      </div>
+                      <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">{skill.title}</CardTitle>
                     </div>
-                    <p className="text-muted-foreground">{skill.description}</p>
+                    <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 leading-relaxed">{skill.description}</p>
                   </CardHeader>
-                   <CardContent>
-                     <div className="space-y-2">
-                       <span className="text-sm font-medium">Key Methods</span>
-                       <div className="flex flex-wrap gap-2">
-                         {skill.tools.map((tool, toolIndex) => (
-                           <Badge key={toolIndex} variant="secondary" className="text-xs">
-                             {tool}
-                           </Badge>
-                         ))}
-                       </div>
-                     </div>
-                   </CardContent>
+                  
+                  <CardContent className="relative">
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm font-semibold text-primary">Key Methods</span>
+                        <div className="h-px flex-1 bg-gradient-to-r from-primary/20 to-transparent" />
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {skill.tools.map((tool, toolIndex) => (
+                          <Badge 
+                            key={toolIndex} 
+                            variant="secondary" 
+                            className="text-xs px-3 py-1 bg-gradient-to-r from-secondary/80 to-secondary border border-primary/10 hover:border-primary/20 hover:from-primary/5 hover:to-accent/5 hover:shadow-sm transition-all duration-300 cursor-default"
+                          >
+                            {tool}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  </CardContent>
                 </Card>
               );
             })}
