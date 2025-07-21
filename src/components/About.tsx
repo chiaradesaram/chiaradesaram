@@ -56,6 +56,7 @@ const About = () => {
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary" className="px-3 py-1">8 Years Experience</Badge>
                 <Badge variant="secondary" className="px-3 py-1">6 Major Projects</Badge>
+                <Badge variant="secondary" className="px-3 py-1">Startups → Fortune 500</Badge>
                 <Badge variant="secondary" className="px-3 py-1">Multiple Industries</Badge>
               </div>
             </div>

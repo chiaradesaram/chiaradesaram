@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Mail, Linkedin, Github } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { Badge } from "@/components/ui/badge";
+import { Mail, Download } from "lucide-react";
 import profilePlaceholder from "@/assets/profile-placeholder.jpg";
 
 const Hero = () => {
@@ -9,52 +9,81 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Dark Gradient Background */}
+    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
+      {/* Geometric Shapes */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900"></div>
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-yellow-400/20 to-orange-400/20 blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/6 w-72 h-72 rounded-full bg-gradient-to-br from-orange-400/15 to-red-400/15 blur-2xl"></div>
+        <div className="absolute top-1/2 right-1/5 w-24 h-24 bg-yellow-400/30 rounded-2xl rotate-45"></div>
+        <div className="absolute top-1/3 right-1/3 w-16 h-16 bg-orange-400/40 rounded-full"></div>
       </div>
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center text-white">
-        <div className="max-w-4xl mx-auto space-y-8">
-          {/* Profile Photo */}
-          <div className="flex justify-center mb-8">
-            <div className="futuristic-border w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
-              <img 
-                src={profilePlaceholder} 
-                alt="Chiara de Saram" 
-                className="w-full h-full object-cover"
-              />
+      <div className="relative z-10 container mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          {/* Left Content */}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-6xl md:text-7xl font-bold tracking-tight">
+                Hi,<br />
+                I am <span className="text-gradient">Chiara de Saram</span>
+              </h1>
+              
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
+                Business Analyst & Consultant who blends business analysis, CX, and user research 
+                to craft tools that solve the <em className="text-primary font-medium">right</em> problems.
+              </p>
+            </div>
+            
+            {/* Floating Skills */}
+            <div className="flex flex-wrap gap-3">
+              <Badge variant="secondary" className="px-4 py-2 text-sm">Business Analysis</Badge>
+              <Badge variant="outline" className="px-4 py-2 text-sm">User Research</Badge>
+              <Badge variant="secondary" className="px-4 py-2 text-sm">Process Optimization</Badge>
+            </div>
+            
+            {/* Action Buttons */}
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button 
+                size="lg" 
+                onClick={() => scrollToSection('contact')}
+                className="px-8 py-3"
+              >
+                <Mail className="mr-2 h-5 w-5" />
+                Get In Touch
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="px-8 py-3"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download CV
+              </Button>
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            Chiara de Saram
-          </h1>
-          
-          <p className="text-xl md:text-2xl font-light opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Business Analyst & Consultant who blends business analysis, CX, and user research 
-            to craft tools that solve the <em className="text-yellow-300 font-medium">right</em> problems
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-4 text-lg">
-            <div className="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2">
-              <span className="font-semibold">8</span> Years Experience
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2">
-              <span className="font-semibold">6</span> Major Projects
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2">
-              Startups → Fortune 500
+          {/* Right Content - Photo */}
+          <div className="flex justify-center lg:justify-end relative">
+            <div className="relative">
+              {/* Profile Photo */}
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl relative z-10">
+                <img 
+                  src={profilePlaceholder} 
+                  alt="Chiara de Saram" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Floating Elements */}
+              <div className="absolute -top-8 -left-8 bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold shadow-lg transform -rotate-12">
+                UI/UX Designer
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                8 years experience
+              </div>
             </div>
           </div>
-          
-          <p className="text-lg opacity-80 max-w-2xl mx-auto">
-            With customer needs at the heart of every decision, I help teams transform 
-            insights into powerful, usable, and measurable outcomes.
-          </p>
-          
         </div>
       </div>
     </section>
