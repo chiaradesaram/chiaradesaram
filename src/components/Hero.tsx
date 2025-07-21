@@ -24,8 +24,7 @@ const Hero = () => {
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Business Analyst & Consultant who blends business analysis, CX, and user research 
-                to craft tools that solve the <em className="text-primary font-medium">right</em> problems.
+                Insight‑driven and customer‑focused, blending product strategy, business analysis, and user research to craft solutions that matter.
               </p>
             </div>
             
