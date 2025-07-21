@@ -62,7 +62,7 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end relative">
             <div className="relative">
               {/* Profile Photo */}
-              <div className="w-80 h-96 lg:w-96 lg:h-[450px] overflow-hidden relative z-10">
+              <div className="w-96 h-[450px] lg:w-[450px] lg:h-[550px] overflow-hidden relative z-10">
                 <img 
                   src="/lovable-uploads/aefb496c-5639-4934-af77-54c04365a85c.png" 
                   alt="Chiara de Saram" 
