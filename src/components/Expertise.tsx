@@ -11,16 +11,10 @@ const Expertise = () => {
     tools: ["Journey Mapping", "Voice of Customer", "CX Metrics", "Touchpoint Analysis"]
   }, {
     icon: BarChart3,
-    title: "Business Analysis",
+    title: "Business Analysis & Product Management",
     description: "Translating business needs into actionable requirements and solutions",
     level: 92,
     tools: ["Requirements Gathering", "Process Modeling", "Gap Analysis", "Stakeholder Management"]
-  }, {
-    icon: Cog,
-    title: "Process Optimisation",
-    description: "Streamlining operations and workflows for maximum efficiency and impact",
-    level: 88,
-    tools: ["Process Mining", "Workflow Design", "Automation", "Performance Metrics"]
   }, {
     icon: Search,
     title: "User Research",
