@@ -267,3 +267,48 @@ All colors MUST be HSL.
     background-position: 200% 0;
   }
 }
+
+/* Stacked card scroll animations */
+.card-slide-0 {
+  animation: cardSlide-0 linear both;
+  animation-timeline: scroll();
+  animation-range: 0vh 30vh;
+}
+
+.card-slide-1 {
+  animation: cardSlide-1 linear both;
+  animation-timeline: scroll();
+  animation-range: 10vh 40vh;
+}
+
+.card-slide-2 {
+  animation: cardSlide-2 linear both;
+  animation-timeline: scroll();
+  animation-range: 20vh 50vh;
+}
+
+.card-slide-3 {
+  animation: cardSlide-3 linear both;
+  animation-timeline: scroll();
+  animation-range: 30vh 60vh;
+}
+
+@keyframes cardSlide-0 {
+  0% { transform: translateY(0px) scale(1); }
+  100% { transform: translateY(-50px) scale(0.95); }
+}
+
+@keyframes cardSlide-1 {
+  0% { transform: translateY(0px) scale(1); }
+  100% { transform: translateY(-30px) scale(0.95); }
+}
+
+@keyframes cardSlide-2 {
+  0% { transform: translateY(0px) scale(1); }
+  100% { transform: translateY(-10px) scale(0.95); }
+}
+
+@keyframes cardSlide-3 {
+  0% { transform: translateY(0px) scale(1); }
+  100% { transform: translateY(10px) scale(0.95); }
+}

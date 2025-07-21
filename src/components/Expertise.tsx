@@ -48,17 +48,21 @@ const Expertise = () => {
             </p>
           </div>
 
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-4xl mx-auto space-y-8">
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="relative mb-8 last:mb-0"
+                className="relative"
                 style={{
-                  transform: `translateY(-${index * 20}px)`,
                   zIndex: skills.length - index,
                 }}
               >
-                <Card className="card-hover group sticky top-20 shadow-2xl bg-card/95 backdrop-blur-sm border-2">
+                <Card 
+                  className={`card-hover group sticky shadow-2xl bg-card/95 backdrop-blur-sm border-2 transition-all duration-300 hover:scale-[1.02] card-slide-${index}`}
+                  style={{
+                    top: `${80 + index * 20}px`,
+                  }}
+                >
                   <CardHeader className="pb-4">
                     <div className="flex items-center gap-4">
                       <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
@@ -86,6 +90,7 @@ const Expertise = () => {
               </div>
             ))}
           </div>
+
 
           <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 mt-32">
             <div className="grid md:grid-cols-2 gap-8 items-center">
