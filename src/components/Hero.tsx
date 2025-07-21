@@ -67,11 +67,11 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end relative">
             <div className="relative">
               {/* Profile Photo */}
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl relative z-10">
+              <div className="w-80 h-96 lg:w-96 lg:h-[450px] overflow-hidden shadow-2xl relative z-10">
                 <img 
                   src="/lovable-uploads/aefb496c-5639-4934-af77-54c04365a85c.png" 
                   alt="Chiara de Saram" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               
