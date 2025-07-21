@@ -67,12 +67,14 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end relative">
             <div className="relative">
               {/* Profile Photo */}
-              <div className="w-80 h-96 lg:w-96 lg:h-[450px] overflow-hidden shadow-2xl relative z-10">
+              <div className="w-80 h-96 lg:w-96 lg:h-[450px] overflow-hidden relative z-10">
                 <img 
                   src="/lovable-uploads/aefb496c-5639-4934-af77-54c04365a85c.png" 
                   alt="Chiara de Saram" 
                   className="w-full h-full object-cover object-top"
                 />
+                {/* Gradient overlay to blend into background */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/80"></div>
               </div>
               
               {/* Floating Elements */}
