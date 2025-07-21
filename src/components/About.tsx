@@ -43,9 +43,9 @@ const About = () => {
             
             <Card className="bg-white/5 backdrop-blur-sm border-0 text-center p-6">
               <CardContent className="p-0">
-                <div className="text-3xl font-bold text-orange-400 mb-2">50+</div>
-                <div className="text-white font-medium">Products</div>
-                <div className="text-gray-400 text-sm">Launched</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">7</div>
+                <div className="text-white font-medium">Client</div>
+                <div className="text-gray-400 text-sm">Engagements</div>
               </CardContent>
             </Card>
             
