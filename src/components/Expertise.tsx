@@ -13,11 +13,6 @@ const Expertise = () => {
     description: "Translating business needs into actionable requirements and solutions",
     tools: ["Requirements Gathering", "Process Modeling", "Gap Analysis", "Stakeholder Management"]
   }, {
-    icon: Cog,
-    title: "Process Optimisation",
-    description: "Streamlining operations and workflows for maximum efficiency and impact",
-    tools: ["Process Mining", "Workflow Design", "Automation", "Performance Metrics"]
-  }, {
     icon: Search,
     title: "User Research",
     description: "Uncovering user insights that inform product and business decisions",
