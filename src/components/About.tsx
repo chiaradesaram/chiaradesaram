@@ -48,11 +48,19 @@ const About = () => {
                 bringing together business analysis, user research, and process optimization 
                 to help bring good products to life.
               </p>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">8+ Years Experience</Badge>
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Startups → Fortune 500</Badge>
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
-                
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
+                  <div className="text-2xl font-bold text-orange-400 mb-1">8+</div>
+                  <div className="text-sm text-gray-300">Years Experience</div>
+                </div>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
+                  <div className="text-lg font-semibold text-orange-400 mb-1">Startups → Fortune 500</div>
+                  <div className="text-sm text-gray-300">Scale Range</div>
+                </div>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300">
+                  <div className="text-lg font-semibold text-orange-400 mb-1">Multiple</div>
+                  <div className="text-sm text-gray-300">Industries</div>
+                </div>
               </div>
             </div>
 
