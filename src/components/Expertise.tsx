@@ -8,7 +8,7 @@ const Expertise = () => {
     title: "CX Strategy",
     description: "Designing customer experience strategies that drive business growth and satisfaction",
     level: 95,
-    tools: ["Journey Mapping", "Voice of Customer", "CX Metrics", "Touchpoint Analysis"]
+    tools: ["Journey Mapping", "Product Discovery", "CX Metrics", "Feedback Loop", "Experimentation"]
   }, {
     icon: BarChart3,
     title: "Business Analysis",
