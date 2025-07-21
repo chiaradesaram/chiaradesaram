@@ -36,7 +36,7 @@ const About = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 With 8 years of experience spanning startups to Fortune 500 companies, 
                 I've learned that the best products come from deeply understanding customer needs 
-                and translating those insights into actionable strategies.
+                and translating those insights into actionable strategies. I'm outcomes‑driven and always open to experimenting along the way to ensure we're solving the right problems and delivering value.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 I love all things product and act as a Swiss army knife for teams, 
