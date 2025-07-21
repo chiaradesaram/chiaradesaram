@@ -205,31 +205,23 @@ All colors MUST be HSL.
     z-index: 1;
   }
   
-  .badge-shimmer {
-    position: relative;
-    overflow: hidden;
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      currentColor 40%,
+      hsl(var(--primary)) 50%,
+      currentColor 60%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shimmer 2.5s ease-in-out infinite;
     transition: var(--transition-smooth);
   }
   
-  .badge-shimmer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      hsl(var(--primary) / 0.3),
-      transparent
-    );
-    animation: shimmer 2s infinite;
-    border-radius: inherit;
-  }
-  
-  .badge-shimmer:hover::before {
-    animation-duration: 0.8s;
+  .text-shimmer:hover {
+    animation-duration: 1s;
   }
 }
 
@@ -262,5 +254,14 @@ All colors MUST be HSL.
   }
   100% {
     left: 100%;
+  }
+}
+
+@keyframes text-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
   }
 }
