@@ -19,14 +19,14 @@ const About = () => {
     title: "Team Enabler",
     description: "Swiss army knife helping product teams succeed"
   }];
-  return <section id="about" className="py-20 section-gradient">
+  return <section id="about" className="py-20 bg-gray-900 text-white">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               About <span className="text-gradient">Me</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Product manager passionate about solving complex problems through data-driven insights and user-centered design.
             </p>
           </div>
@@ -34,38 +34,38 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold">My Approach</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-gray-300 leading-relaxed">
                 With 8 years of experience spanning startups to Fortune 500 companies, 
                 I've learned that the best products come from deeply understanding customer needs 
                 and translating those insights into actionable strategies.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-gray-300 leading-relaxed">
                 I love all things product and act as a Swiss army knife for teams, 
                 bringing together business analysis, user research, and process optimization 
                 to help bring good products to life.
               </p>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary" className="px-3 py-1">8+ Years Experience</Badge>
-                <Badge variant="secondary" className="px-3 py-1">Startups → Fortune 500</Badge>
-                <Badge variant="secondary" className="px-3 py-1">Multiple Industries</Badge>
-                <Badge variant="secondary" className="px-3 py-1">Product Strategy</Badge>
+                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">8+ Years Experience</Badge>
+                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Startups → Fortune 500</Badge>
+                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
+                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Product Strategy</Badge>
               </div>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
               {values.map((value, index) => (
-                <Card key={index} className="animate-fade-in opacity-0 hover:shadow-lg transition-all duration-300 group" style={{
+                <Card key={index} className="animate-fade-in opacity-0 hover:shadow-lg transition-all duration-300 group bg-gray-800 border-gray-700" style={{
                   animationDelay: `${index * 150}ms`,
                   animationFillMode: 'forwards'
                 }}>
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                        <value.icon className="h-6 w-6 text-primary" />
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-orange-500/30 transition-colors">
+                        <value.icon className="h-6 w-6 text-orange-400" />
                       </div>
                       <div className="space-y-2">
-                        <h4 className="font-semibold text-foreground">{value.title}</h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
+                        <h4 className="font-semibold text-white">{value.title}</h4>
+                        <p className="text-sm text-gray-300 leading-relaxed">{value.description}</p>
                       </div>
                     </div>
                   </CardContent>
