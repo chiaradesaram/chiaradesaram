@@ -55,8 +55,8 @@ const Expertise = () => {
                   key={index} 
                   className="card-hover group sticky top-20 transform transition-all duration-500 ease-out"
                   style={{
-                    zIndex: skills.length - index,
-                    transform: `scale(${1 - index * 0.05}) translateY(${index * -20}px)`,
+                    zIndex: index + 1,
+                    transform: `translateY(${index * -20}px)`,
                   }}
                 >
                   <CardHeader>
