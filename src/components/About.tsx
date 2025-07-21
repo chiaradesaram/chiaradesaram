@@ -52,15 +52,10 @@ const About = () => {
             </div>
 
             <div className="space-y-8">
-              {values.map((value, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-center gap-4 animate-fade-in opacity-0 group"
-                  style={{ 
-                    animationDelay: `${index * 150}ms`,
-                    animationFillMode: 'forwards'
-                  }}
-                >
+              {values.map((value, index) => <div key={index} className="flex items-center gap-4 animate-fade-in opacity-0 group" style={{
+              animationDelay: `${index * 150}ms`,
+              animationFillMode: 'forwards'
+            }}>
                   <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <value.icon className="h-4 w-4 text-primary" />
                   </div>
@@ -68,20 +63,11 @@ const About = () => {
                     <span className="text-sm font-medium text-foreground">{value.title}</span>
                     <span className="text-xs text-muted-foreground ml-2">— {value.description}</span>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
 
-          <div className="bg-primary/5 rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-semibold mb-4">Why Work With Me?</h3>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-              I don't just analyze business requirements or conduct user research in isolation. 
-              I bring these disciplines together to ensure that every product decision is backed 
-              by both business logic and real user needs, creating solutions that are not only 
-              viable but truly valuable.
-            </p>
-          </div>
+          
         </div>
       </div>
     </section>;
