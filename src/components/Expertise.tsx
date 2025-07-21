@@ -38,18 +38,29 @@ const Expertise = () => {
   ];
 
   useEffect(() => {
+    console.log('Setting up scroll listener for stacked cards');
+    
     const handleScroll = () => {
       const cards = document.querySelectorAll('.stack-card');
+      console.log('Scroll triggered, found cards:', cards.length);
+      
       cards.forEach((card, index) => {
         const rect = card.getBoundingClientRect();
-        const scrollProgress = Math.max(0, Math.min(1, (window.innerHeight - rect.top) / window.innerHeight));
-        const translateY = scrollProgress * (index * -30);
-        const scale = 1 - (scrollProgress * 0.1);
+        const windowHeight = window.innerHeight;
+        const scrollProgress = Math.max(0, Math.min(1, (windowHeight - rect.top) / windowHeight));
+        
+        // Create overlapping effect - cards below slide up and over the cards above
+        const translateY = scrollProgress * (-50 - index * 20);
+        const scale = 1 - (scrollProgress * 0.05);
+        
+        console.log(`Card ${index}: scrollProgress=${scrollProgress.toFixed(2)}, translateY=${translateY}px`);
+        
         (card as HTMLElement).style.transform = `translateY(${translateY}px) scale(${scale})`;
       });
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -69,20 +80,21 @@ const Expertise = () => {
             </p>
           </div>
 
-          <div className="relative max-w-4xl mx-auto space-y-8">
+          <div className="relative max-w-4xl mx-auto">
             {skills.map((skill, index) => (
               <div
                 key={index}
                 className="relative"
                 style={{
-                  zIndex: skills.length - index,
+                  marginTop: index === 0 ? '0' : '-200px', // Overlap cards by 200px
                 }}
               >
                 <Card 
-                  className={`stack-card card-hover group sticky shadow-2xl bg-card/95 backdrop-blur-sm border-2 transition-all duration-300 hover:scale-[1.02]`}
+                  className={`stack-card card-hover group sticky shadow-2xl bg-card/95 backdrop-blur-sm border-2 transition-all duration-300`}
                   style={{
-                    top: `${100 + index * 60}px`,
+                    top: '100px',
                     zIndex: skills.length - index,
+                    marginBottom: index === skills.length - 1 ? '0' : '250px', // Add space for next card
                   }}
                 >
                   <CardHeader className="pb-4">
