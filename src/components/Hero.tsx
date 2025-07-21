@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Download } from "lucide-react";
-import profilePlaceholder from "@/assets/profile-placeholder.jpg";
+// Using the uploaded image directly
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -69,7 +69,7 @@ const Hero = () => {
               {/* Profile Photo */}
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl relative z-10">
                 <img 
-                  src={profilePlaceholder} 
+                  src="/lovable-uploads/aefb496c-5639-4934-af77-54c04365a85c.png" 
                   alt="Chiara de Saram" 
                   className="w-full h-full object-cover"
                 />
