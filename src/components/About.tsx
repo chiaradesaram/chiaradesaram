@@ -1,33 +1,25 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Zap, Target, Users } from "lucide-react";
-
 const About = () => {
-  const values = [
-    {
-      icon: Heart,
-      title: "Customer-Centric",
-      description: "Customer needs at the heart of every decision"
-    },
-    {
-      icon: Target,
-      title: "Problem Solver",
-      description: "Focus on solving the right problems, not just any problems"
-    },
-    {
-      icon: Zap,
-      title: "Results-Driven",
-      description: "Transform insights into measurable outcomes"
-    },
-    {
-      icon: Users,
-      title: "Team Enabler",
-      description: "Swiss army knife helping product teams succeed"
-    }
-  ];
-
-  return (
-    <section id="about" className="py-20 section-gradient">
+  const values = [{
+    icon: Heart,
+    title: "Customer-Centric",
+    description: "Customer needs at the heart of every decision"
+  }, {
+    icon: Target,
+    title: "Problem Solver",
+    description: "Focus on solving the right problems, not just any problems"
+  }, {
+    icon: Zap,
+    title: "Results-Driven",
+    description: "Transform insights into measurable outcomes"
+  }, {
+    icon: Users,
+    title: "Team Enabler",
+    description: "Swiss army knife helping product teams succeed"
+  }];
+  return <section id="about" className="py-20 section-gradient">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -35,9 +27,7 @@ const About = () => {
               About <span className="text-gradient">Me</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              I'm a consultant who blends business analysis, customer experience, and user research 
-              to craft solutions that truly matter.
-            </p>
+          </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -62,8 +52,7 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              {values.map((value, index) => (
-                <Card key={index} className="card-hover p-6 text-center">
+              {values.map((value, index) => <Card key={index} className="card-hover p-6 text-center">
                   <CardContent className="p-0 space-y-4">
                     <div className="w-12 h-12 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
                       <value.icon className="h-6 w-6 text-primary" />
@@ -75,8 +64,7 @@ const About = () => {
                       </p>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
 
@@ -91,8 +79,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
