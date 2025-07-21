@@ -2,6 +2,24 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Zap, Target, Users } from "lucide-react";
 const About = () => {
+  const stats = [
+    {
+      number: "8+",
+      label: "Years",
+      subtitle: "Experience"
+    },
+    {
+      number: "7",
+      label: "Client",
+      subtitle: "Engagements"
+    },
+    {
+      number: "Startups to Fortune 500",
+      label: "",
+      subtitle: "Scale Range"
+    }
+  ];
+
   const values = [{
     icon: Heart,
     title: "Customer-Centric",
@@ -18,6 +36,10 @@ const About = () => {
     icon: Users,
     title: "Team Enabler",
     description: "Swiss army knife helping product teams succeed"
+  }, {
+    icon: Zap,
+    title: "Growth-Minded",
+    description: "Always learning and adapting to new challenges"
   }];
   return <section id="about" className="py-20 bg-gray-900 text-white">
       <div className="container mx-auto px-6">
@@ -27,6 +49,18 @@ const About = () => {
               About <span className="text-gradient">Me</span>
             </h2>
             
+          </div>
+
+          {/* Stats Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            {stats.map((stat, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center">
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300 text-sm">
+                  {stat.label} {stat.subtitle && <div>{stat.subtitle}</div>}
+                </div>
+              </div>
+            ))}
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
