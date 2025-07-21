@@ -30,12 +30,12 @@ const Hero = () => {
             
             {/* Floating Skills */}
             <div className="flex flex-wrap gap-3">
-              <Badge variant="secondary" className="px-4 py-2 text-sm">Business Analysis</Badge>
-              <Badge variant="outline" className="px-4 py-2 text-sm">User Research</Badge>
-              <Badge variant="secondary" className="px-4 py-2 text-sm">Process Optimization</Badge>
-              <Badge variant="outline" className="px-4 py-2 text-sm">Product Management</Badge>
-              <Badge variant="secondary" className="px-4 py-2 text-sm">Product Operations</Badge>
-              <Badge variant="outline" className="px-4 py-2 text-sm">CX Strategy</Badge>
+              <Badge variant="secondary" className="px-4 py-2 text-sm badge-glow">Business Analysis</Badge>
+              <Badge variant="outline" className="px-4 py-2 text-sm badge-glow">User Research</Badge>
+              <Badge variant="secondary" className="px-4 py-2 text-sm badge-glow">Process Optimization</Badge>
+              <Badge variant="outline" className="px-4 py-2 text-sm badge-glow">Product Management</Badge>
+              <Badge variant="secondary" className="px-4 py-2 text-sm badge-glow">Product Operations</Badge>
+              <Badge variant="outline" className="px-4 py-2 text-sm badge-glow">CX Strategy</Badge>
             </div>
             
             {/* Action Buttons */}
