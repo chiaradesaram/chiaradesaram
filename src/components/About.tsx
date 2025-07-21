@@ -52,24 +52,20 @@ const About = () => {
               </div>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="space-y-6">
               {values.map((value, index) => (
-                <Card key={index} className="animate-fade-in opacity-0 hover:shadow-lg transition-all duration-300 group bg-gray-800 border-gray-700" style={{
+                <div key={index} className="flex items-center gap-4 animate-fade-in opacity-0" style={{
                   animationDelay: `${index * 150}ms`,
                   animationFillMode: 'forwards'
                 }}>
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-orange-500/30 transition-colors">
-                        <value.icon className="h-6 w-6 text-orange-400" />
-                      </div>
-                      <div className="space-y-2">
-                        <h4 className="font-semibold text-white">{value.title}</h4>
-                        <p className="text-sm text-gray-300 leading-relaxed">{value.description}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <value.icon className="h-5 w-5 text-orange-400" />
+                  </div>
+                  <div>
+                    <span className="font-semibold text-white">{value.title}</span>
+                    <span className="text-gray-300 ml-2">— {value.description}</span>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
