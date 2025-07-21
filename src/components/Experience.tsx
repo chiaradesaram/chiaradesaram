@@ -27,22 +27,28 @@ const Experience = () => {
   const industries = ["Financial Services", "Healthcare", "E-commerce", "SaaS", "Manufacturing", "Retail", "Technology", "B2B Services"];
   const timeline = [{
     year: "2016",
-    milestone: "Started as an Economic Analyst in Private Equity, building strong analytical foundations"
+    milestone: "Started as an Economic Analyst in Private Equity",
+    subtitle: "building strong analytical foundations"
   }, {
     year: "2018",
-    milestone: "Moved into Fintech, gaining experience in fast‑paced product environments"
+    milestone: "Moved into Fintech",
+    subtitle: "gaining experience in fast‑paced product environments"
   }, {
     year: "2019",
-    milestone: "Pivoted to Tech and Business Analysis, translating needs into actionable solutions"
+    milestone: "Pivoted to Tech and Business Analysis",
+    subtitle: "translating needs into actionable solutions"
   }, {
     year: "2020",
-    milestone: "Drove Product Development and Discovery initiatives"
+    milestone: "Drove Product Development and Discovery initiatives",
+    subtitle: ""
   }, {
     year: "2021",
-    milestone: "Expanded into CX Strategy and User Research"
+    milestone: "Expanded into CX Strategy and User Research",
+    subtitle: ""
   }, {
     year: "2024",
-    milestone: "Added Product Operations knowledge while helping set up and shape that stream"
+    milestone: "Added Product Operations knowledge",
+    subtitle: "while helping set up and shape that stream"
   }];
   return <section id="experience" className="py-20 bg-background">
       <div className="container mx-auto px-6">
@@ -97,14 +103,19 @@ const Experience = () => {
                 Career Journey
               </h3>
               <div className="space-y-6">
-                {timeline.map((item, index) => <div key={index} className="flex items-start gap-4">
+                {timeline.map((item, index) => (
+                  <div key={index} className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-sm font-semibold text-primary">{item.year}</span>
                     </div>
                     <div className="pt-2">
                       <p className="font-medium">{item.milestone}</p>
+                      {item.subtitle && (
+                        <p className="text-sm text-muted-foreground mt-1">{item.subtitle}</p>
+                      )}
                     </div>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </div>
 
