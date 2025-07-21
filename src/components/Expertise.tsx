@@ -1,8 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BarChart3, Users, Cog, Search, Layers, TrendingUp } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const Expertise = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  
   const skills = [
     {
       icon: TrendingUp,
@@ -34,8 +37,26 @@ const Expertise = () => {
     }
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const cards = document.querySelectorAll('.stack-card');
+      cards.forEach((card, index) => {
+        const rect = card.getBoundingClientRect();
+        const scrollProgress = Math.max(0, Math.min(1, (window.innerHeight - rect.top) / window.innerHeight));
+        const translateY = scrollProgress * (index * -30);
+        const scale = 1 - (scrollProgress * 0.1);
+        (card as HTMLElement).style.transform = `translateY(${translateY}px) scale(${scale})`;
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section id="expertise" className="py-20 bg-background">
+    <section ref={sectionRef} id="expertise" className="py-20 bg-background relative min-h-screen"
+      style={{ height: `${skills.length * 400 + 600}px` }}
+    >
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -58,9 +79,10 @@ const Expertise = () => {
                 }}
               >
                 <Card 
-                  className={`card-hover group sticky shadow-2xl bg-card/95 backdrop-blur-sm border-2 transition-all duration-300 hover:scale-[1.02] card-slide-${index}`}
+                  className={`stack-card card-hover group sticky shadow-2xl bg-card/95 backdrop-blur-sm border-2 transition-all duration-300 hover:scale-[1.02]`}
                   style={{
-                    top: `${80 + index * 20}px`,
+                    top: `${100 + index * 60}px`,
+                    zIndex: skills.length - index,
                   }}
                 >
                   <CardHeader className="pb-4">
