@@ -33,7 +33,7 @@ const About = () => {
 
           {/* Experience Cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-16">
-            <Card className="bg-white/5 backdrop-blur-sm border-white/10 text-center p-6">
+            <Card className="bg-white/5 backdrop-blur-sm border-0 text-center p-6">
               <CardContent className="p-0">
                 <div className="text-3xl font-bold text-orange-400 mb-2">8+</div>
                 <div className="text-white font-medium">Years</div>
@@ -41,7 +41,7 @@ const About = () => {
               </CardContent>
             </Card>
             
-            <Card className="bg-white/5 backdrop-blur-sm border-white/10 text-center p-6">
+            <Card className="bg-white/5 backdrop-blur-sm border-0 text-center p-6">
               <CardContent className="p-0">
                 <div className="text-3xl font-bold text-orange-400 mb-2">50+</div>
                 <div className="text-white font-medium">Products</div>
@@ -49,7 +49,7 @@ const About = () => {
               </CardContent>
             </Card>
             
-            <Card className="bg-white/5 backdrop-blur-sm border-white/10 text-center p-6">
+            <Card className="bg-white/5 backdrop-blur-sm border-0 text-center p-6">
               <CardContent className="p-0">
                 <div className="text-3xl font-bold text-orange-400 mb-2">5</div>
                 <div className="text-white font-medium">Industries</div>
