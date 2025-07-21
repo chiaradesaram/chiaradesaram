@@ -73,13 +73,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/80"></div>
               </div>
               
-              {/* Floating Elements */}
-              <div className="absolute -top-8 -left-8 bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold shadow-lg transform -rotate-12">
-                UI/UX Designer
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                8 years experience
-              </div>
+              {/* Floating Elements removed */}
             </div>
           </div>
         </div>
