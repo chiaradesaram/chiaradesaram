@@ -36,7 +36,7 @@ const About = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 With 8 years of experience spanning startups to Fortune 500 companies, 
                 I've learned that the best products come from deeply understanding customer needs 
-                and translating those insights into actionable strategies. I'm outcomes‑driven and always open to experimenting along the way to ensure we're solving the right problems and delivering value.
+                and translating those insights into actionable strategies.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 I love all things product and act as a Swiss army knife for teams, 
@@ -44,15 +44,15 @@ const About = () => {
                 to help bring good products to life.
               </p>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary" className="px-3 py-1">8 Years Experience</Badge>
-                <Badge variant="secondary" className="px-3 py-1">6 Major Projects</Badge>
+                
+                
                 <Badge variant="secondary" className="px-3 py-1">Startups → Fortune 500</Badge>
                 <Badge variant="secondary" className="px-3 py-1">Multiple Industries</Badge>
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              {values.map((value, index) => <Card key={index} className="card-hover p-6 text-center border-0">
+              {values.map((value, index) => <Card key={index} className="card-hover p-6 text-center">
                   <CardContent className="p-0 space-y-4">
                     <div className="w-12 h-12 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
                       <value.icon className="h-6 w-6 text-primary" />
