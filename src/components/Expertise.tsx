@@ -57,10 +57,7 @@ const Expertise = () => {
                     <skill.icon className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle className="text-xl">{skill.title}</CardTitle>
-                  <div className="space-y-2">
-                    <Progress value={skill.level} className="h-2" />
-                    <span className="text-sm text-muted-foreground">{skill.level}% Proficiency</span>
-                  </div>
+                  <div className="w-full h-0.5 bg-primary"></div>
                 </CardHeader>
                 <CardContent className="pt-0">
                   <p className="text-muted-foreground mb-4 leading-relaxed">
