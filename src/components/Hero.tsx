@@ -27,36 +27,14 @@ const Hero = () => {
               </p>
             </div>
             
-            {/* Core Expertise Areas */}
-            <div className="grid grid-cols-2 gap-4 max-w-md">
-              {[
-                "Business Transformation",
-                "Customer Experience", 
-                "Process",
-                "Technology Solutions"
-              ].map((expertise, index) => (
-                <div 
-                  key={expertise}
-                  className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 backdrop-blur-sm border border-primary/20 p-4 hover:from-primary/20 hover:to-primary/10 transition-all duration-500 animate-fade-in opacity-0"
-                  style={{
-                    animationDelay: `${index * 200}ms`,
-                    animationFillMode: 'forwards'
-                  }}
-                >
-                  <div className="relative z-10">
-                    <div className="text-sm font-semibold text-primary mb-1 group-hover:scale-105 transition-transform duration-300">
-                      {expertise}
-                    </div>
-                    <div className="h-1 w-8 bg-gradient-to-r from-primary to-primary/50 rounded-full group-hover:w-12 transition-all duration-300"></div>
-                  </div>
-                  
-                  {/* Animated background element */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  {/* Floating dots animation */}
-                  <div className="absolute top-2 right-2 w-2 h-2 bg-primary/30 rounded-full group-hover:scale-150 group-hover:bg-primary/50 transition-all duration-300"></div>
-                </div>
-              ))}
+            {/* Floating Skills */}
+            <div className="flex flex-wrap gap-3">
+              <Badge variant="secondary" className="px-4 py-2 text-sm"><span className="text-shimmer">Business Analysis</span></Badge>
+              <Badge variant="outline" className="px-4 py-2 text-sm"><span className="text-shimmer">User Research</span></Badge>
+              <Badge variant="secondary" className="px-4 py-2 text-sm"><span className="text-shimmer">Process Optimization</span></Badge>
+              <Badge variant="outline" className="px-4 py-2 text-sm"><span className="text-shimmer">Product Management</span></Badge>
+              <Badge variant="secondary" className="px-4 py-2 text-sm"><span className="text-shimmer">Product Operations</span></Badge>
+              <Badge variant="outline" className="px-4 py-2 text-sm"><span className="text-shimmer">CX Strategy</span></Badge>
             </div>
             
             {/* Action Buttons */}
