@@ -48,12 +48,6 @@ const Contact = () => {
     value: "/in/chiaraadesaram",
     description: "Let's connect professionally",
     action: "https://linkedin.com/in/chiaraadesaram"
-  }, {
-    icon: Calendar,
-    title: "Schedule a Call",
-    value: "15-30 min chat",
-    description: "Book a discovery call",
-    action: "#"
   }];
   const services = ["Business Analysis & Requirements", "Customer Experience Strategy", "User Research & Insights", "Process Optimization", "Product Operations", "Digital Transformation"];
   return <section id="contact" className="py-20 section-gradient">
