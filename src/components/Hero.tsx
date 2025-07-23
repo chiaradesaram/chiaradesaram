@@ -27,16 +27,6 @@ const Hero = () => {
               </p>
             </div>
             
-            {/* Floating Skills */}
-            <div className="flex flex-wrap gap-3">
-              <Badge variant="secondary" className="px-4 py-2 text-sm"><span className="text-shimmer">Business Analysis</span></Badge>
-              <Badge variant="outline" className="px-4 py-2 text-sm"><span className="text-shimmer">User Research</span></Badge>
-              <Badge variant="secondary" className="px-4 py-2 text-sm"><span className="text-shimmer">Process Optimization</span></Badge>
-              <Badge variant="outline" className="px-4 py-2 text-sm"><span className="text-shimmer">Product Management</span></Badge>
-              <Badge variant="secondary" className="px-4 py-2 text-sm"><span className="text-shimmer">Product Operations</span></Badge>
-              <Badge variant="outline" className="px-4 py-2 text-sm"><span className="text-shimmer">Customer Experience</span></Badge>
-              <Badge variant="secondary" className="px-4 py-2 text-sm"><span className="text-shimmer">Business Transformation</span></Badge>
-            </div>
             
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
