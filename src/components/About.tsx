@@ -111,32 +111,29 @@ const About = () => {
             </div>
 
             {/* Values Section */}
-            <div className="space-y-8">
-              <h3 className="text-3xl font-bold flex items-center gap-3 animate-fade-in" style={{animationDelay: '300ms', animationFillMode: 'both'}}>
-                <div className="w-2 h-8 bg-gradient-to-b from-secondary to-primary rounded-full"></div>
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold flex items-center gap-3 animate-fade-in" style={{animationDelay: '300ms', animationFillMode: 'both'}}>
+                <div className="w-1.5 h-6 bg-gradient-to-b from-secondary to-primary rounded-full"></div>
                 Core Values
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {values.map((value, index) => (
                   <div 
                     key={index} 
-                    className="group relative p-4 rounded-xl bg-card/40 backdrop-blur-sm border border-border/30 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg animate-fade-in opacity-0"
+                    className="flex items-start gap-3 py-2 animate-fade-in opacity-0"
                     style={{
                       animationDelay: `${(index * 100) + 500}ms`,
                       animationFillMode: 'forwards'
                     }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="relative z-10 flex items-start gap-4">
-                      <div className="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
-                      <div>
-                        <span className="font-semibold text-foreground text-lg group-hover:text-primary transition-colors duration-300">
-                          {value.title}
-                        </span>
-                        <p className="text-muted-foreground mt-1 leading-relaxed">
-                          {value.description}
-                        </p>
-                      </div>
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <span className="font-medium text-foreground">
+                        {value.title}
+                      </span>
+                      <p className="text-sm text-muted-foreground mt-0.5 leading-relaxed">
+                        {value.description}
+                      </p>
                     </div>
                   </div>
                 ))}
