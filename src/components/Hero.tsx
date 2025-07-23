@@ -41,13 +41,6 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Left Content */}
           <div className="space-y-10 animate-fade-in">
-            {/* Status indicator */}
-            <div className="flex items-center gap-3 animate-fade-in" style={{animationDelay: '0.2s', animationFillMode: 'both'}}>
-              <div className="flex items-center gap-2 glass-card px-4 py-2 rounded-full">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-sm text-muted-foreground">Available for new opportunities</span>
-              </div>
-            </div>
 
             {/* Main heading */}
             <div className="space-y-6 animate-fade-in" style={{animationDelay: '0.4s', animationFillMode: 'both'}}>
