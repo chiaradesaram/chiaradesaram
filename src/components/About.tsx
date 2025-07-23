@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Zap, Target, Users } from "lucide-react";
-
 const About = () => {
   const stats = [{
     number: "8+",
@@ -16,7 +15,6 @@ const About = () => {
     label: "",
     subtitle: "Scale Range"
   }];
-
   const values = [{
     icon: Heart,
     title: "Customer-Centric",
@@ -38,100 +36,66 @@ const About = () => {
     title: "Growth-Minded",
     description: "Always learning and adapting to new challenges"
   }];
-
-  return (
-    <section id="about" className="py-24 bg-slate-50 relative">
-      <div className="container mx-auto px-6 relative z-10">
+  return <section id="about" className="py-20 bg-gray-900 text-white">
+      <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Clean, minimal header */}
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              About Me
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              About <span className="text-gradient">Me</span>
             </h2>
-            <div className="w-16 h-0.5 bg-slate-800 mx-auto"></div>
+            
           </div>
 
-          {/* Clean Stats Cards */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
-              <div 
-                key={index} 
-                className="bg-white rounded-xl p-8 text-center shadow-sm border border-slate-200/50 hover:shadow-md transition-shadow duration-300"
-              >
-                <div className="text-3xl font-bold text-slate-900 mb-2">
-                  {stat.number}
+          {/* Stats Cards */}
+          <div className="grid md:grid-cols-3 gap-4 mb-12 max-w-2xl mx-auto">
+            {stats.map((stat, index) => <div key={index} className="bg-white/5 backdrop-blur-md rounded-lg p-4 text-center border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="text-lg font-bold text-shimmer mb-1">{stat.number}</div>
+                <div className="text-gray-300 text-xs">
+                  {stat.label && <div>{stat.label}</div>}
+                  {stat.subtitle && <div className="text-gray-400">{stat.subtitle}</div>}
                 </div>
-                <div className="text-slate-600">
-                  {stat.label && <div className="font-medium text-slate-700">{stat.label}</div>}
-                  {stat.subtitle && <div className="text-sm text-slate-500">{stat.subtitle}</div>}
-                </div>
-              </div>
-            ))}
+              </div>)}
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Approach Section */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200/50">
-              <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-slate-900 flex items-center gap-3">
-                  <div className="w-1 h-8 bg-slate-800 rounded-full"></div>
-                  My Approach
-                </h3>
-                <div className="space-y-4 text-slate-700 leading-relaxed">
-                  <p className="text-lg">
-                    I bring a unique perspective to solving customer problems, shaped by a career spanning business, economics, and technology.
-                  </p>
-                  <p>
-                    My background in economics gave me an analytical mindset that peaked my love for data and insights, and constant experimentation. Running my family business taught me how decisions affect real operations, people, and outcomes.
-                  </p>
-                  <p>
-                    When I moved into tech, I immersed myself in a wide variety of industries and technology, feeding a deep curiosity and a habit of constant learning. Over eight years, from early‑stage ventures to global enterprises, I've seen that the best solutions come from understanding customer problems at their core and testing until we get them right.
-                  </p>
-                  <p>
-                    I blend business analysis, research, and process improvement to help teams create products that make a real impact.
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-3 pt-4">
-                  <Badge variant="secondary" className="px-4 py-2 bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200 transition-colors">
-                    Multiple Industries
-                  </Badge>
-                  <Badge variant="secondary" className="px-4 py-2 bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200 transition-colors">
-                    Startups → Fortune 500
-                  </Badge>
-                </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold">My Approach</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                With 8 years of experience spanning startups to Fortune 500 companies, 
+                I've learned that the best products come from deeply understanding customer needs 
+                and translating those insights into actionable strategies.
+              </p>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                I love all things product and act as a Swiss army knife for teams, 
+                bringing together business analysis, user research, and process optimization 
+                to help bring good products to life.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
+                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Startups → Fortune 500</Badge>
+                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
               </div>
             </div>
 
-            {/* Values Section */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200/50">
-              <h3 className="text-3xl font-bold text-slate-900 flex items-center gap-3 mb-8">
-                <div className="w-1 h-8 bg-slate-800 rounded-full"></div>
-                Core Values
-              </h3>
-              <div className="space-y-6">
-                {values.map((value, index) => (
-                  <div 
-                    key={index} 
-                    className="flex items-start gap-4 p-4 rounded-lg hover:bg-slate-50 transition-colors duration-200"
-                  >
-                    <div className="w-2 h-2 bg-slate-400 rounded-full mt-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="font-semibold text-slate-900 text-lg mb-1">
-                        {value.title}
-                      </h4>
-                      <p className="text-slate-600 leading-relaxed">
-                        {value.description}
-                      </p>
-                    </div>
+            <div className="space-y-6">
+              {values.map((value, index) => <div key={index} className="flex items-center gap-4 animate-fade-in opacity-0" style={{
+              animationDelay: `${index * 150}ms`,
+              animationFillMode: 'forwards'
+            }}>
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <value.icon className="h-5 w-5 text-orange-400" />
                   </div>
-                ))}
-              </div>
+                  <div>
+                    <span className="font-semibold text-white">{value.title}</span>
+                    
+                  </div>
+                </div>)}
             </div>
           </div>
+
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
