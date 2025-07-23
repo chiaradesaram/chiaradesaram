@@ -77,19 +77,21 @@ const About = () => {
               </div>
             </div>
 
-            <div className="space-y-6">
-              {values.map((value, index) => <div key={index} className="flex items-center gap-4 animate-fade-in opacity-0" style={{
-              animationDelay: `${index * 150}ms`,
-              animationFillMode: 'forwards'
-            }}>
-                  <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <value.icon className="h-5 w-5 text-orange-400" />
-                  </div>
-                  <div>
-                    <span className="font-semibold text-white">{value.title}</span>
-                    <span className="text-gray-300 ml-2">— {value.description}</span>
-                  </div>
-                </div>)}
+            <div className="space-y-4">
+              <ul className="space-y-3">
+                {values.map((value, index) => (
+                  <li key={index} className="flex items-start gap-3 animate-fade-in opacity-0" style={{
+                    animationDelay: `${index * 150}ms`,
+                    animationFillMode: 'forwards'
+                  }}>
+                    <span className="text-orange-400 mt-1">•</span>
+                    <div>
+                      <span className="font-semibold text-white">{value.title}</span>
+                      <span className="text-gray-300 ml-2">— {value.description}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
