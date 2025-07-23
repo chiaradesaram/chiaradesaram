@@ -36,7 +36,7 @@ const About = () => {
     title: "Growth-Minded",
     description: "Always learning and adapting to new challenges"
   }];
-  return <section id="about" className="py-20 bg-gray-900 text-white">
+  return <section id="about" className="py-20 bg-gray-50 text-gray-900">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -48,11 +48,11 @@ const About = () => {
 
           {/* Stats Cards */}
           <div className="grid md:grid-cols-3 gap-4 mb-12 max-w-2xl mx-auto">
-            {stats.map((stat, index) => <div key={index} className="bg-white/5 backdrop-blur-md rounded-lg p-4 text-center border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="text-lg font-bold text-shimmer mb-1">{stat.number}</div>
-                <div className="text-gray-300 text-xs">
+            {stats.map((stat, index) => <div key={index} className="bg-white backdrop-blur-md rounded-lg p-4 text-center border border-gray-200 hover:shadow-md transition-all duration-300">
+                <div className="text-lg font-bold text-primary mb-1">{stat.number}</div>
+                <div className="text-gray-600 text-xs">
                   {stat.label && <div>{stat.label}</div>}
-                  {stat.subtitle && <div className="text-gray-400">{stat.subtitle}</div>}
+                  {stat.subtitle && <div className="text-gray-500">{stat.subtitle}</div>}
                 </div>
               </div>)}
           </div>
@@ -60,20 +60,20 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold">My Approach</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 With 8 years of experience spanning startups to Fortune 500 companies, 
                 I've learned that the best products come from deeply understanding customer needs 
                 and translating those insights into actionable strategies.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 I love all things product and act as a Swiss army knife for teams, 
                 bringing together business analysis, user research, and process optimization 
                 to help bring good products to life.
               </p>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Startups → Fortune 500</Badge>
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
+                <Badge variant="secondary" className="px-3 py-1">Multiple Industries</Badge>
+                <Badge variant="secondary" className="px-3 py-1">Startups → Fortune 500</Badge>
+                <Badge variant="secondary" className="px-3 py-1">Cross-Functional</Badge>
               </div>
             </div>
 
@@ -86,7 +86,7 @@ const About = () => {
                     <value.icon className="h-5 w-5 text-orange-400" />
                   </div>
                   <div>
-                    <span className="font-semibold text-white">{value.title}</span>
+                    <span className="font-semibold text-gray-900">{value.title}</span>
                     
                   </div>
                 </div>)}
