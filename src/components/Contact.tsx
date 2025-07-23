@@ -83,7 +83,7 @@ const Contact = () => {
                             <method.icon className="h-5 w-5 text-primary" />
                           </div>
                           <div className="flex-1">
-                            <h4 className="font-medium">{method.title}</h4>
+                            
                             <p className="text-sm text-primary font-medium">{method.value}</p>
                             <p className="text-xs text-muted-foreground">{method.description}</p>
                           </div>
@@ -98,18 +98,7 @@ const Contact = () => {
 
               {/* Availability */}
               <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Calendar className="h-6 w-6 text-primary" />
-                  </div>
-                  <h4 className="font-semibold mb-2">Available for New Projects</h4>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Currently accepting new consulting engagements
-                  </p>
-                  <Badge className="bg-green-100 text-green-800 border-green-200">
-                    Available
-                  </Badge>
-                </CardContent>
+                
               </Card>
             </div>
           </div>
