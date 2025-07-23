@@ -38,38 +38,9 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6">
-        <div className="max-w-7xl mx-auto">
-          {/* Image positioned top right */}
-          <div className="flex justify-end mb-8 lg:mb-12">
-            <div className="relative animate-fade-in" style={{animationDelay: '0.2s', animationFillMode: 'both'}}>
-              <div className="relative w-64 h-80 lg:w-80 lg:h-96 overflow-hidden rounded-3xl">
-                {/* Glassmorphism frame */}
-                <div className="absolute inset-0 glass-card rounded-3xl z-10 pointer-events-none"></div>
-                
-                {/* Profile Photo */}
-                <img 
-                  src="/lovable-uploads/aefb496c-5639-4934-af77-54c04365a85c.png" 
-                  alt="Chiara de Saram - Product Strategy & Business Analysis Expert" 
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
-                  onError={(e) => {
-                    console.log('Image failed to load:', e.currentTarget.src);
-                    // Fallback to a placeholder or default image
-                    e.currentTarget.src = "/src/assets/profile-placeholder.jpg";
-                  }}
-                />
-                
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent"></div>
-              </div>
-              
-              {/* Floating accent elements */}
-              <div className="absolute -top-2 -right-2 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-glow-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-secondary/15 rounded-full blur-2xl animate-float" style={{animationDelay: '1s'}}></div>
-            </div>
-          </div>
-
-          {/* Main Content */}
-          <div className="max-w-4xl space-y-10 animate-fade-in">
+        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+          {/* Left Content */}
+          <div className="space-y-10 animate-fade-in">
             {/* Main heading */}
             <div className="space-y-6 animate-fade-in" style={{animationDelay: '0.4s', animationFillMode: 'both'}}>
               <div className="space-y-2">
@@ -84,7 +55,7 @@ const Hero = () => {
                 </h1>
               </div>
               
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
                 Insight‑driven and customer‑focused, blending 
                 <span className="text-primary font-medium"> product strategy</span>, 
                 <span className="text-primary font-medium"> business analysis</span>, and 
@@ -141,6 +112,35 @@ const Hero = () => {
                 <span className="text-sm">Scroll to explore</span>
                 <ArrowDown className="w-4 h-4 animate-bounce group-hover:text-primary" />
               </button>
+            </div>
+          </div>
+
+          {/* Right Content - Image */}
+          <div className="flex justify-center lg:justify-end relative animate-fade-in" style={{animationDelay: '0.2s', animationFillMode: 'both'}}>
+            <div className="relative">
+              <div className="relative w-80 h-96 lg:w-96 lg:h-[500px] overflow-hidden rounded-3xl">
+                {/* Glassmorphism frame */}
+                <div className="absolute inset-0 glass-card rounded-3xl z-10 pointer-events-none"></div>
+                
+                {/* Profile Photo */}
+                <img 
+                  src="/lovable-uploads/aefb496c-5639-4934-af77-54c04365a85c.png" 
+                  alt="Chiara de Saram - Product Strategy & Business Analysis Expert" 
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  onError={(e) => {
+                    console.log('Image failed to load:', e.currentTarget.src);
+                    // Fallback to a placeholder or default image
+                    e.currentTarget.src = "/src/assets/profile-placeholder.jpg";
+                  }}
+                />
+                
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent"></div>
+              </div>
+              
+              {/* Floating accent elements */}
+              <div className="absolute -top-2 -right-2 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-glow-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-secondary/15 rounded-full blur-2xl animate-float" style={{animationDelay: '1s'}}></div>
             </div>
           </div>
         </div>
