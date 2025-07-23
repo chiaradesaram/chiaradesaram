@@ -78,6 +78,7 @@ const About = () => {
             </div>
 
             <div className="space-y-6">
+              <h3 className="text-2xl font-semibold">Core Values</h3>
               {values.map((value, index) => <div key={index} className="flex items-center gap-4 animate-fade-in opacity-0" style={{
               animationDelay: `${index * 150}ms`,
               animationFillMode: 'forwards'
