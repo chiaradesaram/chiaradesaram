@@ -62,36 +62,7 @@ const Experience = () => {
 
           {/* Company Types */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {experiences.map((exp, index) => (
-              <Card key={index} className={`${exp.color} transition-all duration-300 hover:shadow-lg hover:scale-105`}>
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="p-3 bg-white rounded-lg shadow-sm">
-                      <exp.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">{exp.type}</h3>
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        {exp.companies.map((company, idx) => (
-                          <Badge key={idx} variant="secondary" className="text-xs">
-                            {company}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground mb-4">{exp.description}</p>
-                  <div className="space-y-2">
-                    {exp.highlights.map((highlight, idx) => (
-                      <div key={idx} className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        <span className="text-sm">{highlight}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {experiences.map((exp, index) => {})}
           </div>
 
           {/* Timeline & Industries */}
@@ -103,19 +74,15 @@ const Experience = () => {
                 Career Journey
               </h3>
               <div className="space-y-6">
-                {timeline.map((item, index) => (
-                  <div key={index} className="flex items-start gap-4">
+                {timeline.map((item, index) => <div key={index} className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-sm font-semibold text-primary">{item.year}</span>
                     </div>
                     <div className="pt-2">
                       <p className="font-medium">{item.milestone}</p>
-                      {item.subtitle && (
-                        <p className="text-sm text-muted-foreground mt-1">{item.subtitle}</p>
-                      )}
+                      {item.subtitle && <p className="text-sm text-muted-foreground mt-1">{item.subtitle}</p>}
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
@@ -131,12 +98,10 @@ const Experience = () => {
                   to every engagement.
                 </p>
                 <div className="grid grid-cols-2 gap-3">
-                  {industries.map((industry, index) => (
-                    <div key={index} className="flex items-center gap-2">
+                  {industries.map((industry, index) => <div key={index} className="flex items-center gap-2">
                       <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
                       <span className="text-sm">{industry}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </div>
