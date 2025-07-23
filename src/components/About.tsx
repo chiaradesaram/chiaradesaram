@@ -61,14 +61,16 @@ const About = () => {
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold">My Approach</h3>
               <p className="text-lg text-gray-300 leading-relaxed">
-                With 8 years of experience spanning startups to Fortune 500 companies, 
-                I've learned that the best products come from deeply understanding customer needs 
-                and translating those insights into actionable strategies.
+                I bring a unique perspective to solving customer problems, shaped by a career spanning business, economics, and technology.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                I love all things product and act as a Swiss army knife for teams, 
-                bringing together business analysis, user research, and process optimization 
-                to help bring good products to life.
+                My background in economics gave me an analytical mindset that peaked my love for data and insights, and constant experimentation. Running my family business taught me how decisions affect real operations, people, and outcomes.
+              </p>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                When I moved into tech, I immersed myself in a wide variety of industries and technology, feeding a deep curiosity and a habit of constant learning. Over eight years, from early‑stage ventures to global enterprises, I've seen that the best solutions come from understanding customer problems at their core and testing until we get them right.
+              </p>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                I blend business analysis, research, and process improvement to help teams create products that make a real impact.
               </p>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
