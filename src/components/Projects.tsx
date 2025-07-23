@@ -7,7 +7,7 @@ const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const categories = ["All", "CX Strategy", "Business Analysis", "User Research", "Process Optimization"];
   const projects = [{
-    title: "Digital Transformation for Fortune 500 Retailer",
+    title: "CX Transformation for a Leading Compliance & Legal Services Firm",
     category: "CX Strategy",
     description: "Led end-to-end customer journey redesign resulting in 40% improvement in customer satisfaction and 25% increase in conversion rates.",
     impact: "40% ↑ Customer Satisfaction",
@@ -77,7 +77,16 @@ const Projects = () => {
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-2 mb-12">
-            {categories.map(category => {})}
+            {categories.map(category => (
+              <Button
+                key={category}
+                variant={selectedCategory === category ? "default" : "outline"}
+                onClick={() => setSelectedCategory(category)}
+                className="text-sm"
+              >
+                {category}
+              </Button>
+            ))}
           </div>
 
           {/* Projects Grid */}
