@@ -147,18 +147,34 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent"></div>
               </div>
               
-              {/* Floating accent elements with coral theme */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/25 rounded-full blur-xl animate-glow-pulse"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary/20 rounded-full blur-2xl animate-float" style={{animationDelay: '1s'}}></div>
-              <div className="absolute top-1/2 -right-8 w-16 h-16 bg-primary/15 rounded-full blur-lg animate-float" style={{animationDelay: '2.5s'}}></div>
+              {/* Floating accent elements - repositioned for better visibility */}
+              <div className="absolute -top-2 -right-2 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-glow-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-secondary/15 rounded-full blur-2xl animate-float" style={{animationDelay: '1s'}}></div>
               
-              {/* Achievement badge */}
-              <div className="absolute top-6 -left-6 glass-card px-4 py-2 rounded-xl animate-float" style={{animationDelay: '3s'}}>
+              {/* Stats badges - positioned for visibility */}
+              <div className="absolute -top-4 -left-4 glass-card px-3 py-2 rounded-lg animate-fade-in" style={{animationDelay: '1.5s', animationFillMode: 'both'}}>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm font-medium text-foreground">8+ Years</span>
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                  <span className="text-xs font-medium text-foreground">8+ Years</span>
                 </div>
                 <p className="text-xs text-muted-foreground">Experience</p>
+              </div>
+              
+              {/* Client engagement badge */}
+              <div className="absolute -bottom-4 -right-4 glass-card px-3 py-2 rounded-lg animate-fade-in" style={{animationDelay: '2s', animationFillMode: 'both'}}>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
+                  <span className="text-xs font-medium text-foreground">7+ Clients</span>
+                </div>
+                <p className="text-xs text-muted-foreground">Served</p>
+              </div>
+              
+              {/* Industry range badge */}
+              <div className="absolute top-1/2 -right-6 glass-card px-3 py-2 rounded-lg animate-fade-in" style={{animationDelay: '2.5s', animationFillMode: 'both'}}>
+                <div className="text-center">
+                  <div className="text-xs font-medium text-foreground">Startups to</div>
+                  <div className="text-xs font-medium text-primary">Fortune 500</div>
+                </div>
               </div>
             </div>
           </div>
