@@ -2,24 +2,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Zap, Target, Users } from "lucide-react";
 const About = () => {
-  const stats = [
-    {
-      number: "8+",
-      label: "Years",
-      subtitle: "Experience"
-    },
-    {
-      number: "7",
-      label: "Client",
-      subtitle: "Engagements"
-    },
-    {
-      number: "Startups to Fortune 500",
-      label: "",
-      subtitle: "Scale Range"
-    }
-  ];
-
+  const stats = [{
+    number: "8+",
+    label: "Years",
+    subtitle: "Experience"
+  }, {
+    number: "7",
+    label: "Client",
+    subtitle: "Engagements"
+  }, {
+    number: "Startups to Fortune 500",
+    label: "",
+    subtitle: "Scale Range"
+  }];
   const values = [{
     icon: Heart,
     title: "Customer-Centric",
@@ -53,15 +48,13 @@ const About = () => {
 
           {/* Stats Cards */}
           <div className="grid md:grid-cols-3 gap-4 mb-12 max-w-2xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-md rounded-lg p-4 text-center border border-white/10 hover:bg-white/10 transition-all duration-300">
+            {stats.map((stat, index) => <div key={index} className="bg-white/5 backdrop-blur-md rounded-lg p-4 text-center border border-white/10 hover:bg-white/10 transition-all duration-300">
                 <div className="text-lg font-bold text-shimmer mb-1">{stat.number}</div>
                 <div className="text-gray-300 text-xs">
                   {stat.label && <div>{stat.label}</div>}
                   {stat.subtitle && <div className="text-gray-400">{stat.subtitle}</div>}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -80,16 +73,15 @@ const About = () => {
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
                 <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Startups → Fortune 500</Badge>
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
+                
               </div>
             </div>
 
             <div className="space-y-6">
-              {values.map((value, index) => (
-                <div key={index} className="flex items-center gap-4 animate-fade-in opacity-0" style={{
-                  animationDelay: `${index * 150}ms`,
-                  animationFillMode: 'forwards'
-                }}>
+              {values.map((value, index) => <div key={index} className="flex items-center gap-4 animate-fade-in opacity-0" style={{
+              animationDelay: `${index * 150}ms`,
+              animationFillMode: 'forwards'
+            }}>
                   <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <value.icon className="h-5 w-5 text-orange-400" />
                   </div>
@@ -97,8 +89,7 @@ const About = () => {
                     <span className="font-semibold text-white">{value.title}</span>
                     <span className="text-gray-300 ml-2">— {value.description}</span>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
 
