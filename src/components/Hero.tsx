@@ -14,7 +14,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen overflow-hidden pt-32 pb-20">
+    <section className="relative min-h-screen overflow-hidden pt-32 pb-20 flex items-center">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Main background gradient */}
@@ -37,8 +37,8 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+      <div className="relative z-10 container mx-auto px-6 w-full">
+        <div className="grid lg:grid-cols-2 gap-16 items-start max-w-7xl mx-auto">
           {/* Left Content */}
           <div className="space-y-10 animate-fade-in">
             {/* Main heading */}
@@ -115,7 +115,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Image */}
+          {/* Right Content - Image aligned with content */}
           <div className="flex justify-center lg:justify-end relative animate-fade-in" style={{animationDelay: '0.2s', animationFillMode: 'both'}}>
             <div className="relative">
               <div className="relative w-80 h-96 lg:w-96 lg:h-[500px] overflow-hidden rounded-3xl">
