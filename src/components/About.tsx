@@ -87,7 +87,7 @@ const About = () => {
                   </div>
                   <div>
                     <span className="font-semibold text-gray-900">{value.title}</span>
-                    
+                    <p className="text-sm text-gray-600 mt-1">{value.description}</p>
                   </div>
                 </div>)}
             </div>
