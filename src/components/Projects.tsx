@@ -5,61 +5,56 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, TrendingUp, Users, Zap, Target, BarChart3, Search } from "lucide-react";
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const categories = ["All", "CX Strategy", "Business Analysis", "User Research", "Process Optimization"];
+  const categories = ["All", "CX Strategy", "Business Analysis", "Discovery", "Process Redesign", "Customer Experience"];
   const projects = [{
-    title: "CX Transformation for a Leading Compliance & Legal Services Firm",
+    title: "CX Transformation for a Leading US Compliance & Legal Services Firm",
     category: "CX Strategy",
-    description: "Led end-to-end customer journey redesign resulting in 40% improvement in customer satisfaction and 25% increase in conversion rates.",
-    impact: "40% ↑ Customer Satisfaction",
-    duration: "6 months",
-    tools: ["Journey Mapping", "CX Analytics", "Stakeholder Workshops"],
+    description: "Partnered on a multi‑year transformation program within CX and Product Ops, taking customer experiences from early discovery through design, build, and continuous experimentation. Delivered new journeys, processes, and tools that improved experiences for thousands of customers.",
+    tools: ["Journey Mapping", "Service Blueprinting", "CX Analysis", "Experimentation", "KPI/Metrics Design", "User Research", "Workshops", "Product Analytics", "Jobs to Be Done"],
     icon: TrendingUp,
     color: "bg-blue-50 text-blue-600"
   }, {
-    title: "Product Requirements Optimization",
+    title: "Digital Customer Self‑Service Portal for a Leading UK Telecommunications Company",
     category: "Business Analysis",
-    description: "Streamlined product development process for fintech startup, reducing time-to-market by 50% while improving feature adoption.",
-    impact: "50% ↓ Time-to-Market",
-    duration: "4 months",
-    tools: ["Requirements Analysis", "Process Modeling", "Agile Methodologies"],
+    description: "Served as the business analyst from discovery through build of a new self‑service portal—defining MVP scope, shaping critical user journeys, and aligning cross‑functional teams to deliver at scale.",
+    tools: ["Journey Mapping", "Stakeholder Interviews", "Requirements Elicitation", "User Story Writing", "Prioritization", "Backlog Grooming", "Agile Ceremonies"],
     icon: BarChart3,
     color: "bg-green-50 text-green-600"
   }, {
-    title: "User Research Framework Implementation",
-    category: "User Research",
-    description: "Established comprehensive user research practice for healthcare platform, informing product decisions with actionable insights.",
-    impact: "200% ↑ User Engagement",
-    duration: "8 months",
-    tools: ["User Interviews", "Usability Testing", "Research Repository"],
+    title: "Field Engineer Process Analysis for a UK Telecommunications Company",
+    category: "Discovery",
+    description: "Led a discovery initiative to uncover root causes of pain points and inefficiencies in field engineer workflows, proposing process improvements and new technology opportunities.",
+    tools: ["Journey Mapping", "User Research", "Process Mapping", "Process Redesign"],
     icon: Search,
     color: "bg-purple-50 text-purple-600"
   }, {
-    title: "Operational Excellence Initiative",
-    category: "Process Optimization",
-    description: "Redesigned core business processes for manufacturing company, achieving 35% efficiency gains and cost reduction.",
-    impact: "35% ↑ Efficiency",
-    duration: "5 months",
-    tools: ["Process Mining", "Lean Methodology", "Change Management"],
-    icon: Zap,
+    title: "Fibre Build Process Efficiency Program for a UK Telecommunications Company",
+    category: "Discovery",
+    description: "Conducted in‑depth analysis of fibre line build processes to pinpoint inefficiencies and recommend process changes and technology enhancements to boost delivery speed and effectiveness.",
+    tools: ["Journey Mapping", "User Research", "Process Mapping", "Process Redesign"],
+    icon: Search,
     color: "bg-orange-50 text-orange-600"
   }, {
-    title: "Cross-Platform Analytics Integration",
-    category: "Business Analysis",
-    description: "Unified data analytics across multiple touchpoints for e-commerce platform, enabling data-driven decision making.",
-    impact: "Unified Analytics View",
-    duration: "3 months",
-    tools: ["Data Analysis", "System Integration", "Dashboard Design"],
-    icon: BarChart3,
+    title: "Finance Workflow Redesign for a Fortune 500 FMCG Company",
+    category: "Process Redesign",
+    description: "Facilitated workshops and analysis sessions to map current finance processes, identify bottlenecks, and implement technology‑enabled improvements for greater efficiency and alignment.",
+    tools: ["Process Mapping", "Stakeholder Interviews", "Workshops", "Opportunity Analysis"],
+    icon: Zap,
     color: "bg-indigo-50 text-indigo-600"
   }, {
-    title: "Customer Experience Measurement Program",
-    category: "CX Strategy",
-    description: "Developed comprehensive CX metrics and monitoring system for SaaS company, tracking customer satisfaction in real-time.",
-    impact: "Real-time CX Insights",
-    duration: "4 months",
-    tools: ["CX Metrics", "Survey Design", "Reporting Dashboards"],
-    icon: Users,
+    title: "Digital Customer Self‑Service Portal for a Leading Sri Lankan Telecommunications Company",
+    category: "Business Analysis",
+    description: "Was in a team of business analysts defining MVP scope, refining requirements, and ensuring cross‑team alignment to create a customer portal.",
+    tools: ["Requirements Elicitation", "User Story Writing", "Prioritization", "Backlog Refinement", "Agile Ceremonies"],
+    icon: BarChart3,
     color: "bg-teal-50 text-teal-600"
+  }, {
+    title: "Fintech App Development for a Santander‑Backed Startup",
+    category: "Customer Experience",
+    description: "Supported the creation of a money‑management app for SMEs, leading credit risk testing, defining operational procedures, gathering CRM and notification requirements, and testing prototypes for invoice financing features.",
+    tools: ["Requirements Elicitation", "Credit Risk Testing", "Pricing Analysis", "Market Research", "Process Design"],
+    icon: Users,
+    color: "bg-pink-50 text-pink-600"
   }];
   const filteredProjects = selectedCategory === "All" ? projects : projects.filter(project => project.category === selectedCategory);
   return <section id="projects" className="py-20 section-gradient">
@@ -100,9 +95,6 @@ const Projects = () => {
                     <Badge variant="secondary" className="text-xs">
                       {project.category}
                     </Badge>
-                    <span className="text-xs text-muted-foreground">
-                      {project.duration}
-                    </span>
                   </div>
                   <CardTitle className="text-lg leading-tight">
                     {project.title}
@@ -114,12 +106,6 @@ const Projects = () => {
                       {project.description}
                     </p>
                     
-                    <div className="bg-primary/5 rounded-lg p-3">
-                      <div className="flex items-center gap-2">
-                        
-                        
-                      </div>
-                    </div>
 
                     <div className="space-y-2">
                       <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
