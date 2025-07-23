@@ -62,32 +62,7 @@ const Experience = () => {
 
           {/* Company Types */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {experiences.map((exp, index) => (
-              <Card key={index} className={`${exp.color} border-2 card-hover`}>
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                      <exp.icon className="h-5 w-5 text-primary" />
-                    </div>
-                    <h3 className="text-lg font-semibold">{exp.type}</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4">{exp.description}</p>
-                  <div className="space-y-2">
-                    <div className="flex flex-wrap gap-2">
-                      {exp.highlights.map((highlight, idx) => (
-                        <Badge key={idx} variant="secondary" className="text-xs">
-                          {highlight}
-                        </Badge>
-                      ))}
-                    </div>
-                    <div className="mt-3">
-                      <p className="text-xs font-medium text-muted-foreground mb-1">Companies:</p>
-                      <p className="text-sm">{exp.companies.join(" • ")}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {experiences.map((exp, index) => {})}
           </div>
 
           {/* Timeline & Industries */}
