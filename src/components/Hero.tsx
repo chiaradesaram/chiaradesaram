@@ -20,10 +20,11 @@ const Hero = () => {
         {/* Main background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-muted/30"></div>
         
-        {/* Floating orbs */}
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-secondary/10 rounded-full blur-2xl animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-primary/5 rounded-full blur-xl animate-glow-pulse"></div>
+        {/* Floating orbs with coral/pink theme */}
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/15 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-secondary/12 rounded-full blur-2xl animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-primary/8 rounded-full blur-xl animate-glow-pulse"></div>
+        <div className="absolute top-3/4 right-1/3 w-20 h-20 bg-secondary/10 rounded-full blur-lg animate-float" style={{animationDelay: '4s'}}></div>
         
         {/* Grid pattern overlay */}
         <div 
@@ -42,7 +43,7 @@ const Hero = () => {
           <div className="space-y-10 animate-fade-in">
             {/* Status indicator */}
             <div className="flex items-center gap-3 animate-fade-in" style={{animationDelay: '0.2s', animationFillMode: 'both'}}>
-              <div className="flex items-center gap-2 glass px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 glass-card px-4 py-2 rounded-full">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-sm text-muted-foreground">Available for new opportunities</span>
               </div>
@@ -135,15 +136,21 @@ const Hero = () => {
                   src="/lovable-uploads/aefb496c-5639-4934-af77-54c04365a85c.png" 
                   alt="Chiara de Saram - Product Strategy & Business Analysis Expert" 
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  onError={(e) => {
+                    console.log('Image failed to load:', e.currentTarget.src);
+                    // Fallback to a placeholder or default image
+                    e.currentTarget.src = "/src/assets/profile-placeholder.jpg";
+                  }}
                 />
                 
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent"></div>
               </div>
               
-              {/* Floating accent elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-xl animate-glow-pulse"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary/15 rounded-full blur-2xl animate-float" style={{animationDelay: '1s'}}></div>
+              {/* Floating accent elements with coral theme */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/25 rounded-full blur-xl animate-glow-pulse"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary/20 rounded-full blur-2xl animate-float" style={{animationDelay: '1s'}}></div>
+              <div className="absolute top-1/2 -right-8 w-16 h-16 bg-primary/15 rounded-full blur-lg animate-float" style={{animationDelay: '2.5s'}}></div>
               
               {/* Achievement badge */}
               <div className="absolute top-6 -left-6 glass-card px-4 py-2 rounded-xl animate-float" style={{animationDelay: '3s'}}>
