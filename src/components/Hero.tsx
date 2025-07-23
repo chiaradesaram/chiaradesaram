@@ -79,13 +79,13 @@ const Hero = () => {
                   <Badge 
                     key={skill}
                     variant={index % 2 === 0 ? "secondary" : "outline"} 
-                    className="glass-card px-4 py-2 text-sm hover:scale-105 transition-transform duration-300 animate-fade-in opacity-0"
+                    className="px-4 py-2 text-sm bg-muted/30 border-border/50 hover:bg-muted/40 transition-colors duration-300 animate-fade-in opacity-0"
                     style={{
                       animationDelay: `${0.8 + (index * 0.1)}s`,
                       animationFillMode: 'forwards'
                     }}
                   >
-                    <span className="text-shimmer">{skill}</span>
+                    {skill}
                   </Badge>
                 ))}
               </div>
