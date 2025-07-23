@@ -77,10 +77,22 @@ const About = () => {
                 bringing together business analysis, user research, and process optimization 
                 to help bring good products to life.
               </p>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Startups → Fortune 500</Badge>
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
+              {/* Skills & Expertise */}
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-white">Core Skills</h4>
+                <div className="flex flex-wrap gap-3">
+                  <Badge variant="secondary" className="px-4 py-2 text-sm bg-gray-700 text-gray-200 border-gray-600"><span className="text-shimmer">Business Analysis</span></Badge>
+                  <Badge variant="outline" className="px-4 py-2 text-sm border-gray-600 text-gray-300 hover:bg-gray-700"><span className="text-shimmer">User Research</span></Badge>
+                  <Badge variant="secondary" className="px-4 py-2 text-sm bg-gray-700 text-gray-200 border-gray-600"><span className="text-shimmer">Process Optimization</span></Badge>
+                  <Badge variant="outline" className="px-4 py-2 text-sm border-gray-600 text-gray-300 hover:bg-gray-700"><span className="text-shimmer">Product Management</span></Badge>
+                  <Badge variant="secondary" className="px-4 py-2 text-sm bg-gray-700 text-gray-200 border-gray-600"><span className="text-shimmer">Product Operations</span></Badge>
+                  <Badge variant="outline" className="px-4 py-2 text-sm border-gray-600 text-gray-300 hover:bg-gray-700"><span className="text-shimmer">CX Strategy</span></Badge>
+                </div>
+                
+                <div className="flex flex-wrap gap-2 pt-2">
+                  <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
+                  <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Startups → Fortune 500</Badge>
+                </div>
               </div>
             </div>
 
