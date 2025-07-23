@@ -36,64 +36,111 @@ const About = () => {
     title: "Growth-Minded",
     description: "Always learning and adapting to new challenges"
   }];
-  return <section id="about" className="py-20 bg-gray-900 text-white">
-      <div className="container mx-auto px-6">
+  return <section id="about" className="py-20 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-1/2 -left-1/2 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              About <span className="text-gradient">Me</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
+              About <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Me</span>
             </h2>
-            
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
           </div>
 
-          {/* Stats Cards */}
-          <div className="grid md:grid-cols-3 gap-4 mb-12 max-w-2xl mx-auto">
-            {stats.map((stat, index) => <div key={index} className="bg-white/5 backdrop-blur-md rounded-lg p-4 text-center border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="text-lg font-bold text-shimmer mb-1">{stat.number}</div>
-                <div className="text-gray-300 text-xs">
-                  {stat.label && <div>{stat.label}</div>}
-                  {stat.subtitle && <div className="text-gray-400">{stat.subtitle}</div>}
+          {/* Animated Stats Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
+            {stats.map((stat, index) => (
+              <div 
+                key={index} 
+                className="group relative bg-card/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-border/50 hover:border-primary/30 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-primary/10 animate-fade-in"
+                style={{
+                  animationDelay: `${index * 200}ms`,
+                  animationFillMode: 'both'
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="text-3xl font-bold text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                    {stat.number}
+                  </div>
+                  <div className="text-muted-foreground text-sm">
+                    {stat.label && <div className="font-medium">{stat.label}</div>}
+                    {stat.subtitle && <div className="text-xs opacity-80">{stat.subtitle}</div>}
+                  </div>
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold">My Approach</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                I bring a unique perspective to solving customer problems, shaped by a career spanning business, economics, and technology.
-              </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                My background in economics gave me an analytical mindset that peaked my love for data and insights, and constant experimentation. Running my family business taught me how decisions affect real operations, people, and outcomes.
-              </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                When I moved into tech, I immersed myself in a wide variety of industries and technology, feeding a deep curiosity and a habit of constant learning. Over eight years, from early‑stage ventures to global enterprises, I've seen that the best solutions come from understanding customer problems at their core and testing until we get them right.
-              </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                I blend business analysis, research, and process improvement to help teams create products that make a real impact.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Multiple Industries</Badge>
-                <Badge variant="secondary" className="px-3 py-1 bg-gray-700 text-gray-200 border-gray-600">Startups → Fortune 500</Badge>
-                
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            {/* Approach Section */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h3 className="text-3xl font-bold flex items-center gap-3 animate-fade-in">
+                  <div className="w-2 h-8 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+                  My Approach
+                </h3>
+                <div className="space-y-6 text-muted-foreground leading-relaxed animate-fade-in" style={{animationDelay: '200ms', animationFillMode: 'both'}}>
+                  <p className="text-lg">
+                    I bring a unique perspective to solving customer problems, shaped by a career spanning business, economics, and technology.
+                  </p>
+                  <p>
+                    My background in economics gave me an analytical mindset that peaked my love for data and insights, and constant experimentation. Running my family business taught me how decisions affect real operations, people, and outcomes.
+                  </p>
+                  <p>
+                    When I moved into tech, I immersed myself in a wide variety of industries and technology, feeding a deep curiosity and a habit of constant learning. Over eight years, from early‑stage ventures to global enterprises, I've seen that the best solutions come from understanding customer problems at their core and testing until we get them right.
+                  </p>
+                  <p>
+                    I blend business analysis, research, and process improvement to help teams create products that make a real impact.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3 animate-fade-in" style={{animationDelay: '400ms', animationFillMode: 'both'}}>
+                  <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">
+                    Multiple Industries
+                  </Badge>
+                  <Badge variant="secondary" className="px-4 py-2 bg-secondary/10 text-secondary border-secondary/20 hover:bg-secondary/20 transition-colors">
+                    Startups → Fortune 500
+                  </Badge>
+                </div>
               </div>
             </div>
 
-            <div className="space-y-4">
-              <ul className="space-y-3">
+            {/* Values Section */}
+            <div className="space-y-8">
+              <h3 className="text-3xl font-bold flex items-center gap-3 animate-fade-in" style={{animationDelay: '300ms', animationFillMode: 'both'}}>
+                <div className="w-2 h-8 bg-gradient-to-b from-secondary to-primary rounded-full"></div>
+                Core Values
+              </h3>
+              <div className="space-y-4">
                 {values.map((value, index) => (
-                  <li key={index} className="flex items-start gap-3 animate-fade-in opacity-0" style={{
-                    animationDelay: `${index * 150}ms`,
-                    animationFillMode: 'forwards'
-                  }}>
-                    <span className="text-orange-400 mt-1">•</span>
-                    <div>
-                      <span className="font-semibold text-white">{value.title}</span>
-                      <span className="text-gray-300 ml-2">— {value.description}</span>
+                  <div 
+                    key={index} 
+                    className="group relative p-4 rounded-xl bg-card/40 backdrop-blur-sm border border-border/30 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg animate-fade-in opacity-0"
+                    style={{
+                      animationDelay: `${(index * 100) + 500}ms`,
+                      animationFillMode: 'forwards'
+                    }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative z-10 flex items-start gap-4">
+                      <div className="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
+                      <div>
+                        <span className="font-semibold text-foreground text-lg group-hover:text-primary transition-colors duration-300">
+                          {value.title}
+                        </span>
+                        <p className="text-muted-foreground mt-1 leading-relaxed">
+                          {value.description}
+                        </p>
+                      </div>
                     </div>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
 
