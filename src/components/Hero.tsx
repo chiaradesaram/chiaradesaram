@@ -78,8 +78,8 @@ const Hero = () => {
                 {skills.map((skill, index) => (
                   <Badge 
                     key={skill}
-                    variant={index % 2 === 0 ? "secondary" : "outline"} 
-                    className="px-4 py-2 text-sm bg-muted/30 border-border/50 hover:bg-muted/40 transition-colors duration-300 animate-fade-in opacity-0"
+                    variant="secondary"
+                    className="px-4 py-2 text-sm bg-slate-700/80 text-slate-200 border border-slate-600/50 hover:bg-slate-600/80 hover:border-slate-500/60 transition-all duration-300 animate-fade-in opacity-0 backdrop-blur-sm"
                     style={{
                       animationDelay: `${0.8 + (index * 0.1)}s`,
                       animationFillMode: 'forwards'
