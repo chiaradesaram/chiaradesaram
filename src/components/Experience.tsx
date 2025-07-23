@@ -62,34 +62,7 @@ const Experience = () => {
 
           {/* Company Types */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {experiences.map((exp, index) => (
-              <Card key={index} className={`p-6 hover:shadow-lg transition-all duration-300 ${exp.color}`}>
-                <CardContent className="p-0">
-                  <div className="flex items-center gap-3 mb-4">
-                    <exp.icon className="h-8 w-8 text-primary" />
-                    <h3 className="text-xl font-semibold">{exp.type}</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm mb-4">{exp.description}</p>
-                  <div className="space-y-2">
-                    <div className="flex flex-wrap gap-1">
-                      {exp.companies.map((company, i) => (
-                        <Badge key={i} variant="outline" className="text-xs">
-                          {company}
-                        </Badge>
-                      ))}
-                    </div>
-                    <div className="space-y-1">
-                      {exp.highlights.map((highlight, i) => (
-                        <div key={i} className="flex items-center gap-2 text-xs text-muted-foreground">
-                          <div className="w-1 h-1 bg-primary rounded-full"></div>
-                          {highlight}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {experiences.map((exp, index) => {})}
           </div>
 
           {/* Timeline & Industries */}
@@ -101,19 +74,15 @@ const Experience = () => {
                 Career Journey
               </h3>
               <div className="space-y-6">
-                {timeline.map((item, index) => (
-                  <div key={index} className="flex items-start gap-4">
+                {timeline.map((item, index) => <div key={index} className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-sm font-semibold text-primary">{item.year}</span>
                     </div>
                     <div className="flex-1">
                       <h4 className="font-semibold text-foreground">{item.milestone}</h4>
-                      {item.subtitle && (
-                        <p className="text-sm text-muted-foreground mt-1">{item.subtitle}</p>
-                      )}
+                      {item.subtitle && <p className="text-sm text-muted-foreground mt-1">{item.subtitle}</p>}
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
@@ -129,36 +98,17 @@ const Experience = () => {
                   to every engagement.
                 </p>
                 <div className="grid grid-cols-2 gap-3">
-                  {industries.map((industry, index) => (
-                    <div key={index} className="flex items-center gap-2">
+                  {industries.map((industry, index) => <div key={index} className="flex items-center gap-2">
                       <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
                       <span className="text-sm">{industry}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </div>
           </div>
 
           {/* Call to Action */}
-          <div className="mt-16 bg-primary/5 rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-semibold mb-4">Ready to Add Value to Your Team?</h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Whether you're a startup finding your product-market fit or an enterprise 
-              optimizing at scale, I bring the right experience for your stage and challenges.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Badge variant="secondary" className="px-4 py-2 text-sm">
-                Quick to onboard
-              </Badge>
-              <Badge variant="secondary" className="px-4 py-2 text-sm">
-                Cross-functional collaboration
-              </Badge>
-              <Badge variant="secondary" className="px-4 py-2 text-sm">
-                Immediate impact
-              </Badge>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>;
