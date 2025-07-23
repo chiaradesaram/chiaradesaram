@@ -71,9 +71,9 @@ const About = () => {
                 to help bring good products to life.
               </p>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary" className="px-3 py-1">Multiple Industries</Badge>
-                <Badge variant="secondary" className="px-3 py-1">Startups → Fortune 500</Badge>
-                <Badge variant="secondary" className="px-3 py-1">Cross-Functional</Badge>
+                
+                
+                
               </div>
             </div>
 
