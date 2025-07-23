@@ -61,14 +61,19 @@ const About = () => {
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold">My Approach</h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                With 8 years of experience spanning startups to Fortune 500 companies, 
-                I've learned that the best products come from deeply understanding customer needs 
-                and translating those insights into actionable strategies.
+                I bring a unique perspective to solving customer problems, shaped by a career spanning business, economics, and technology.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                I love all things product and act as a Swiss army knife for teams, 
-                bringing together business analysis, user research, and process optimization 
-                to help bring good products to life.
+                My background in economics and banking sharpened my analytical thinking and sparked a lasting interest in data, insights, and experimentation. Running my family business taught me how decisions play out in real operations, affecting people and outcomes.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Moving into tech, I've worked across a wide range of industries and tools, driven by curiosity and a constant appetite to learn.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Over eight years—across startups and global enterprises—I've seen that the best solutions come from understanding customer problems at their root and refining until they truly work.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                I blend business analysis, research, and process improvement to help teams create products that make a real impact.
               </p>
               <div className="flex flex-wrap gap-2">
                 
