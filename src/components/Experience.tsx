@@ -78,10 +78,7 @@ const Experience = () => {
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-sm font-semibold text-primary">{item.year}</span>
                     </div>
-                    <div className="pt-2">
-                      <p className="font-medium">{item.milestone}</p>
-                      {item.subtitle && <p className="text-sm text-muted-foreground mt-1">{item.subtitle}</p>}
-                    </div>
+                    
                   </div>)}
               </div>
             </div>
