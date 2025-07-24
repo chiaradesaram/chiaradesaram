@@ -23,29 +23,33 @@ const Experience = () => {
   }];
   const industries = ["Fintech", "Legal", "Compliance", "FMCG", "Telecommunications"];
   const timeline = [{
-    year: "2016",
-    milestone: "Started as an Economic Analyst in Private Equity",
-    subtitle: "building strong analytical foundations"
+    year: "Education",
+    milestone: "MSc Banking and Finance, King's College London",
+    subtitle: "BCs Economics and Finance, Queen Mary University of London"
   }, {
-    year: "2018",
-    milestone: "Moved into Fintech",
-    subtitle: "gaining experience in fast‑paced product environments"
+    year: "2024-2025",
+    milestone: "Business Consultant, CT Corporation",
+    subtitle: "Led CX initiatives and partnered with product teams to drive innovation and customer‑centric solutions"
   }, {
-    year: "2019",
-    milestone: "Pivoted to Tech and Business Analysis",
-    subtitle: "translating needs into actionable solutions"
+    year: "2019-2023",
+    milestone: "Business Consultant, Virtusa",
+    subtitle: "Business analysis and transformation initiatives for clients from Medium to Fortune 500 companies"
   }, {
-    year: "2020",
-    milestone: "Drove Product Development and Discovery initiatives",
-    subtitle: ""
+    year: "2018-2019",
+    milestone: "Technology Intern, Asto Digital (Santander UK)",
+    subtitle: "Supported building a banking app for SMEs that provided money management tools"
   }, {
-    year: "2021",
-    milestone: "Expanded into CX Strategy and User Research",
-    subtitle: ""
+    year: "2016-2017",
+    milestone: "Private Equity Economic Analyst, Asia Capital PLC",
+    subtitle: "Built econometric models and provided strategic insights to international investors"
   }, {
-    year: "2024",
-    milestone: "Added Product Operations knowledge",
-    subtitle: "while helping set up and shape that stream"
+    year: "2016-Present",
+    milestone: "Director, Lakpahana Handicrafts",
+    subtitle: "Support Sri Lankan craftsmen through strategy, operations, and marketing in our family business"
+  }, {
+    year: "2012-2015",
+    milestone: "Professional Foundation Years",
+    subtitle: "Gained diverse expertise through internships in corporate law (DL & F de Saram Attorneys at Law), financial auditing (Ernst & Young), and equity markets (NDB Securities)"
   }];
   return <section id="experience" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
