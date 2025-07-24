@@ -113,9 +113,7 @@ const Projects = () => {
                       </div>
                     </div>
 
-                    <Button variant="ghost" size="sm" className="w-full bg-slate-700/30 text-slate-300 border border-slate-600/30 hover:bg-slate-700/50 hover:text-slate-200 transition-all duration-200">
-                      Learn More <ExternalLink className="ml-2 h-3 w-3" />
-                    </Button>
+                    
                   </CardContent>
                 </Card>;
           })}
