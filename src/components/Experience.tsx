@@ -47,7 +47,7 @@ const Experience = () => {
     milestone: "Added Product Operations knowledge",
     subtitle: "while helping set up and shape that stream"
   }];
-  return <section id="experience" className="py-20 bg-slate-50/80">
+  return <section id="experience" className="py-20 bg-amber-50/60">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
