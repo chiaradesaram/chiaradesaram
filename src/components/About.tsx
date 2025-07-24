@@ -50,18 +50,14 @@ const About = () => {
           <div className="mb-16">
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center relative">
-                    {index > 0 && (
-                      <div className="hidden md:block absolute -left-4 top-1/2 transform -translate-y-1/2 w-px h-12 bg-gray-200"></div>
-                    )}
+                {stats.map((stat, index) => <div key={index} className="text-center relative">
+                    {index > 0 && <div className="hidden md:block absolute -left-4 top-1/2 transform -translate-y-1/2 w-px h-12 bg-gray-200"></div>}
                     <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.number}</div>
                     <div className="text-gray-700 font-medium">
                       {stat.label && <span>{stat.label} </span>}
-                      <span className="text-gray-500">{stat.subtitle}</span>
+                      
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
