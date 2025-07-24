@@ -330,12 +330,34 @@ All colors MUST be HSL.
   }
 }
 
+@keyframes marquee-contained {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }
 
+.animate-marquee-contained {
+  animation: marquee-contained 15s linear infinite;
+}
+
 .animate-pulse-slow {
   animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Coral color utilities */
+.text-coral-300\/70 {
+  color: hsl(350 85% 70% / 0.7);
+}
+
+.text-coral-400\/50 {
+  color: hsl(350 85% 65% / 0.5);
 }
 
 /* Staggered animations */

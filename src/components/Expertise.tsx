@@ -89,14 +89,14 @@ const Expertise = () => {
           </div>
 
           {/* Rotating Tools List */}
-          <div className="mt-16 text-center">
-            <div className="overflow-hidden h-6">
-              <div className="animate-pulse-slow">
-                <div className="text-xs text-muted-foreground/60 whitespace-nowrap animate-marquee">
+          <div className="mt-16 max-w-2xl mx-auto">
+            <div className="overflow-hidden h-8 bg-gradient-to-r from-transparent via-slate-800/20 to-transparent rounded-lg border border-slate-700/20">
+              <div className="flex items-center h-full px-4">
+                <div className="text-sm text-slate-400/80 whitespace-nowrap animate-marquee-contained">
                   {tools.map((tool, index) => (
                     <span key={index} className="inline-flex items-center">
-                      {tool}
-                      {index < tools.length - 1 && <span className="mx-2 text-[0.5rem]">•</span>}
+                      <span className="text-coral-300/70">{tool}</span>
+                      {index < tools.length - 1 && <span className="mx-3 text-coral-400/50 text-xs">•</span>}
                     </span>
                   ))}
                 </div>
