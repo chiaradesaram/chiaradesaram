@@ -24,8 +24,8 @@ const Experience = () => {
   const industries = ["Fintech", "Legal", "Compliance", "FMCG", "Telecommunications"];
   const timeline = [{
     year: "Education",
-    milestone: "MSc Banking and Finance, King's College London",
-    subtitle: "BCs Economics and Finance, Queen Mary University of London"
+    milestone: "MSc Banking and Finance, King's College London • BSc Economics and Finance, Queen Mary University of London",
+    subtitle: null
   }, {
     year: "2024-2025",
     milestone: "Business Consultant, CT Corporation",
@@ -105,8 +105,10 @@ const Experience = () => {
               </h3>
               <div className="space-y-6">
                 {timeline.map((item, index) => <div key={index} className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-coral-50 rounded-full flex items-center justify-center flex-shrink-0 border border-coral-200/50">
-                      <span className="text-sm font-semibold text-coral-600">{item.year}</span>
+                    <div className="flex-shrink-0 pt-1">
+                      <div className="bg-coral-500 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap">
+                        {item.year}
+                      </div>
                     </div>
                     <div className="flex-1">
                       <h4 className="font-semibold text-slate-800">{item.milestone}</h4>
