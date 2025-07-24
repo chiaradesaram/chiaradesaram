@@ -8,7 +8,7 @@ const About = () => {
     subtitle: "Experience"
   }, {
     number: "7",
-    label: "Client",
+    label: "Clients",
     subtitle: "Engagements"
   }, {
     number: "Startups to Fortune 500",
