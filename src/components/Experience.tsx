@@ -62,7 +62,45 @@ const Experience = () => {
 
           {/* Company Types */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {experiences.map((exp, index) => {})}
+            {experiences.map((exp, index) => (
+              <Card key={index} className={`${exp.color} transition-all duration-300 hover:shadow-lg`}>
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded-lg bg-white/50">
+                      <exp.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold">{exp.type}</h3>
+                  </div>
+                  
+                  <p className="text-muted-foreground mb-4">{exp.description}</p>
+                  
+                  <div className="space-y-3">
+                    <div>
+                      <h4 className="font-medium text-sm text-foreground mb-2">Companies:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {exp.companies.map((company, idx) => (
+                          <Badge key={idx} variant="secondary" className="text-xs">
+                            {company}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-medium text-sm text-foreground mb-2">Key Highlights:</h4>
+                      <div className="space-y-1">
+                        {exp.highlights.map((highlight, idx) => (
+                          <div key={idx} className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                            <span className="text-sm text-muted-foreground">{highlight}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
           {/* Timeline & Industries */}
