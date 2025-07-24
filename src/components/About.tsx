@@ -46,15 +46,24 @@ const About = () => {
             
           </div>
 
-          {/* Stats Cards */}
-          <div className="grid md:grid-cols-3 gap-4 mb-12 max-w-2xl mx-auto">
-            {stats.map((stat, index) => <div key={index} className="bg-white backdrop-blur-md rounded-lg p-4 text-center border border-gray-200 hover:shadow-md transition-all duration-300">
-                <div className="text-lg font-bold text-primary mb-1">{stat.number}</div>
-                <div className="text-gray-600 text-xs">
-                  {stat.label && <div>{stat.label}</div>}
-                  {stat.subtitle && <div className="text-gray-500">{stat.subtitle}</div>}
-                </div>
-              </div>)}
+          {/* Stats Bar */}
+          <div className="mb-16">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center relative">
+                    {index > 0 && (
+                      <div className="hidden md:block absolute -left-4 top-1/2 transform -translate-y-1/2 w-px h-12 bg-gray-200"></div>
+                    )}
+                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.number}</div>
+                    <div className="text-gray-700 font-medium">
+                      {stat.label && <span>{stat.label} </span>}
+                      <span className="text-gray-500">{stat.subtitle}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
