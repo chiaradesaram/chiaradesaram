@@ -3,6 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { BarChart3, Users, Cog, Search, Layers, TrendingUp } from "lucide-react";
 
 const Expertise = () => {
+  const tools = ["Azure DevOps", "Jira", "Miro", "Pendo", "Dovetail", "UserZoom", "Microsoft Office Suite", "Trello", "Confluence", "Lovable", "Slack"];
+  
   const skills = [{
     icon: TrendingUp,
     title: "CX Strategy",
@@ -84,6 +86,22 @@ const Expertise = () => {
                 </Card>
               );
             })}
+          </div>
+
+          {/* Rotating Tools List */}
+          <div className="mt-16 text-center">
+            <div className="overflow-hidden h-6">
+              <div className="animate-pulse-slow">
+                <div className="text-xs text-muted-foreground/60 whitespace-nowrap animate-marquee">
+                  {tools.map((tool, index) => (
+                    <span key={index} className="inline-flex items-center">
+                      {tool}
+                      {index < tools.length - 1 && <span className="mx-2 text-[0.5rem]">•</span>}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

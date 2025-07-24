@@ -62,7 +62,36 @@ const Experience = () => {
 
           {/* Company Types */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {experiences.map((exp, index) => {})}
+            {experiences.map((exp, index) => (
+              <Card key={index} className={`${exp.color} h-full transition-all duration-300 hover:shadow-lg`}>
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <exp.icon className="h-6 w-6 text-foreground" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">{exp.type}</h3>
+                      <div className="flex flex-wrap gap-1 mb-3">
+                        {exp.companies.map((company, idx) => (
+                          <Badge key={idx} variant="secondary" className="text-xs">
+                            {company}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">{exp.description}</p>
+                  <div className="space-y-2">
+                    {exp.highlights.map((highlight, idx) => (
+                      <div key={idx} className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        <span className="text-sm text-foreground">{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
           {/* Timeline & Industries */}

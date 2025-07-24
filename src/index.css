@@ -320,6 +320,24 @@ All colors MUST be HSL.
   animation: scale-in 0.5s ease-out forwards;
 }
 
+/* Marquee animation for tools */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 /* Staggered animations */
 .animate-stagger-1 { animation-delay: 0.1s; }
 .animate-stagger-2 { animation-delay: 0.2s; }
