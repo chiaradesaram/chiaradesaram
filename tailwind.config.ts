@@ -61,6 +61,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				coral: {
+					300: 'hsl(350 85% 70%)',
+					400: 'hsl(350 85% 65%)',
+					500: 'hsl(350 85% 65%)',
+					600: 'hsl(350 85% 55%)'
 				}
 			},
 			borderRadius: {
