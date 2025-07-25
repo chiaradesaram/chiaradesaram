@@ -5,7 +5,7 @@ const Experience = () => {
   const industries = ["Fintech", "Legal", "Compliance", "FMCG", "Telecommunications"];
   const timeline = [{
     year: "Education",
-    milestone: "MSc Banking and Finance, King's College London • BSc Economics and Finance, Queen Mary University of London",
+    milestone: "MSc Banking and Finance, King's College London\nBSc Economics and Finance, Queen Mary University of London",
     subtitle: null
   }, {
     year: "2024-2025",
@@ -59,7 +59,7 @@ const Experience = () => {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-slate-800">{item.milestone}</h4>
+                      <h4 className="font-semibold text-slate-800 whitespace-pre-line">{item.milestone}</h4>
                       {item.subtitle && <p className="text-sm text-slate-600 mt-1">{item.subtitle}</p>}
                     </div>
                   </div>)}
