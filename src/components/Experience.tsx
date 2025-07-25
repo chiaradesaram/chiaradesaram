@@ -5,7 +5,11 @@ const Experience = () => {
   const industries = ["Fintech", "Legal", "Compliance", "FMCG", "Telecommunications"];
   const timeline = [{
     year: "Education",
-    milestone: "MSc Banking and Finance, King's College London\nBSc Economics and Finance, Queen Mary University of London",
+    milestone: "MSc Banking and Finance, King's College London",
+    subtitle: "Won the award for Best Dissertation"
+  }, {
+    year: "",
+    milestone: "BSc Economics and Finance, Queen Mary University of London",
     subtitle: null
   }, {
     year: "2024-2025",
