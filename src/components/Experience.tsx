@@ -3,15 +3,21 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Users } from "lucide-react";
 const Experience = () => {
   const industries = ["Fintech", "Legal", "Compliance", "FMCG", "Telecommunications"];
+  
+  const education = [
+    {
+      degree: "MSc Banking and Finance",
+      institution: "King's College London",
+      award: "Won the award for Best Dissertation"
+    },
+    {
+      degree: "BSc Economics and Finance", 
+      institution: "Queen Mary University of London",
+      award: null
+    }
+  ];
+  
   const timeline = [{
-    year: "Education",
-    milestone: "MSc Banking and Finance, King's College London",
-    subtitle: "Won the award for Best Dissertation"
-  }, {
-    year: "",
-    milestone: "BSc Economics and Finance, Queen Mary University of London",
-    subtitle: null
-  }, {
     year: "2024-2025",
     milestone: "Business Consultant, CT Corporation",
     subtitle: "Led CX initiatives and partnered with product teams to drive innovation and customer‑centric solutions"
@@ -46,6 +52,27 @@ const Experience = () => {
             
           </div>
 
+          {/* Education Section */}
+          <div className="mb-12">
+            <div className="bg-white rounded-xl p-8 border border-slate-200/60 shadow-sm">
+              <h3 className="text-2xl font-semibold mb-6 text-slate-800">Education</h3>
+              <div className="space-y-4">
+                {education.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-coral-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-slate-800">
+                        {item.degree}, {item.institution}
+                      </h4>
+                      {item.award && (
+                        <p className="text-sm text-coral-600 mt-1 font-medium">{item.award}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
 
           {/* Timeline & Industries */}
           <div className="grid lg:grid-cols-2 gap-12">
@@ -58,14 +85,12 @@ const Experience = () => {
               <div className="space-y-6">
                 {timeline.map((item, index) => <div key={index} className="flex items-start gap-4">
                     <div className="flex-shrink-0 pt-1">
-                      {item.year && (
-                        <div className="bg-coral-500 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap">
-                          {item.year}
-                        </div>
-                      )}
+                      <div className="bg-coral-500 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap">
+                        {item.year}
+                      </div>
                     </div>
-                    <div className={`flex-1 ${!item.year ? 'ml-16' : ''}`}>
-                      <h4 className="font-semibold text-slate-800 whitespace-pre-line">{item.milestone}</h4>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-slate-800">{item.milestone}</h4>
                       {item.subtitle && <p className="text-sm text-slate-600 mt-1">{item.subtitle}</p>}
                     </div>
                   </div>)}
