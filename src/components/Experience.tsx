@@ -58,9 +58,11 @@ const Experience = () => {
               <div className="space-y-6">
                 {timeline.map((item, index) => <div key={index} className="flex items-start gap-4">
                     <div className="flex-shrink-0 pt-1">
-                      <div className="bg-coral-500 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap">
-                        {item.year}
-                      </div>
+                      {item.year && (
+                        <div className="bg-coral-500 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap">
+                          {item.year}
+                        </div>
+                      )}
                     </div>
                     <div className="flex-1">
                       <h4 className="font-semibold text-slate-800 whitespace-pre-line">{item.milestone}</h4>
