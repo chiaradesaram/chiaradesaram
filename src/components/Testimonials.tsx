@@ -44,6 +44,20 @@ const Testimonials = () => {
       title: "Position, Company",
       image: "/placeholder.svg",
       quote: "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt."
+    },
+    {
+      id: 7,
+      name: "Asheley Wardell",
+      title: "Associate Director, Practice Solutions, Legal Technology, Simpson Thacher & Bartlett LLP",
+      image: "/placeholder.svg",
+      quote: "Chiara has a special talent for figuring out the best way to take in data, organize it, identify themes and potential opportunities, and share her findings with a variety of audience members. Somehow she gets every excited to get to work! Her attention to detail and thoughtfulness inspire confidence and her ability to look at problems from all different angles provides for transformational ideas. Chiara is a bright light on any team she interacts with! I hope our paths cross again in the future!"
+    },
+    {
+      id: 8,
+      name: "Luke Schelechte",
+      title: "CX Manager, Wolters Kluwer",
+      image: "/placeholder.svg",
+      quote: "Chiara is one of the most well-prepared, determined colleagues I have ever worked with. She continually brings diligence and well-rounded thinking to her projects, including nothing short of highly detailed project plans and multiple backup avenues when obstacles arise. Given with her collaborative and even-keel demeanor, Chirara excels at connecting teams to fully understand and buy into shared complex business goals."
     }
   ];
 
