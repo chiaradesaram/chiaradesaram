@@ -5,55 +5,13 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Client Name",
-      title: "Position, Company",
-      image: "/placeholder.svg",
-      quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      id: 2,
-      name: "Client Name",
-      title: "Position, Company", 
-      image: "/placeholder.svg",
-      quote: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    },
-    {
-      id: 3,
-      name: "Client Name",
-      title: "Position, Company",
-      image: "/placeholder.svg", 
-      quote: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-    },
-    {
-      id: 4,
-      name: "Client Name",
-      title: "Position, Company",
-      image: "/placeholder.svg",
-      quote: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      id: 5,
-      name: "Client Name", 
-      title: "Position, Company",
-      image: "/placeholder.svg",
-      quote: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
-    },
-    {
-      id: 6,
-      name: "Client Name",
-      title: "Position, Company",
-      image: "/placeholder.svg",
-      quote: "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt."
-    },
-    {
-      id: 7,
       name: "Asheley Wardell",
       title: "Associate Director, Practice Solutions, Legal Technology, Simpson Thacher & Bartlett LLP",
       image: "/placeholder.svg",
       quote: "Chiara has a special talent for figuring out the best way to take in data, organize it, identify themes and potential opportunities, and share her findings with a variety of audience members. Somehow she gets every excited to get to work! Her attention to detail and thoughtfulness inspire confidence and her ability to look at problems from all different angles provides for transformational ideas. Chiara is a bright light on any team she interacts with! I hope our paths cross again in the future!"
     },
     {
-      id: 8,
+      id: 2,
       name: "Luke Schelechte",
       title: "CX Manager, Wolters Kluwer",
       image: "/placeholder.svg",
