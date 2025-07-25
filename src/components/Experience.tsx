@@ -64,7 +64,7 @@ const Experience = () => {
                         </div>
                       )}
                     </div>
-                    <div className="flex-1">
+                    <div className={`flex-1 ${!item.year ? 'ml-16' : ''}`}>
                       <h4 className="font-semibold text-slate-800 whitespace-pre-line">{item.milestone}</h4>
                       {item.subtitle && <p className="text-sm text-slate-600 mt-1">{item.subtitle}</p>}
                     </div>
