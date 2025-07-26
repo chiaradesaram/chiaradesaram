@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, TrendingUp, Users, Zap, Target, BarChart3, Search } from "lucide-react";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const categories = ["All", "CX Strategy", "Business Analysis", "Discovery", "Process Redesign", "Customer Experience", "Product Discovery", "User Research", "Product Ops"];
@@ -70,7 +71,24 @@ const Projects = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => {
             const Icon = project.icon;
-            return <Card key={index} className="group h-full transition-all duration-300 border border-slate-600/30 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/50 hover:border-slate-500/40 shadow-lg hover:shadow-xl">
+            const ProjectCard = () => {
+              const { ref, isVisible } = useScrollReveal({ 
+                threshold: 0.2,
+                rootMargin: '-50px'
+              });
+              
+              return (
+                <Card 
+                  ref={ref}
+                  className={`group h-full transition-all duration-700 border border-slate-600/30 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/50 hover:border-slate-500/40 shadow-lg hover:shadow-xl transform ${
+                    isVisible 
+                      ? 'translate-y-0 opacity-100' 
+                      : 'translate-y-8 opacity-0'
+                  }`}
+                  style={{
+                    transitionDelay: `${index * 150}ms`
+                  }}
+                >
                   <CardHeader className="pb-4">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 rounded-lg bg-slate-700/50 border border-slate-600/30 flex items-center justify-center">
@@ -115,7 +133,11 @@ const Projects = () => {
 
                     
                   </CardContent>
-                </Card>;
+                </Card>
+              );
+            };
+            
+            return <ProjectCard key={index} />;
           })}
           </div>
 
