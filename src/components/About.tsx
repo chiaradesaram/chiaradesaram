@@ -1,6 +1,50 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Zap, Target, Users } from "lucide-react";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+const StatsSection = ({ stats }: { stats: Array<{ number: string; label: string; subtitle: string }> }) => {
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.3 });
+  
+  return (
+    <div className="mb-16">
+      <div 
+        ref={ref}
+        className={`bg-white rounded-2xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto transition-all duration-700 transform ${
+          isVisible 
+            ? 'translate-y-0 opacity-100 scale-100' 
+            : 'translate-y-12 opacity-0 scale-95'
+        }`}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {stats.map((stat, index) => (
+            <div 
+              key={index} 
+              className={`text-center relative transition-all duration-500 transform ${
+                isVisible 
+                  ? 'translate-y-0 opacity-100' 
+                  : 'translate-y-6 opacity-0'
+              }`}
+              style={{
+                transitionDelay: isVisible ? `${index * 200}ms` : '0ms'
+              }}
+            >
+              {index > 0 && (
+                <div className="hidden md:block absolute -left-4 top-1/2 transform -translate-y-1/2 w-px h-12 bg-gray-200"></div>
+              )}
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                {stat.number}
+              </div>
+              <div className="text-gray-700 font-medium">
+                {stat.label && <span>{stat.label} </span>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const About = () => {
   const stats = [{
     number: "8+",
@@ -47,20 +91,7 @@ const About = () => {
           </div>
 
           {/* Stats Bar */}
-          <div className="mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {stats.map((stat, index) => <div key={index} className="text-center relative">
-                    {index > 0 && <div className="hidden md:block absolute -left-4 top-1/2 transform -translate-y-1/2 w-px h-12 bg-gray-200"></div>}
-                    <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.number}</div>
-                    <div className="text-gray-700 font-medium">
-                      {stat.label && <span>{stat.label} </span>}
-                      
-                    </div>
-                  </div>)}
-              </div>
-            </div>
-          </div>
+          <StatsSection stats={stats} />
 
           <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
             <div className="space-y-6">
