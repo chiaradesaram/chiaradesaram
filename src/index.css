@@ -344,7 +344,7 @@ All colors MUST be HSL.
 }
 
 .animate-marquee-contained {
-  animation: marquee-contained 25s linear infinite;
+  animation: marquee-contained 22s linear infinite;
 }
 
 .animate-pulse-slow {
