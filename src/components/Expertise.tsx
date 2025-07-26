@@ -93,18 +93,16 @@ const Expertise = () => {
             <div className="overflow-hidden h-8 bg-gradient-to-r from-transparent via-slate-800/20 to-transparent rounded-lg border border-slate-700/20">
               <div className="flex items-center h-full">
                 <div className="text-sm text-slate-400/80 whitespace-nowrap animate-marquee-contained flex">
-                  {/* First set of tools */}
                   {tools.map((tool, index) => (
-                    <span key={`first-${index}`} className="inline-flex items-center mx-4">
+                    <span key={`first-${index}`} className="inline-flex items-center mx-6">
                       <span className="text-coral-300/70">{tool}</span>
-                      <span className="ml-3 text-coral-400/50 text-xs">•</span>
+                      <span className="ml-4 text-coral-400/50 text-xs">•</span>
                     </span>
                   ))}
-                  {/* Duplicate set for seamless loop */}
                   {tools.map((tool, index) => (
-                    <span key={`second-${index}`} className="inline-flex items-center mx-4">
+                    <span key={`second-${index}`} className="inline-flex items-center mx-6">
                       <span className="text-coral-300/70">{tool}</span>
-                      <span className="ml-3 text-coral-400/50 text-xs">•</span>
+                      <span className="ml-4 text-coral-400/50 text-xs">•</span>
                     </span>
                   ))}
                 </div>
