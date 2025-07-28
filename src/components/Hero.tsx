@@ -14,42 +14,15 @@ const Hero = () => {
         {/* Main background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-muted/30"></div>
         
-        {/* Diagonal wave lines */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-          <div 
-            className="absolute w-1 h-[200vh] bg-gradient-to-b from-transparent via-primary/30 to-transparent opacity-0"
-            style={{ 
-              left: '100%',
-              top: '-50vh',
-              transform: 'rotate(-45deg)',
-              transformOrigin: 'center',
-              animation: 'diagonal-wave 3s ease-in-out forwards',
-              animationDelay: '1s'
-            }}
-          ></div>
-          <div 
-            className="absolute w-1 h-[200vh] bg-gradient-to-b from-transparent via-secondary/25 to-transparent opacity-0"
-            style={{ 
-              left: '110%',
-              top: '-50vh',
-              transform: 'rotate(-45deg)',
-              transformOrigin: 'center',
-              animation: 'diagonal-wave 3.5s ease-in-out forwards',
-              animationDelay: '1.5s'
-            }}
-          ></div>
-          <div 
-            className="absolute w-1 h-[200vh] bg-gradient-to-b from-transparent via-primary/20 to-transparent opacity-0"
-            style={{ 
-              left: '120%',
-              top: '-50vh',
-              transform: 'rotate(-45deg)',
-              transformOrigin: 'center',
-              animation: 'diagonal-wave 4s ease-in-out forwards',
-              animationDelay: '2s'
-            }}
-          ></div>
-        </div>
+        {/* Floating orbs with coral/pink theme */}
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/15 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-secondary/12 rounded-full blur-2xl animate-float" style={{
+        animationDelay: '2s'
+      }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-primary/8 rounded-full blur-xl animate-glow-pulse"></div>
+        <div className="absolute top-3/4 right-1/3 w-20 h-20 bg-secondary/10 rounded-full blur-lg animate-float" style={{
+        animationDelay: '4s'
+      }}></div>
         
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 opacity-[0.02]" style={{
