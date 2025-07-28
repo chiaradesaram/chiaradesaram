@@ -268,20 +268,20 @@ All colors MUST be HSL.
 
 @keyframes diagonal-wave {
   0% {
-    transform: translateX(100vw) translateY(-50vh);
+    transform: translateX(0) translateY(0) rotate(-45deg);
     opacity: 0;
   }
-  10% {
-    opacity: 0.3;
+  15% {
+    opacity: 0.8;
   }
   50% {
+    opacity: 0.5;
+  }
+  85% {
     opacity: 0.2;
   }
-  90% {
-    opacity: 0.1;
-  }
   100% {
-    transform: translateX(-100vw) translateY(50vh);
+    transform: translateX(-150vw) translateY(75vh) rotate(-45deg);
     opacity: 0;
   }
 }
