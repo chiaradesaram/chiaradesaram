@@ -15,37 +15,49 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-muted/30"></div>
         
         {/* Diagonal wave lines */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div 
-            className="absolute w-px h-screen bg-gradient-to-b from-transparent via-primary/20 to-transparent transform rotate-45 origin-center"
+            className="absolute w-0.5 h-[150vh] bg-gradient-to-b from-transparent via-primary/40 to-transparent"
             style={{ 
-              animation: 'diagonal-wave 3s ease-out forwards',
-              animationDelay: '0.5s',
-              filter: 'blur(0.5px)'
+              left: '120%',
+              top: '-25vh',
+              transform: 'rotate(45deg)',
+              transformOrigin: 'center',
+              animation: 'diagonal-wave 4s ease-out forwards',
+              animationDelay: '0.5s'
             }}
           ></div>
           <div 
-            className="absolute w-px h-screen bg-gradient-to-b from-transparent via-secondary/15 to-transparent transform rotate-45 origin-center"
+            className="absolute w-0.5 h-[150vh] bg-gradient-to-b from-transparent via-secondary/30 to-transparent"
             style={{ 
-              animation: 'diagonal-wave 3.2s ease-out forwards',
-              animationDelay: '1s',
-              filter: 'blur(0.8px)'
+              left: '125%',
+              top: '-25vh',
+              transform: 'rotate(45deg)',
+              transformOrigin: 'center',
+              animation: 'diagonal-wave 4.5s ease-out forwards',
+              animationDelay: '1s'
             }}
           ></div>
           <div 
-            className="absolute w-px h-screen bg-gradient-to-b from-transparent via-primary/10 to-transparent transform rotate-45 origin-center"
+            className="absolute w-0.5 h-[150vh] bg-gradient-to-b from-transparent via-primary/25 to-transparent"
             style={{ 
-              animation: 'diagonal-wave 2.8s ease-out forwards',
-              animationDelay: '1.5s',
-              filter: 'blur(1px)'
+              left: '130%',
+              top: '-25vh',
+              transform: 'rotate(45deg)',
+              transformOrigin: 'center',
+              animation: 'diagonal-wave 4.2s ease-out forwards',
+              animationDelay: '1.5s'
             }}
           ></div>
           <div 
-            className="absolute w-px h-screen bg-gradient-to-b from-transparent via-secondary/8 to-transparent transform rotate-45 origin-center"
+            className="absolute w-0.5 h-[150vh] bg-gradient-to-b from-transparent via-secondary/20 to-transparent"
             style={{ 
-              animation: 'diagonal-wave 3.5s ease-out forwards',
-              animationDelay: '2s',
-              filter: 'blur(1.2px)'
+              left: '135%',
+              top: '-25vh',
+              transform: 'rotate(45deg)',
+              transformOrigin: 'center',
+              animation: 'diagonal-wave 5s ease-out forwards',
+              animationDelay: '2s'
             }}
           ></div>
         </div>
