@@ -42,11 +42,11 @@ const Experience = () => {
     milestone: "Professional Foundation Years",
     subtitle: "Gained diverse expertise through internships in corporate law (DL & F de Saram Attorneys at Law), financial auditing (Ernst & Young), and equity markets (NDB Securities)"
   }];
-  return <section id="experience" className="py-20 bg-gray-50">
+  return <section id="experience" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               My <span className="text-gradient">Experience</span>
             </h2>
             
@@ -54,18 +54,18 @@ const Experience = () => {
 
           {/* Education Section */}
           <div className="mb-12">
-            <div className="bg-white rounded-xl p-8 border border-slate-200/60 shadow-sm">
-              <h3 className="text-2xl font-semibold mb-6 text-slate-800">Education</h3>
+            <div className="glass-card rounded-xl p-8">
+              <h3 className="text-2xl font-semibold mb-6 text-foreground">Education</h3>
               <div className="space-y-4">
                 {education.map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-coral-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-slate-800">
+                      <h4 className="font-semibold text-foreground">
                         {item.degree}, {item.institution}
                       </h4>
                       {item.award && (
-                        <p className="text-sm text-coral-600 mt-1 font-medium">{item.award}</p>
+                        <p className="text-sm text-primary mt-1 font-medium">{item.award}</p>
                       )}
                     </div>
                   </div>
@@ -77,41 +77,41 @@ const Experience = () => {
           {/* Timeline & Industries */}
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Career Timeline */}
-            <div className="bg-white rounded-xl p-8 border border-slate-200/60 shadow-sm">
-              <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2 text-slate-800">
-                <Calendar className="h-6 w-6 text-coral-500" />
+            <div className="glass-card rounded-xl p-8">
+              <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2 text-foreground">
+                <Calendar className="h-6 w-6 text-primary" />
                 Career Journey
               </h3>
               <div className="space-y-6">
                 {timeline.map((item, index) => <div key={index} className="flex items-start gap-4">
                     <div className="flex-shrink-0 pt-1">
-                      <div className="bg-coral-500 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap">
+                      <div className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap">
                         {item.year}
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-slate-800">{item.milestone}</h4>
-                      {item.subtitle && <p className="text-sm text-slate-600 mt-1">{item.subtitle}</p>}
+                      <h4 className="font-semibold text-foreground">{item.milestone}</h4>
+                      {item.subtitle && <p className="text-sm text-muted-foreground mt-1">{item.subtitle}</p>}
                     </div>
                   </div>)}
               </div>
             </div>
 
             {/* Industries */}
-            <div className="bg-white rounded-xl p-8 border border-slate-200/60 shadow-sm">
-              <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2 text-slate-800">
-                <Users className="h-6 w-6 text-coral-500" />
+            <div className="glass-card rounded-xl p-8">
+              <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2 text-foreground">
+                <Users className="h-6 w-6 text-primary" />
                 Industries Served
               </h3>
               <div className="space-y-4">
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   Experience across diverse sectors, bringing cross-industry insights 
                   to every engagement.
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                   {industries.map((industry, index) => <div key={index} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-coral-500 rounded-full"></div>
-                      <span className="text-sm text-slate-700">{industry}</span>
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                      <span className="text-sm text-foreground">{industry}</span>
                     </div>)}
                 </div>
               </div>

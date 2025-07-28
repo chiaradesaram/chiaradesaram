@@ -51,14 +51,14 @@ const Projects = () => {
     icon: Users
   }];
   const filteredProjects = selectedCategory === "All" ? projects : projects.filter(project => project.categories.includes(selectedCategory));
-  return <section id="projects" className="py-20 bg-background">
+  return <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800">
               Featured <span className="text-gradient">Projects</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Real projects, real impact. Here's how I've helped teams transform 
               insights into measurable outcomes.
             </p>
@@ -80,7 +80,7 @@ const Projects = () => {
               return (
                 <Card 
                   ref={ref}
-                  className={`group h-full transition-all duration-700 border border-slate-600/30 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/50 hover:border-slate-500/40 shadow-lg hover:shadow-xl transform ${
+                  className={`group h-full transition-all duration-700 border border-slate-200/60 bg-white hover:bg-gray-50 hover:border-slate-300/60 shadow-sm hover:shadow-md transform ${
                     isVisible 
                       ? 'translate-y-0 opacity-100' 
                       : 'translate-y-8 opacity-0'
@@ -91,41 +91,41 @@ const Projects = () => {
                 >
                   <CardHeader className="pb-4">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-lg bg-slate-700/50 border border-slate-600/30 flex items-center justify-center">
-                        <Icon className="h-5 w-5 text-slate-300" />
+                      <div className="w-10 h-10 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center">
+                        <Icon className="h-5 w-5 text-slate-600" />
                       </div>
                       {/* Small, subtle category badges */}
                       <div className="flex flex-wrap gap-1">
-                        {project.categories.slice(0, 2).map((category, catIndex) => <Badge key={catIndex} variant="secondary" className="text-xs px-2 py-0.5 bg-slate-700/40 text-slate-400 border border-slate-600/20">
+                        {project.categories.slice(0, 2).map((category, catIndex) => <Badge key={catIndex} variant="secondary" className="text-xs px-2 py-0.5 bg-slate-100 text-slate-600 border border-slate-200">
                             {category}
                           </Badge>)}
-                        {project.categories.length > 2 && <Badge variant="secondary" className="text-xs px-2 py-0.5 bg-slate-700/40 text-slate-400 border border-slate-600/20">
+                        {project.categories.length > 2 && <Badge variant="secondary" className="text-xs px-2 py-0.5 bg-slate-100 text-slate-600 border border-slate-200">
                             +{project.categories.length - 2}
                           </Badge>}
                       </div>
                     </div>
                     
                     {/* Emphasized Project Title */}
-                    <CardTitle className="text-xl leading-tight text-slate-100 font-bold mb-3">
+                    <CardTitle className="text-xl leading-tight text-slate-800 font-bold mb-3">
                       {project.title}
                     </CardTitle>
                   </CardHeader>
                   
                   <CardContent className="pt-0 flex flex-col justify-between flex-1">
                     <div className="space-y-4 mb-6">
-                      <p className="text-slate-300 text-sm leading-relaxed">
+                      <p className="text-slate-600 text-sm leading-relaxed">
                         {project.description}
                       </p>
                       
                       {/* Tools with Coral Bullet Points */}
                       <div className="space-y-3">
-                        <span className="text-xs font-medium text-slate-400 uppercase tracking-wide">
+                        <span className="text-xs font-medium text-slate-500 uppercase tracking-wide">
                           Tools & Methods
                         </span>
                         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                           {project.tools.map((tool, toolIndex) => <div key={toolIndex} className="flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-rose-400/80 flex-shrink-0"></div>
-                              <span className="text-xs text-slate-300">{tool}</span>
+                              <div className="w-1.5 h-1.5 rounded-full bg-rose-400 flex-shrink-0"></div>
+                              <span className="text-xs text-slate-600">{tool}</span>
                             </div>)}
                         </div>
                       </div>
@@ -142,10 +142,10 @@ const Projects = () => {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-6">
+            <p className="text-slate-600 mb-6">
               Interested in seeing more details about these projects?
             </p>
-            <Button variant="outline" size="lg" className="bg-slate-800/30 text-slate-300 border-slate-600/30 hover:bg-slate-700/50 hover:border-slate-500/40">
+            <Button variant="outline" size="lg" className="bg-white text-slate-700 border-slate-300 hover:bg-slate-50 hover:border-slate-400">
               View Full Portfolio
             </Button>
           </div>
