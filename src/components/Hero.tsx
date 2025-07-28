@@ -14,15 +14,41 @@ const Hero = () => {
         {/* Main background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-muted/30"></div>
         
-        {/* Floating orbs with coral/pink theme */}
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/15 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-secondary/12 rounded-full blur-2xl animate-float" style={{
-        animationDelay: '2s'
-      }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-primary/8 rounded-full blur-xl animate-glow-pulse"></div>
-        <div className="absolute top-3/4 right-1/3 w-20 h-20 bg-secondary/10 rounded-full blur-lg animate-float" style={{
-        animationDelay: '4s'
-      }}></div>
+        {/* Diagonal wave lines */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div 
+            className="absolute w-px h-screen bg-gradient-to-b from-transparent via-primary/20 to-transparent transform rotate-45 origin-center"
+            style={{ 
+              animation: 'diagonal-wave 3s ease-out forwards',
+              animationDelay: '0.5s',
+              filter: 'blur(0.5px)'
+            }}
+          ></div>
+          <div 
+            className="absolute w-px h-screen bg-gradient-to-b from-transparent via-secondary/15 to-transparent transform rotate-45 origin-center"
+            style={{ 
+              animation: 'diagonal-wave 3.2s ease-out forwards',
+              animationDelay: '1s',
+              filter: 'blur(0.8px)'
+            }}
+          ></div>
+          <div 
+            className="absolute w-px h-screen bg-gradient-to-b from-transparent via-primary/10 to-transparent transform rotate-45 origin-center"
+            style={{ 
+              animation: 'diagonal-wave 2.8s ease-out forwards',
+              animationDelay: '1.5s',
+              filter: 'blur(1px)'
+            }}
+          ></div>
+          <div 
+            className="absolute w-px h-screen bg-gradient-to-b from-transparent via-secondary/8 to-transparent transform rotate-45 origin-center"
+            style={{ 
+              animation: 'diagonal-wave 3.5s ease-out forwards',
+              animationDelay: '2s',
+              filter: 'blur(1.2px)'
+            }}
+          ></div>
+        </div>
         
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 opacity-[0.02]" style={{
