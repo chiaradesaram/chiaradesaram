@@ -53,24 +53,26 @@ const Experience = () => {
           </div>
 
           {/* Education Section */}
-          <div className="mb-12">
-            <Card className="group transform transition-all duration-300 ease-out overflow-hidden border border-rose-200/60 bg-white/60 backdrop-blur-md hover:bg-white/70 hover:border-rose-300/60 shadow-lg hover:shadow-xl">
-              {/* Subtle top accent */}
-              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-rose-300/50 to-pink-300/50" />
-              
-              <CardHeader className="relative p-8">
-                <CardTitle className="text-2xl text-slate-800 mb-6">Education</CardTitle>
-                <div className="space-y-4">
+          <div className="mb-16">
+            <Card className="group border-0 bg-white/40 backdrop-blur-sm hover:bg-white/50 transition-all duration-500 shadow-sm hover:shadow-md">
+              <CardHeader className="p-10">
+                <CardTitle className="text-xl text-slate-700 mb-8 font-medium">Education</CardTitle>
+                <div className="space-y-6">
                   {education.map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-rose-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-slate-800">
-                          {item.degree}, {item.institution}
-                        </h4>
-                        {item.award && (
-                          <p className="text-sm text-rose-600 mt-1 font-medium">{item.award}</p>
-                        )}
+                    <div key={index} className="group/item hover:translate-x-1 transition-transform duration-300">
+                      <div className="flex items-start gap-4">
+                        <div className="w-1 h-8 bg-gradient-to-b from-rose-300/60 to-transparent rounded-full mt-1 flex-shrink-0"></div>
+                        <div className="flex-1 space-y-1">
+                          <h4 className="font-medium text-slate-800 leading-relaxed">
+                            {item.degree}
+                          </h4>
+                          <p className="text-sm text-slate-600">
+                            {item.institution}
+                          </p>
+                          {item.award && (
+                            <p className="text-xs text-rose-600 font-medium bg-rose-50 px-2 py-1 rounded-md inline-block mt-2">{item.award}</p>
+                          )}
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -80,61 +82,63 @@ const Experience = () => {
           </div>
 
           {/* Timeline & Industries */}
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8">
             {/* Career Timeline */}
-            <Card className="group transform transition-all duration-300 ease-out overflow-hidden border border-rose-200/60 bg-white/60 backdrop-blur-md hover:bg-white/70 hover:border-rose-300/60 shadow-lg hover:shadow-xl">
-              {/* Subtle top accent */}
-              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-rose-300/50 to-pink-300/50" />
-              
-              <CardHeader className="relative p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-2.5 rounded-lg bg-rose-100/60 border border-rose-200/60">
-                    <Calendar className="h-5 w-5 text-rose-600" />
+            <Card className="group border-0 bg-white/40 backdrop-blur-sm hover:bg-white/50 transition-all duration-500 shadow-sm hover:shadow-md">
+              <CardHeader className="p-10">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-8 h-8 rounded-full bg-rose-100/80 flex items-center justify-center">
+                    <Calendar className="h-4 w-4 text-rose-600" />
                   </div>
-                  <CardTitle className="text-xl text-slate-800">Career Journey</CardTitle>
+                  <CardTitle className="text-xl text-slate-700 font-medium">Career Journey</CardTitle>
                 </div>
-                <div className="space-y-6">
-                  {timeline.map((item, index) => <div key={index} className="flex items-start gap-4">
-                      <div className="flex-shrink-0 pt-1">
-                        <div className="bg-gradient-to-r from-rose-400 to-pink-400 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
+                <div className="space-y-8">
+                  {timeline.map((item, index) => (
+                    <div key={index} className="group/item relative pl-6 hover:translate-x-1 transition-transform duration-300">
+                      {/* Timeline line */}
+                      {index < timeline.length - 1 && (
+                        <div className="absolute left-2 top-8 w-px h-8 bg-gradient-to-b from-rose-200 to-transparent"></div>
+                      )}
+                      
+                      <div className="absolute left-0 top-2">
+                        <div className="w-4 h-4 rounded-full bg-white border-2 border-rose-300 shadow-sm group-hover/item:border-rose-400 transition-colors duration-300"></div>
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <div className="text-xs font-medium text-rose-600 bg-rose-50 px-2 py-1 rounded-md inline-block">
                           {item.year}
                         </div>
+                        <h4 className="font-medium text-slate-800 leading-relaxed">{item.milestone}</h4>
+                        {item.subtitle && (
+                          <p className="text-sm text-slate-600 leading-relaxed">{item.subtitle}</p>
+                        )}
                       </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-slate-800">{item.milestone}</h4>
-                        {item.subtitle && <p className="text-sm text-slate-600 mt-1">{item.subtitle}</p>}
-                      </div>
-                    </div>)}
+                    </div>
+                  ))}
                 </div>
               </CardHeader>
             </Card>
 
             {/* Industries */}
-            <Card className="group transform transition-all duration-300 ease-out overflow-hidden border border-rose-200/60 bg-white/60 backdrop-blur-md hover:bg-white/70 hover:border-rose-300/60 shadow-lg hover:shadow-xl">
-              {/* Subtle top accent */}
-              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-rose-300/50 to-pink-300/50" />
-              
-              <CardHeader className="relative p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-2.5 rounded-lg bg-rose-100/60 border border-rose-200/60">
-                    <Users className="h-5 w-5 text-rose-600" />
+            <Card className="group border-0 bg-white/40 backdrop-blur-sm hover:bg-white/50 transition-all duration-500 shadow-sm hover:shadow-md">
+              <CardHeader className="p-10">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-8 h-8 rounded-full bg-rose-100/80 flex items-center justify-center">
+                    <Users className="h-4 w-4 text-rose-600" />
                   </div>
-                  <CardTitle className="text-xl text-slate-800">Industries Served</CardTitle>
+                  <CardTitle className="text-xl text-slate-700 font-medium">Industries Served</CardTitle>
                 </div>
-                <div className="space-y-4">
-                  <p className="text-slate-600 leading-relaxed">
-                    Experience across diverse sectors, bringing cross-industry insights 
-                    to every engagement.
+                <div className="space-y-6">
+                  <p className="text-slate-600 leading-relaxed text-sm">
+                    Cross-industry expertise bringing diverse insights to every engagement.
                   </p>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-sm font-medium text-slate-500">Sectors</span>
-                    <div className="h-px flex-1 bg-rose-200/60" />
-                  </div>
-                  <div className="grid grid-cols-1 gap-3">
-                    {industries.map((industry, index) => <div key={index} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-rose-400 rounded-full"></div>
-                        <span className="text-sm text-slate-700">{industry}</span>
-                      </div>)}
+                  <div className="grid grid-cols-1 gap-4">
+                    {industries.map((industry, index) => (
+                      <div key={index} className="group/item flex items-center gap-3 p-3 rounded-lg hover:bg-rose-50/50 transition-colors duration-300">
+                        <div className="w-2 h-2 bg-rose-400/60 rounded-full group-hover/item:bg-rose-500 transition-colors duration-300"></div>
+                        <span className="text-sm text-slate-700 font-medium">{industry}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </CardHeader>
