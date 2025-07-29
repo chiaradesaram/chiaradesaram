@@ -42,7 +42,7 @@ const Experience = () => {
     milestone: "Professional Foundation Years",
     subtitle: "Gained diverse expertise through internships in corporate law (DL & F de Saram Attorneys at Law), financial auditing (Ernst & Young), and equity markets (NDB Securities)"
   }];
-  return <section id="experience" className="py-20" style={{background: 'linear-gradient(135deg, #EEEEEE 0%, #F5EFEF 50%, #F0E8E8 100%)'}}>
+  return <section id="experience" className="py-20" style={{background: 'linear-gradient(135deg, #EEEEEE 0%, #F2F2F2 50%, #F0F0F0 100%)'}}>
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
