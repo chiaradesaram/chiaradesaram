@@ -42,30 +42,30 @@ const Experience = () => {
     milestone: "Professional Foundation Years",
     subtitle: "Gained diverse expertise through internships in corporate law (DL & F de Saram Attorneys at Law), financial auditing (Ernst & Young), and equity markets (NDB Securities)"
   }];
-  return <section id="experience" className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50/70 to-slate-50">
+  return <section id="experience" className="py-20" style={{background: 'linear-gradient(135deg, #EEEEEE 0%, #F5EFEF 50%, #F0E8E8 100%)'}}>
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800">
-              My <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Experience</span>
+              My <span className="bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">Experience</span>
             </h2>
             
           </div>
 
           {/* Education Section */}
           <div className="mb-12">
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-blue-100/60 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-rose-100/60 shadow-sm hover:shadow-md transition-shadow duration-300">
               <h3 className="text-2xl font-semibold mb-6 text-slate-800">Education</h3>
               <div className="space-y-4">
                 {education.map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-rose-400 rounded-full mt-2 flex-shrink-0"></div>
                     <div className="flex-1">
                       <h4 className="font-semibold text-slate-800">
                         {item.degree}, {item.institution}
                       </h4>
                       {item.award && (
-                        <p className="text-sm text-blue-600 mt-1 font-medium">{item.award}</p>
+                        <p className="text-sm text-rose-600 mt-1 font-medium">{item.award}</p>
                       )}
                     </div>
                   </div>
@@ -77,15 +77,15 @@ const Experience = () => {
           {/* Timeline & Industries */}
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Career Timeline */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-blue-100/60 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-rose-100/60 shadow-sm hover:shadow-md transition-shadow duration-300">
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2 text-slate-800">
-                <Calendar className="h-6 w-6 text-blue-600" />
+                <Calendar className="h-6 w-6 text-rose-500" />
                 Career Journey
               </h3>
               <div className="space-y-6">
                 {timeline.map((item, index) => <div key={index} className="flex items-start gap-4">
                     <div className="flex-shrink-0 pt-1">
-                      <div className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
+                      <div className="bg-gradient-to-r from-rose-400 to-pink-400 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
                         {item.year}
                       </div>
                     </div>
@@ -98,9 +98,9 @@ const Experience = () => {
             </div>
 
             {/* Industries */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-blue-100/60 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-rose-100/60 shadow-sm hover:shadow-md transition-shadow duration-300">
               <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2 text-slate-800">
-                <Users className="h-6 w-6 text-blue-600" />
+                <Users className="h-6 w-6 text-rose-500" />
                 Industries Served
               </h3>
               <div className="space-y-4">
@@ -110,7 +110,7 @@ const Experience = () => {
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                   {industries.map((industry, index) => <div key={index} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-rose-400 rounded-full"></div>
                       <span className="text-sm text-slate-700">{industry}</span>
                     </div>)}
                 </div>
@@ -122,6 +122,6 @@ const Experience = () => {
           
         </div>
       </div>
-    </section>;
+    </section>
 };
 export default Experience;
