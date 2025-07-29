@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Users } from "lucide-react";
 const Experience = () => {
@@ -54,68 +54,91 @@ const Experience = () => {
 
           {/* Education Section */}
           <div className="mb-12">
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-rose-100/60 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold mb-6 text-slate-800">Education</h3>
-              <div className="space-y-4">
-                {education.map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-rose-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-slate-800">
-                        {item.degree}, {item.institution}
-                      </h4>
-                      {item.award && (
-                        <p className="text-sm text-rose-600 mt-1 font-medium">{item.award}</p>
-                      )}
+            <Card className="group transform transition-all duration-300 ease-out overflow-hidden border border-rose-200/60 bg-white/60 backdrop-blur-md hover:bg-white/70 hover:border-rose-300/60 shadow-lg hover:shadow-xl">
+              {/* Subtle top accent */}
+              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-rose-300/50 to-pink-300/50" />
+              
+              <CardHeader className="relative p-8">
+                <CardTitle className="text-2xl text-slate-800 mb-6">Education</CardTitle>
+                <div className="space-y-4">
+                  {education.map((item, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-rose-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-slate-800">
+                          {item.degree}, {item.institution}
+                        </h4>
+                        {item.award && (
+                          <p className="text-sm text-rose-600 mt-1 font-medium">{item.award}</p>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+                  ))}
+                </div>
+              </CardHeader>
+            </Card>
           </div>
 
           {/* Timeline & Industries */}
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Career Timeline */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-rose-100/60 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2 text-slate-800">
-                <Calendar className="h-6 w-6 text-rose-500" />
-                Career Journey
-              </h3>
-              <div className="space-y-6">
-                {timeline.map((item, index) => <div key={index} className="flex items-start gap-4">
-                    <div className="flex-shrink-0 pt-1">
-                      <div className="bg-gradient-to-r from-rose-400 to-pink-400 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
-                        {item.year}
+            <Card className="group transform transition-all duration-300 ease-out overflow-hidden border border-rose-200/60 bg-white/60 backdrop-blur-md hover:bg-white/70 hover:border-rose-300/60 shadow-lg hover:shadow-xl">
+              {/* Subtle top accent */}
+              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-rose-300/50 to-pink-300/50" />
+              
+              <CardHeader className="relative p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-2.5 rounded-lg bg-rose-100/60 border border-rose-200/60">
+                    <Calendar className="h-5 w-5 text-rose-600" />
+                  </div>
+                  <CardTitle className="text-xl text-slate-800">Career Journey</CardTitle>
+                </div>
+                <div className="space-y-6">
+                  {timeline.map((item, index) => <div key={index} className="flex items-start gap-4">
+                      <div className="flex-shrink-0 pt-1">
+                        <div className="bg-gradient-to-r from-rose-400 to-pink-400 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
+                          {item.year}
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-slate-800">{item.milestone}</h4>
-                      {item.subtitle && <p className="text-sm text-slate-600 mt-1">{item.subtitle}</p>}
-                    </div>
-                  </div>)}
-              </div>
-            </div>
-
-            {/* Industries */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 border border-rose-100/60 shadow-sm hover:shadow-md transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2 text-slate-800">
-                <Users className="h-6 w-6 text-rose-500" />
-                Industries Served
-              </h3>
-              <div className="space-y-4">
-                <p className="text-slate-600 leading-relaxed">
-                  Experience across diverse sectors, bringing cross-industry insights 
-                  to every engagement.
-                </p>
-                <div className="grid grid-cols-2 gap-3">
-                  {industries.map((industry, index) => <div key={index} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-rose-400 rounded-full"></div>
-                      <span className="text-sm text-slate-700">{industry}</span>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-slate-800">{item.milestone}</h4>
+                        {item.subtitle && <p className="text-sm text-slate-600 mt-1">{item.subtitle}</p>}
+                      </div>
                     </div>)}
                 </div>
-              </div>
-            </div>
+              </CardHeader>
+            </Card>
+
+            {/* Industries */}
+            <Card className="group transform transition-all duration-300 ease-out overflow-hidden border border-rose-200/60 bg-white/60 backdrop-blur-md hover:bg-white/70 hover:border-rose-300/60 shadow-lg hover:shadow-xl">
+              {/* Subtle top accent */}
+              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-rose-300/50 to-pink-300/50" />
+              
+              <CardHeader className="relative p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-2.5 rounded-lg bg-rose-100/60 border border-rose-200/60">
+                    <Users className="h-5 w-5 text-rose-600" />
+                  </div>
+                  <CardTitle className="text-xl text-slate-800">Industries Served</CardTitle>
+                </div>
+                <div className="space-y-4">
+                  <p className="text-slate-600 leading-relaxed">
+                    Experience across diverse sectors, bringing cross-industry insights 
+                    to every engagement.
+                  </p>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-sm font-medium text-slate-500">Sectors</span>
+                    <div className="h-px flex-1 bg-rose-200/60" />
+                  </div>
+                  <div className="grid grid-cols-1 gap-3">
+                    {industries.map((industry, index) => <div key={index} className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-rose-400 rounded-full"></div>
+                        <span className="text-sm text-slate-700">{industry}</span>
+                      </div>)}
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
           </div>
 
           {/* Call to Action */}
