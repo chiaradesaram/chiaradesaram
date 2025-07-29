@@ -1,37 +1,40 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Heart, Zap, Target, Users } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 const StatsSection = ({ stats }: { stats: Array<{ number: string; label: string; subtitle: string }> }) => {
   const { ref, isVisible } = useScrollReveal({ threshold: 0.3 });
   
   return (
-    <div className="mb-12">
+    <div className="mb-16">
       <div 
         ref={ref}
-        className={`bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 max-w-3xl mx-auto transition-all duration-700 transform ${
+        className={`bg-white rounded-2xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto transition-all duration-700 transform ${
           isVisible 
             ? 'translate-y-0 opacity-100 scale-100' 
-            : 'translate-y-8 opacity-0 scale-98'
+            : 'translate-y-12 opacity-0 scale-95'
         }`}
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
             <div 
               key={index} 
               className={`text-center relative transition-all duration-500 transform ${
                 isVisible 
                   ? 'translate-y-0 opacity-100' 
-                  : 'translate-y-4 opacity-0'
+                  : 'translate-y-6 opacity-0'
               }`}
               style={{
-                transitionDelay: isVisible ? `${index * 150}ms` : '0ms'
+                transitionDelay: isVisible ? `${index * 200}ms` : '0ms'
               }}
             >
               {index > 0 && (
-                <div className="hidden md:block absolute -left-3 top-1/2 transform -translate-y-1/2 w-px h-8 bg-gray-300/60"></div>
+                <div className="hidden md:block absolute -left-4 top-1/2 transform -translate-y-1/2 w-px h-12 bg-gray-200"></div>
               )}
-              <div className="text-xl md:text-2xl font-semibold text-gray-800 mb-1">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                 {stat.number}
               </div>
-              <div className="text-sm text-gray-600 font-medium">
+              <div className="text-gray-700 font-medium">
                 {stat.label && <span>{stat.label} </span>}
               </div>
             </div>
@@ -56,6 +59,27 @@ const About = () => {
     label: "",
     subtitle: "Scale Range"
   }];
+  const values = [{
+    icon: Heart,
+    title: "Customer-Centric",
+    description: "Customer needs at the heart of every decision"
+  }, {
+    icon: Target,
+    title: "Problem Solver",
+    description: "Focus on solving the right problems, not just any problems"
+  }, {
+    icon: Zap,
+    title: "Results-Driven",
+    description: "Transform insights into measurable outcomes"
+  }, {
+    icon: Users,
+    title: "Team Enabler",
+    description: "Swiss army knife helping product teams succeed"
+  }, {
+    icon: Zap,
+    title: "Growth-Minded",
+    description: "Always learning and adapting to new challenges"
+  }];
   return <section id="about" className="py-20 bg-gray-50 text-gray-900">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
@@ -69,47 +93,45 @@ const About = () => {
           {/* Stats Bar */}
           <StatsSection stats={stats} />
 
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8 mb-16">
-              <div className="text-lg text-gray-600 leading-relaxed">
-                I'm a consultant who loves solving meaningful problems, learning from others, and bringing teams together to build products that truly work for users. My background—spanning economics, banking, and running a business—has shaped the way I think.
-              </div>
-              
-              <div className="text-lg text-gray-600 leading-relaxed">
-                Economics and banking sparked a lasting interest in data, insights, and experimentation. Working in my family's business taught me the realities of operations—and how much the right tools, processes, and mindset can impact people and outcomes.
-              </div>
-              
-              <div className="text-lg text-gray-600 leading-relaxed">
-                Since moving into tech 8 years ago, I've worked across industries, technologies and teams in roles spanning business analysis, customer experience, product operations, and user research. I am driven by curiosity and a constant appetite to learn and build better products for real users.
-              </div>
-              
-              <div className="text-lg text-gray-600 leading-relaxed">
-                I believe the best solutions come from deeply understanding customer needs, working collaboratively, and refining until they genuinely work.
-              </div>
-              
-              <div className="text-lg text-gray-600 leading-relaxed">
-                I combine business analysis, research, and process thinking to help teams build products that matter.
+          <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold">My Approach</h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                I bring a unique perspective to solving customer problems, shaped by a career spanning business, economics, and technology.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                My background in economics and banking sharpened my analytical thinking and sparked a lasting interest in data, insights, and experimentation. Running my family business taught me how decisions play out in real operations, affecting people and outcomes.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Moving into tech, I've worked across a wide range of industries and tools, driven by curiosity and a constant appetite to learn.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Over eight years—across startups and global enterprises—I've seen that the best solutions come from understanding customer problems at their root and refining until they truly work.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                I blend business analysis, research, and process improvement to help teams create products that make a real impact.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                
+                
+                
               </div>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-8 border border-gray-200/50">
-              <h3 className="text-2xl font-semibold mb-6 text-gray-900">What I believe in</h3>
-              <div className="space-y-4">
-                {[
-                  "Staying curious and open—there's always more to learn",
-                  "Being comfortable with complexity and asking the right questions", 
-                  "Bringing clarity and structure, even when things move fast",
-                  "Putting customers needs at the heart of every decision",
-                  "Focusing on outcomes and making impact measurable"
-                ].map((belief, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-sm font-semibold text-primary">{index + 1}</span>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">{belief}</p>
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold">Core Values</h3>
+              {values.map((value, index) => <div key={index} className="flex items-center gap-4 animate-fade-in opacity-0" style={{
+              animationDelay: `${index * 150}ms`,
+              animationFillMode: 'forwards'
+            }}>
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <value.icon className="h-5 w-5 text-orange-400" />
                   </div>
-                ))}
-              </div>
+                  <div>
+                    <span className="font-semibold text-gray-900">{value.title}</span>
+                    <p className="text-sm text-gray-600 mt-1">{value.description}</p>
+                  </div>
+                </div>)}
             </div>
           </div>
 
