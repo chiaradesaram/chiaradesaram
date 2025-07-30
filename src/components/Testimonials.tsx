@@ -16,18 +16,25 @@ const Testimonials = () => {
       title: "CX Manager, Wolters Kluwer",
       image: "/placeholder.svg",
       quote: "Chiara is one of the most well-prepared, determined colleagues I have ever worked with. She continually brings diligence and well-rounded thinking to her projects, including nothing short of highly detailed project plans and multiple backup avenues when obstacles arise. Given with her collaborative and even-keel demeanor, Chirara excels at connecting teams to fully understand and buy into shared complex business goals."
+    },
+    {
+      id: 3,
+      name: "Olesya Lisnycha",
+      title: "UX Lead, EPAM",
+      image: "/placeholder.svg",
+      quote: "Over the past four years, I've had the pleasure of working closely with Chiara, and her contributions are consistently outstanding. She possesses a sharp analytical mind and an exceptional ability to thoroughly investigate design processes, which has been incredibly beneficial. Chiara also excels at using user-centered design approaches in developing products, ensuring our solutions truly meet user needs. She is extremely productive in her work and exhibits firm leadership qualities, making her a highly dedicated and valuable team member. Her strong background in the law and compliance industry is a significant asset."
     }
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
+    <section id="testimonials" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Client <span className="text-gradient">Testimonials</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Client <span className="bg-gradient-to-r from-orange-400 to-rose-400 bg-clip-text text-transparent">Testimonials</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Here's what my clients say about working with me
             </p>
           </div>
