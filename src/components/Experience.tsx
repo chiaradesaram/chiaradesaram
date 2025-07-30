@@ -91,20 +91,11 @@ const Experience = () => {
                 <CardTitle className="text-xl text-slate-700 font-medium">Career Journey</CardTitle>
               </div>
               
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {timeline.map((item, index) => (
-                  <div key={index} className="group/item relative pl-6 hover:translate-x-1 transition-transform duration-300">
-                    {/* Timeline line */}
-                    {index < timeline.length - 1 && (
-                      <div className="absolute left-2 top-6 w-px h-6 bg-gradient-to-b from-rose-200 to-transparent"></div>
-                    )}
-                    
-                    <div className="absolute left-0 top-1.5">
-                      <div className="w-4 h-4 rounded-full bg-white border-2 border-rose-300 shadow-sm group-hover/item:border-rose-400 transition-colors duration-300"></div>
-                    </div>
-                    
-                    <div className="space-y-1.5">
-                      <div className="text-xs font-medium text-rose-600 bg-rose-50 px-2 py-0.5 rounded-md inline-block">
+                  <div key={index} className="group/item p-4 rounded-lg bg-white/20 hover:bg-white/30 transition-all duration-300 hover:translate-x-1">
+                    <div className="space-y-2">
+                      <div className="text-xs font-medium text-rose-600 bg-rose-50 px-2 py-1 rounded-full inline-block">
                         {item.year}
                       </div>
                       <h4 className="font-medium text-slate-800 leading-snug text-sm">{item.milestone}</h4>
