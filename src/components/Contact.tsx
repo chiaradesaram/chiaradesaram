@@ -39,15 +39,15 @@ const Contact = () => {
   const contactMethods = [{
     icon: Mail,
     title: "Email",
-    value: "chiara@example.com",
+    value: "chiaradesaram94@gmail.com",
     description: "Drop me a line anytime",
-    action: "mailto:chiara@example.com"
+    action: "mailto:chiaradesaram94@gmail.com"
   }, {
     icon: Linkedin,
     title: "LinkedIn",
-    value: "/in/chiaraadesaram",
+    value: "/in/chiaradesaram",
     description: "Let's connect professionally",
-    action: "https://linkedin.com/in/chiaraadesaram"
+    action: "http://www.linkedin.com/in/chiaradesaram"
   }];
   const services = ["Business Analysis & Requirements", "Customer Experience Strategy", "User Research & Insights", "Process Optimization", "Product Operations", "Digital Transformation"];
   return <section id="contact" className="py-20 section-gradient">
@@ -70,14 +70,18 @@ const Contact = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-6">Get in Touch</h3>
                 <div className="space-y-4">
-                  {contactMethods.map((method, index) => <Card key={index} className="card-hover group cursor-pointer">
+                  {contactMethods.map((method, index) => <Card 
+                      key={index} 
+                      className="card-hover group cursor-pointer"
+                      onClick={() => window.open(method.action, '_blank')}
+                    >
                       <CardContent className="p-4">
                         <div className="flex items-start gap-3">
                           <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                             <method.icon className="h-5 w-5 text-primary" />
                           </div>
                           <div className="flex-1">
-                            
+                            <h4 className="font-medium text-foreground mb-1">{method.title}</h4>
                             <p className="text-sm text-primary font-medium">{method.value}</p>
                             <p className="text-xs text-muted-foreground">{method.description}</p>
                           </div>
