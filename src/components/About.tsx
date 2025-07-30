@@ -59,27 +59,13 @@ const About = () => {
     label: "",
     subtitle: "Scale Range"
   }];
-  const values = [{
-    icon: Heart,
-    title: "Customer-Centric",
-    description: "Customer needs at the heart of every decision"
-  }, {
-    icon: Target,
-    title: "Problem Solver",
-    description: "Focus on solving the right problems, not just any problems"
-  }, {
-    icon: Zap,
-    title: "Results-Driven",
-    description: "Transform insights into measurable outcomes"
-  }, {
-    icon: Users,
-    title: "Team Enabler",
-    description: "Swiss army knife helping product teams succeed"
-  }, {
-    icon: Zap,
-    title: "Growth-Minded",
-    description: "Always learning and adapting to new challenges"
-  }];
+  const values = [
+    "Staying curious and open—there's always more to learn",
+    "Bringing clarity and structure, even when things move fast", 
+    "Putting customers needs at the heart of every decision",
+    "Focusing on outcomes and making impact measurable"
+  ];
+  
   return <section id="about" className="py-20 bg-gray-50 text-gray-900">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
@@ -87,51 +73,59 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               About <span className="text-gradient">Me</span>
             </h2>
-            
           </div>
 
           {/* Stats Bar */}
           <StatsSection stats={stats} />
 
-          <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
+          {/* Main Content */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+            {/* Background Story */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-semibold">My Approach</h3>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                I bring a unique perspective to solving customer problems, shaped by a career spanning business, economics, and technology.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                My background in economics and banking sharpened my analytical thinking and sparked a lasting interest in data, insights, and experimentation. Running my family business taught me how decisions play out in real operations, affecting people and outcomes.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Moving into tech, I've worked across a wide range of industries and tools, driven by curiosity and a constant appetite to learn.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Over eight years—across startups and global enterprises—I've seen that the best solutions come from understanding customer problems at their root and refining until they truly work.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                I blend business analysis, research, and process improvement to help teams create products that make a real impact.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                
-                
-                
+              <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                <h3 className="text-2xl font-semibold mb-6 text-gray-800">My Journey</h3>
+                <div className="space-y-4">
+                  <p className="text-gray-600 leading-relaxed">
+                    Over the past 8 years in tech, I've worked across industries and company sizes, from early-stage startups to global enterprises, in varying roles spanning business analysis, customer experience, product operations, and user research.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    Before that, I worked in economics and banking. This mix has shaped a unique perspective in the way I think: bringing a blend of analytical thinking, structured problem-solving, and creative exploration.
+                  </p>
+                </div>
               </div>
             </div>
 
+            {/* Philosophy */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-semibold">Core Values</h3>
-              {values.map((value, index) => <div key={index} className="flex items-center gap-4 animate-fade-in opacity-0" style={{
-              animationDelay: `${index * 150}ms`,
-              animationFillMode: 'forwards'
-            }}>
-                  <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <value.icon className="h-5 w-5 text-orange-400" />
+              <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                <h3 className="text-2xl font-semibold mb-6 text-gray-800">My Philosophy</h3>
+                <div className="space-y-4">
+                  <p className="text-gray-600 leading-relaxed">
+                    Great products begin with curiosity, a desire to truly understand users and the problems they face. From there, the best solutions emerge through collaboration, experimentation, and ongoing refinement.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    I enjoy bringing the right people together, working toward a shared purpose to create solutions that make a real impact.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Values Section */}
+          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-semibold mb-6 text-center text-gray-800">What I Value in My Work</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              {values.map((value, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300 group"
+                >
+                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-orange-200 transition-colors duration-300">
+                    <span className="text-orange-600 font-semibold text-sm">{index + 1}</span>
                   </div>
-                  <div>
-                    <span className="font-semibold text-gray-900">{value.title}</span>
-                    <p className="text-sm text-gray-600 mt-1">{value.description}</p>
-                  </div>
-                </div>)}
+                  <p className="text-gray-700 leading-relaxed">{value}</p>
+                </div>
+              ))}
             </div>
           </div>
 
