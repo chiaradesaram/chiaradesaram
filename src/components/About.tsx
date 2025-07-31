@@ -115,12 +115,14 @@ const About = () => {
                       {stat.number}
                     </div>
                     <div>
-                      <div className="text-gray-700 font-medium">
+                      <div className={`font-medium ${
+                        index === 2 ? 'text-gray-700 text-base' : 'text-gray-700'
+                      }`}>
                         {stat.label && <span>{stat.label} </span>}
-                        <span className="text-gray-500">{stat.subtitle}</span>
+                        {index !== 2 && <span className="text-gray-500">{stat.subtitle}</span>}
                       </div>
                       {index === 2 && (
-                        <div className="text-xs text-gray-400 mt-1">
+                        <div className="text-sm text-gray-600 mt-1">
                           across industries: Banking, Legal, Compliance, Telecommunications, FMCG
                         </div>
                       )}
