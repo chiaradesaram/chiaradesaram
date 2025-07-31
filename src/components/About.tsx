@@ -104,10 +104,14 @@ const About = () => {
               {stats.map((stat, index) => (
                 <div 
                   key={index} 
-                  className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+                  className={`bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 ${
+                    index === 2 ? 'p-4' : 'p-6'
+                  }`}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="text-3xl font-bold text-primary">
+                    <div className={`font-bold text-primary ${
+                      index === 2 ? 'text-lg' : 'text-3xl'
+                    }`}>
                       {stat.number}
                     </div>
                     <div>
@@ -115,6 +119,11 @@ const About = () => {
                         {stat.label && <span>{stat.label} </span>}
                         <span className="text-gray-500">{stat.subtitle}</span>
                       </div>
+                      {index === 2 && (
+                        <div className="text-xs text-gray-400 mt-1">
+                          across industries: Banking, Legal, Compliance, Telecommunications, FMCG
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
