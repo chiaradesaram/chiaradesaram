@@ -59,11 +59,21 @@ const About = () => {
     label: "",
     subtitle: "Scale Range"
   }];
+
+  const workingApproach = [
+    "Analytical thinking to map businesses, processes, and user journeys",
+    "A strong foundation in discovery and user research to uncover real needs and opportunities",
+    "Data and insights to guide decision-making and prioritisation", 
+    "A focus on outcomes, making impact clear and measurable",
+    "A natural drive to connect the right people and get things moving",
+    "A love for technology, always exploring better ways to work and solve problems"
+  ];
+
   const values = [
-    "Staying curious and open—there's always more to learn",
-    "Bringing clarity and structure, even when things move fast", 
-    "Putting customers needs at the heart of every decision",
-    "Focusing on outcomes and making impact measurable"
+    "Curiosity and a growth mindset",
+    "Clarity in fast-moving environments", 
+    "Real user needs at the core",
+    "Open, collaborative problem-solving"
   ];
   
   return <section id="about" className="py-20 bg-gray-50 text-gray-900">
@@ -78,42 +88,50 @@ const About = () => {
           {/* Stats Bar */}
           <StatsSection stats={stats} />
 
-          {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
-            {/* Background Story */}
-            <div className="space-y-6">
-              <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                <h3 className="text-2xl font-semibold mb-6 text-gray-800">My Journey</h3>
-                <div className="space-y-4">
-                  <p className="text-gray-600 leading-relaxed">
-                    Over the past 8 years in tech, I've worked across industries and company sizes, from early-stage startups to global enterprises, in varying roles spanning business analysis, customer experience, product operations, and user research.
-                  </p>
-                  <p className="text-gray-600 leading-relaxed">
-                    Before that, I worked in economics and banking. This mix has shaped a unique perspective in the way I think: bringing a blend of analytical thinking, structured problem-solving, and creative exploration.
-                  </p>
-                </div>
+          {/* About Me Section */}
+          <div className="mb-16">
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-semibold mb-6 text-gray-800">About Me</h3>
+              <div className="space-y-4">
+                <p className="text-gray-600 leading-relaxed">
+                  Over the past 8 years in tech, I've worked across industries and company sizes, from early-stage startups to global enterprises, in varying roles spanning business analysis, customer experience, product operations, and user research.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  Before moving into tech, I came from an economics and finance background. This mix has shaped a unique perspective in the way that I think: bringing a blend of analytical thinking, structured problem-solving, and creative exploration. As I've moved through different domains, tools, and technologies, my way of thinking has continued to evolve, driven by curiosity, adaptability, and a desire to build better.
+                </p>
               </div>
             </div>
+          </div>
 
-            {/* Philosophy */}
-            <div className="space-y-6">
-              <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                <h3 className="text-2xl font-semibold mb-6 text-gray-800">My Philosophy</h3>
-                <div className="space-y-4">
-                  <p className="text-gray-600 leading-relaxed">
-                    Great products begin with curiosity, a desire to truly understand users and the problems they face. From there, the best solutions emerge through collaboration, experimentation, and ongoing refinement.
-                  </p>
-                  <p className="text-gray-600 leading-relaxed">
-                    I enjoy bringing the right people together, working toward a shared purpose to create solutions that make a real impact.
-                  </p>
+          {/* How I Work Section */}
+          <div className="mb-16">
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-semibold mb-6 text-gray-800">How I Work</h3>
+              <div className="space-y-6">
+                <p className="text-gray-600 leading-relaxed">
+                  I believe the best products come from teams that are curious, collaborative, and committed to deeply understanding their users. I love helping teams come together to explore problems, generate ideas, and iterate on thoughtful solutions, always with a focus on outcomes and measurable impact.
+                </p>
+                <div>
+                  <p className="text-gray-700 font-medium mb-4">My approach combines:</p>
+                  <div className="space-y-3">
+                    {workingApproach.map((approach, index) => (
+                      <div 
+                        key={index} 
+                        className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300"
+                      >
+                        <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <p className="text-gray-700 leading-relaxed">{approach}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Values Section */}
+          {/* What I Value Section */}
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-6 text-center text-gray-800">What I Value in My Work</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800">What I Value</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {values.map((value, index) => (
                 <div 
@@ -128,8 +146,6 @@ const About = () => {
               ))}
             </div>
           </div>
-
-          
         </div>
       </div>
     </section>;
