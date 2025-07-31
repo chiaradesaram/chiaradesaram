@@ -85,21 +85,40 @@ const About = () => {
             </h2>
           </div>
 
-          {/* Stats Bar */}
-          <StatsSection stats={stats} />
-
-          {/* About Me Section */}
-          <div className="mb-16">
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-semibold mb-6 text-gray-800">About Me</h3>
+          {/* About Me Content with Stats */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+            {/* About Me Text */}
+            <div className="space-y-6">
               <div className="space-y-4">
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-lg">
                   Over the past 8 years in tech, I've worked across industries and company sizes, from early-stage startups to global enterprises, in varying roles spanning business analysis, customer experience, product operations, and user research.
                 </p>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-lg">
                   Before moving into tech, I came from an economics and finance background. This mix has shaped a unique perspective in the way that I think: bringing a blend of analytical thinking, structured problem-solving, and creative exploration. As I've moved through different domains, tools, and technologies, my way of thinking has continued to evolve, driven by curiosity, adaptability, and a desire to build better.
                 </p>
               </div>
+            </div>
+
+            {/* Stats Cards */}
+            <div className="space-y-4">
+              {stats.map((stat, index) => (
+                <div 
+                  key={index} 
+                  className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="text-3xl font-bold text-primary">
+                      {stat.number}
+                    </div>
+                    <div>
+                      <div className="text-gray-700 font-medium">
+                        {stat.label && <span>{stat.label} </span>}
+                        <span className="text-gray-500">{stat.subtitle}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
