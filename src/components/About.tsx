@@ -112,17 +112,17 @@ const About = () => {
                     <div className={`font-bold text-primary ${
                       index === 2 ? 'text-lg' : 'text-3xl'
                     }`}>
-                      {stat.number}
+                      {index === 2 ? 'Startups to Fortune 500' : stat.number}
                     </div>
                     <div>
-                      <div className={`font-medium ${
-                        index === 2 ? 'text-gray-700 text-base' : 'text-gray-700'
-                      }`}>
-                        {stat.label && <span>{stat.label} </span>}
-                        {index !== 2 && <span className="text-gray-500">{stat.subtitle}</span>}
-                      </div>
+                      {index !== 2 && (
+                        <div className="font-medium text-gray-700">
+                          {stat.label && <span>{stat.label} </span>}
+                          <span className="text-gray-500">{stat.subtitle}</span>
+                        </div>
+                      )}
                       {index === 2 && (
-                        <div className="text-sm text-gray-600 mt-1">
+                        <div className="text-gray-500 text-sm mt-1">
                           Banking • Legal • Compliance • Telecommunications • FMCG
                         </div>
                       )}
