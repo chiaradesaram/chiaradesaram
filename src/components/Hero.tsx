@@ -42,7 +42,7 @@ const Hero = () => {
             animationFillMode: 'both'
           }}>
               <div className="space-y-2">
-                <p className="text-lg text-muted-foreground font-medium tracking-wide">Hi there, I'm</p>
+                <p className="text-lg font-medium tracking-wide text-gradient bg-gradient-to-r from-muted-foreground to-foreground bg-clip-text text-transparent">Hi there, I'm</p>
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
                   <span className="text-foreground">Chiara</span>
                   <br />
