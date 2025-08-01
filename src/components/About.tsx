@@ -123,7 +123,7 @@ const About = () => {
                       </div>
                       {index === 2 && (
                         <div className="text-sm text-gray-600 mt-1">
-                          across industries: Banking, Legal, Compliance, Telecommunications, FMCG
+                          Banking • Legal • Compliance • Telecommunications • FMCG
                         </div>
                       )}
                     </div>
