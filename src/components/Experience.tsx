@@ -100,7 +100,20 @@ const Experience = () => {
                       </div>
                       <h4 className="font-medium text-slate-800 leading-snug text-sm">{item.milestone}</h4>
                       {item.subtitle && (
-                        <p className="text-xs text-slate-600 leading-relaxed">{item.subtitle}</p>
+                        <>
+                          {index === timeline.length - 1 ? (
+                            <div className="text-xs text-slate-600 leading-relaxed">
+                              <div className="mb-1">Gained diverse expertise through internships in:</div>
+                              <div className="ml-3 space-y-0.5">
+                                <div>• DL & F de Saram Attorneys at Law (corporate law)</div>
+                                <div>• Ernst & Young (financial auditing)</div>
+                                <div>• NDB Securities (stock trading)</div>
+                              </div>
+                            </div>
+                          ) : (
+                            <p className="text-xs text-slate-600 leading-relaxed">{item.subtitle}</p>
+                          )}
+                        </>
                       )}
                     </div>
                   </div>
