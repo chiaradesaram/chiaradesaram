@@ -82,7 +82,7 @@ const Hero = () => {
             animationDelay: '1.2s',
             animationFillMode: 'both'
           }}>
-              <Button size="lg" onClick={() => scrollToSection('contact')} className="group px-8 py-4 text-lg bg-primary hover:bg-primary/90 text-primary-foreground hover-glow transition-all duration-300">
+              <Button size="lg" onClick={() => window.location.href = 'mailto:chiaradesaram94@gmail.com'} className="group px-8 py-4 text-lg bg-primary hover:bg-primary/90 text-primary-foreground hover-glow transition-all duration-300">
                 <Mail className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform" />
                 Get In Touch
               </Button>
