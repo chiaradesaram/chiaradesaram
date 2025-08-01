@@ -66,7 +66,7 @@ const Hero = () => {
             animationDelay: '0.6s',
             animationFillMode: 'both'
           }}>
-              <p className="text-sm text-muted-foreground font-medium">Expertise Areas</p>
+              
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => <Badge key={skill} variant="secondary" className="px-4 py-2 text-sm bg-slate-700/80 text-slate-200 border border-slate-600/50 hover:bg-slate-600/80 hover:border-slate-500/60 transition-all duration-300 animate-fade-in opacity-0 backdrop-blur-sm" style={{
                 animationDelay: `${0.8 + index * 0.1}s`,
@@ -82,7 +82,7 @@ const Hero = () => {
             animationDelay: '1.2s',
             animationFillMode: 'both'
           }}>
-              <Button size="lg" onClick={() => window.location.href = 'mailto:chiaradesaram94@gmail.com'} className="group px-8 py-4 text-lg bg-primary hover:bg-primary/90 text-primary-foreground hover-glow transition-all duration-300">
+              <Button size="lg" onClick={() => scrollToSection('contact')} className="group px-8 py-4 text-lg bg-primary hover:bg-primary/90 text-primary-foreground hover-glow transition-all duration-300">
                 <Mail className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform" />
                 Get In Touch
               </Button>
