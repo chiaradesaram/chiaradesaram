@@ -110,13 +110,9 @@ const About = () => {
                 >
                   <div className="flex items-center gap-4">
                     <div className={`font-bold text-primary ${
-                      index === 2 ? 'text-lg leading-tight' : 'text-3xl'
+                      index === 2 ? 'text-lg' : 'text-3xl'
                     }`}>
-                      {index === 2 ? (
-                        <>
-                          Startups to<br />Fortune 500
-                        </>
-                      ) : stat.number}
+                      {index === 2 ? 'Startups to Fortune 500' : stat.number}
                     </div>
                     <div>
                       {index !== 2 && (
