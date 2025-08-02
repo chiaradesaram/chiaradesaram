@@ -22,7 +22,7 @@ const Projects = () => {
   }, {
     title: "Field Engineer Process Analysis for a UK Telecommunications Company",
     categories: ["Discovery"],
-    description: "Led a discovery initiative to uncover root causes of pain points and inefficiencies in field engineer workflows, proposing process improvements and new technology opportunities.",
+    description: "Discovery initiative to uncover root causes of pain points and inefficiencies in field engineer workflows, proposing process improvements and new technology opportunities.",
     tools: ["Journey Mapping", "User Research", "Process Mapping", "Process Redesign"],
     icon: Search
   }, {
