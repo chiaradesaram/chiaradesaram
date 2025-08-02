@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,17 +19,30 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Expertise', href: '#expertise' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'About', href: '#about', type: 'section' },
+    { label: 'Expertise', href: '#expertise', type: 'section' },
+    { label: 'Projects', href: '#projects', type: 'section' },
+    { label: 'Experience', href: '#experience', type: 'section' },
+    { label: 'Testimonials', href: '#testimonials', type: 'section' },
+    { label: 'Blog', href: '/blog', type: 'page' },
+    { label: 'Contact', href: '#contact', type: 'section' },
   ];
 
-  const scrollToSection = (href: string) => {
-    const sectionId = href.replace('#', '');
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (item: { href: string; type: string }) => {
+    if (item.type === 'page') {
+      navigate(item.href);
+    } else {
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const sectionId = item.href.replace('#', '');
+          document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      } else {
+        const sectionId = item.href.replace('#', '');
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -40,7 +56,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button
-            onClick={() => scrollToSection('#hero')}
+            onClick={() => navigate('/')}
             className={`text-xl font-bold transition-colors ${
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}
@@ -53,7 +69,7 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item)}
                 className={`nav-link font-medium transition-colors ${
                   isScrolled 
                     ? 'text-gray-700 hover:text-primary' 
@@ -65,7 +81,7 @@ const Navigation = () => {
             ))}
             <Button
               variant={isScrolled ? "default" : "ghost"}
-              onClick={() => scrollToSection('#contact')}
+              onClick={() => handleNavigation({ href: '#contact', type: 'section' })}
               className={isScrolled ? "" : "text-white border-white hover:bg-white hover:text-gray-900"}
             >
               Get In Touch
@@ -90,7 +106,7 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.label}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item)}
                   className="text-gray-700 hover:text-primary font-medium px-4 py-2 text-left transition-colors"
                 >
                   {item.label}
@@ -98,7 +114,7 @@ const Navigation = () => {
               ))}
               <div className="px-4">
                 <Button
-                  onClick={() => scrollToSection('#contact')}
+                  onClick={() => handleNavigation({ href: '#contact', type: 'section' })}
                   className="w-full"
                 >
                   Get In Touch
