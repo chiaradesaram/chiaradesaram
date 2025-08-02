@@ -17,7 +17,8 @@ const Blog = () => {
       category: "UX Research",
       readTime: "8 min read",
       date: "2024-01-15",
-      tags: ["User Testing", "UX Research", "Methodology"]
+      tags: ["User Testing", "UX Research", "Methodology"],
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=240&fit=crop&crop=center"
     },
     {
       id: 2,
@@ -26,7 +27,8 @@ const Blog = () => {
       category: "Service Design",
       readTime: "12 min read",
       date: "2024-01-10",
-      tags: ["Journey Mapping", "Templates", "Service Design"]
+      tags: ["Journey Mapping", "Templates", "Service Design"],
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=240&fit=crop&crop=center"
     },
     {
       id: 3,
@@ -35,7 +37,8 @@ const Blog = () => {
       category: "Process Design",
       readTime: "10 min read",
       date: "2024-01-05",
-      tags: ["Process Improvement", "Digital Transformation", "Framework"]
+      tags: ["Process Improvement", "Digital Transformation", "Framework"],
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=240&fit=crop&crop=center"
     },
     {
       id: 4,
@@ -44,12 +47,13 @@ const Blog = () => {
       category: "Design Thinking",
       readTime: "6 min read",
       date: "2023-12-28",
-      tags: ["Design Thinking", "Workshop", "Facilitation"]
+      tags: ["Design Thinking", "Workshop", "Facilitation"],
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=240&fit=crop&crop=center"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">{/* Force light theme */}
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
         <div className="container mx-auto max-w-4xl">
@@ -65,10 +69,10 @@ const Blog = () => {
                 Back to Home
               </Button>
             </Link>
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6">
               Insights & Resources
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl">
+            <p className="text-xl text-slate-600 max-w-2xl">
               Practical guides, templates, and insights on UX research, service design, and process improvement.
             </p>
           </div>
@@ -84,13 +88,36 @@ const Blog = () => {
               postsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="grid gap-8">
+            <div className="space-y-6 max-w-2xl mx-auto">
               {blogPosts.map((post, index) => (
-                <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-4">
-                      <Badge variant="secondary">{post.category}</Badge>
-                      <div className="flex items-center text-sm text-muted-foreground space-x-4">
+                <Card 
+                  key={post.id} 
+                  className="group sticky top-20 transform transition-all duration-300 ease-out overflow-hidden border border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 shadow-lg hover:shadow-xl"
+                  style={{
+                    zIndex: index + 1,
+                    transform: `translateY(${index * -20}px)`
+                  }}
+                >
+                  {/* Subtle top accent */}
+                  <div className="absolute top-0 left-0 w-full h-0.5 bg-slate-300" />
+                  
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <Badge className="bg-white/90 text-slate-800 border border-slate-200 hover:bg-white">
+                        {post.category}
+                      </Badge>
+                    </div>
+                  </div>
+
+                  <CardHeader className="relative p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center text-sm text-slate-500 space-x-4">
                         <div className="flex items-center">
                           <Calendar className="w-4 h-4 mr-1" />
                           {new Date(post.date).toLocaleDateString('en-US', { 
@@ -105,22 +132,35 @@ const Blog = () => {
                         </div>
                       </div>
                     </div>
-                    <CardTitle className="text-2xl mb-3">{post.title}</CardTitle>
-                    <CardDescription className="text-base leading-relaxed">
+                    <CardTitle className="text-xl text-slate-800 mb-3 leading-tight">
+                      {post.title}
+                    </CardTitle>
+                    <p className="text-slate-600 leading-relaxed">
                       {post.description}
-                    </CardDescription>
+                    </p>
                   </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {post.tags.map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-xs">
-                          {tag}
-                        </Badge>
-                      ))}
+                  
+                  <CardContent className="relative p-6 pt-0">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm font-medium text-slate-500">Tags</span>
+                        <div className="h-px flex-1 bg-slate-200" />
+                      </div>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {post.tags.map((tag) => (
+                          <Badge 
+                            key={tag} 
+                            variant="outline" 
+                            className="text-xs px-3 py-1 bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100 hover:border-slate-300 transition-all duration-200"
+                          >
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
+                      <Button className="w-full bg-slate-800 hover:bg-slate-700 text-white">
+                        Read Article
+                      </Button>
                     </div>
-                    <Button variant="default" className="w-full sm:w-auto">
-                      Read Article
-                    </Button>
                   </CardContent>
                 </Card>
               ))}
