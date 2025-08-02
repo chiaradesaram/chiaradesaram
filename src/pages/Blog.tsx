@@ -53,7 +53,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">{/* Force light theme */}
+    <div className="min-h-screen bg-background">
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
         <div className="container mx-auto max-w-4xl">
@@ -69,10 +69,10 @@ const Blog = () => {
                 Back to Home
               </Button>
             </Link>
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">
               Insights & Resources
             </h1>
-            <p className="text-xl text-slate-600 max-w-2xl">
+            <p className="text-xl text-muted-foreground max-w-2xl">
               Practical guides, templates, and insights on UX research, service design, and process improvement.
             </p>
           </div>
@@ -92,14 +92,14 @@ const Blog = () => {
               {blogPosts.map((post, index) => (
                 <Card 
                   key={post.id} 
-                  className="group sticky top-20 transform transition-all duration-300 ease-out overflow-hidden border border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 shadow-lg hover:shadow-xl"
+                  className="group sticky top-20 transform transition-all duration-300 ease-out overflow-hidden border border-border bg-card/40 backdrop-blur-md hover:bg-card/50 hover:border-primary/20 shadow-lg hover:shadow-xl hover-glow"
                   style={{
                     zIndex: index + 1,
                     transform: `translateY(${index * -20}px)`
                   }}
                 >
                   {/* Subtle top accent */}
-                  <div className="absolute top-0 left-0 w-full h-0.5 bg-slate-300" />
+                  <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
                   
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
@@ -108,8 +108,9 @@ const Blog = () => {
                       alt={post.title}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                     <div className="absolute top-4 left-4">
-                      <Badge className="bg-white/90 text-slate-800 border border-slate-200 hover:bg-white">
+                      <Badge className="bg-card/90 text-card-foreground border border-border hover:bg-card">
                         {post.category}
                       </Badge>
                     </div>
@@ -117,7 +118,7 @@ const Blog = () => {
 
                   <CardHeader className="relative p-6">
                     <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center text-sm text-slate-500 space-x-4">
+                      <div className="flex items-center text-sm text-muted-foreground space-x-4">
                         <div className="flex items-center">
                           <Calendar className="w-4 h-4 mr-1" />
                           {new Date(post.date).toLocaleDateString('en-US', { 
@@ -132,10 +133,10 @@ const Blog = () => {
                         </div>
                       </div>
                     </div>
-                    <CardTitle className="text-xl text-slate-800 mb-3 leading-tight">
+                    <CardTitle className="text-xl text-card-foreground mb-3 leading-tight">
                       {post.title}
                     </CardTitle>
-                    <p className="text-slate-600 leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed">
                       {post.description}
                     </p>
                   </CardHeader>
@@ -143,21 +144,21 @@ const Blog = () => {
                   <CardContent className="relative p-6 pt-0">
                     <div className="space-y-4">
                       <div className="flex items-center gap-2">
-                        <span className="text-sm font-medium text-slate-500">Tags</span>
-                        <div className="h-px flex-1 bg-slate-200" />
+                        <span className="text-sm font-medium text-muted-foreground">Tags</span>
+                        <div className="h-px flex-1 bg-border" />
                       </div>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {post.tags.map((tag) => (
                           <Badge 
                             key={tag} 
                             variant="outline" 
-                            className="text-xs px-3 py-1 bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100 hover:border-slate-300 transition-all duration-200"
+                            className="text-xs px-3 py-1 bg-muted/50 text-muted-foreground border border-border hover:bg-muted hover:border-primary/40 transition-all duration-200"
                           >
                             {tag}
                           </Badge>
                         ))}
                       </div>
-                      <Button className="w-full bg-slate-800 hover:bg-slate-700 text-white">
+                      <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
                         Read Article
                       </Button>
                     </div>
