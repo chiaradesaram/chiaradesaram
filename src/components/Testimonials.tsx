@@ -27,14 +27,14 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-900">
+    <section id="testimonials" className="py-20" style={{background: 'linear-gradient(135deg, #EEEEEE 0%, #F2F2F2 50%, #F0F0F0 100%)'}}>
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800">
               Client <span className="bg-gradient-to-r from-orange-400 to-rose-400 bg-clip-text text-transparent">Testimonials</span>
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Here's what my clients say about working with me
             </p>
           </div>
