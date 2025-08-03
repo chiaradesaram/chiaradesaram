@@ -104,25 +104,27 @@ const About = () => {
               {stats.map((stat, index) => (
                 <div 
                   key={index} 
-                  className={`bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 ${
+                  className={`border border-slate-600/30 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/50 hover:border-slate-500/40 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ${
                     index === 2 ? 'p-4' : 'p-6'
                   }`}
                 >
-                  <div className="flex items-center gap-4">
-                    <div className={`font-bold text-primary ${
+                  {/* Subtle top accent */}
+                  <div className="absolute top-0 left-0 w-full h-0.5 bg-slate-500/50" />
+                  <div className="flex items-center gap-4 relative">
+                    <div className={`font-bold text-slate-100 ${
                       index === 2 ? 'text-lg' : 'text-3xl'
                     }`}>
                       {index === 2 ? 'Startups to Fortune 500' : stat.number}
                     </div>
                     <div>
                       {index !== 2 && (
-                        <div className="font-medium text-gray-700">
+                        <div className="font-medium text-slate-300">
                           {stat.label && <span>{stat.label} </span>}
-                          <span className="text-gray-500">{stat.subtitle}</span>
+                          <span className="text-slate-400">{stat.subtitle}</span>
                         </div>
                       )}
                       {index === 2 && (
-                        <div className="text-gray-500 mt-1">
+                        <div className="text-slate-400 mt-1">
                           Banking • Legal • Compliance • Telecommunications • FMCG
                         </div>
                       )}
@@ -135,22 +137,24 @@ const About = () => {
 
           {/* How I Work Section */}
           <div className="mb-16">
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-semibold mb-6 text-gray-800">How I Work</h3>
+            <div className="border border-slate-600/30 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/50 hover:border-slate-500/40 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 max-w-4xl mx-auto relative overflow-hidden">
+              {/* Subtle top accent */}
+              <div className="absolute top-0 left-0 w-full h-0.5 bg-slate-500/50" />
+              <h3 className="text-2xl font-semibold mb-6 text-slate-100">How I Work</h3>
               <div className="space-y-6">
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-slate-300 leading-relaxed">
                   I believe the best products come from teams that are curious, collaborative, and committed to deeply understanding their users. I love helping teams come together to explore problems, generate ideas, and iterate on thoughtful solutions, always with a focus on outcomes and measurable impact.
                 </p>
                 <div>
-                  <p className="text-gray-700 font-medium mb-4">My approach combines:</p>
+                  <p className="text-slate-300 font-medium mb-4">My approach combines:</p>
                   <div className="space-y-3">
                     {workingApproach.map((approach, index) => (
                       <div 
                         key={index} 
-                        className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300"
+                        className="flex items-start gap-3 p-3 rounded-lg bg-slate-700/40 hover:bg-slate-700/60 border border-slate-600/20 hover:border-slate-500/30 transition-all duration-300"
                       >
-                        <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-                        <p className="text-gray-700 leading-relaxed">{approach}</p>
+                        <div className="w-2 h-2 bg-coral-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <p className="text-slate-300 leading-relaxed">{approach}</p>
                       </div>
                     ))}
                   </div>
@@ -160,18 +164,20 @@ const About = () => {
           </div>
 
           {/* What I Value Section */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">What I Value</h3>
+          <div className="border border-slate-600/30 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/50 hover:border-slate-500/40 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 max-w-4xl mx-auto relative overflow-hidden">
+            {/* Subtle top accent */}
+            <div className="absolute top-0 left-0 w-full h-0.5 bg-slate-500/50" />
+            <h3 className="text-2xl font-semibold mb-6 text-slate-100">What I Value</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {values.map((value, index) => (
                 <div 
                   key={index} 
-                  className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300 group"
+                  className="flex items-start gap-4 p-4 rounded-lg bg-slate-700/40 hover:bg-slate-700/60 border border-slate-600/20 hover:border-slate-500/30 transition-all duration-300 group"
                 >
-                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-orange-200 transition-colors duration-300">
-                    <span className="text-orange-600 font-semibold text-sm">{index + 1}</span>
+                  <div className="w-8 h-8 bg-slate-700/50 border border-slate-600/30 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-slate-600/50 group-hover:border-slate-500/40 transition-all duration-300">
+                    <span className="text-coral-400 font-semibold text-sm">{index + 1}</span>
                   </div>
-                  <p className="text-gray-700 leading-relaxed">{value}</p>
+                  <p className="text-slate-300 leading-relaxed">{value}</p>
                 </div>
               ))}
             </div>
