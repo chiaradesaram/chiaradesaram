@@ -18,7 +18,7 @@ const Experience = () => {
   ];
   
   const timeline = [{
-    year: "2024-2025",
+    year: "2023-2025",
     milestone: "Business Consultant, CT Corporation",
     subtitle: "Led CX initiatives and partnered with product teams to drive innovation and customer‑centric solutions"
   }, {
