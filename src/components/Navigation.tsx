@@ -79,13 +79,6 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <Button
-              variant={isScrolled ? "default" : "ghost"}
-              onClick={() => handleNavigation({ href: '#contact', type: 'section' })}
-              className={isScrolled ? "" : "text-white border-white hover:bg-white hover:text-gray-900"}
-            >
-              Get In Touch
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -112,14 +105,6 @@ const Navigation = () => {
                   {item.label}
                 </button>
               ))}
-              <div className="px-4">
-                <Button
-                  onClick={() => handleNavigation({ href: '#contact', type: 'section' })}
-                  className="w-full"
-                >
-                  Get In Touch
-                </Button>
-              </div>
             </div>
           </div>
         )}
