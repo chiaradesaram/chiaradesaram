@@ -67,6 +67,10 @@ export default {
 					400: 'hsl(350 85% 65%)',
 					500: 'hsl(350 85% 65%)',
 					600: 'hsl(350 85% 55%)'
+				},
+				'blog-card': {
+					DEFAULT: 'hsl(var(--blog-card))',
+					hover: 'hsl(var(--blog-card-hover))'
 				}
 			},
 			borderRadius: {

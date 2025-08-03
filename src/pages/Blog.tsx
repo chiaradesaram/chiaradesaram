@@ -88,14 +88,14 @@ const Blog = () => {
               postsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="space-y-6 max-w-2xl mx-auto">
+            <div className="space-y-12 max-w-2xl mx-auto">
               {blogPosts.map((post, index) => (
                 <Card 
                   key={post.id} 
-                  className="group sticky top-20 transform transition-all duration-300 ease-out overflow-hidden border border-border bg-card/40 backdrop-blur-md hover:bg-card/50 hover:border-primary/20 shadow-lg hover:shadow-xl hover-glow"
+                  className="group sticky top-20 transform transition-all duration-300 ease-out overflow-hidden border border-border bg-blog-card hover:bg-blog-card-hover hover:border-primary/20 shadow-lg hover:shadow-xl hover-glow"
                   style={{
                     zIndex: index + 1,
-                    transform: `translateY(${index * -20}px)`
+                    transform: `translateY(${index * -10}px)`
                   }}
                 >
                   {/* Subtle top accent */}
