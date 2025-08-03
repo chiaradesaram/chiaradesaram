@@ -14,10 +14,10 @@ const Index = () => {
       <Navigation />
       <Hero />
       <About />
+      <Testimonials />
       <Expertise />
       <Projects />
       <Experience />
-      <Testimonials />
       <Contact />
       <Footer />
     </div>
