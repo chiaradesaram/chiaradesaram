@@ -146,10 +146,10 @@ const Projects = () => {
               Want to learn more about my insights, methodologies, and industry learnings?
             </p>
             <Button 
-              variant="hero" 
+              variant="default" 
               size="lg" 
               onClick={() => window.location.href = '/blog'}
-              className="hero-gradient text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0 shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-purple-700 transform hover:-translate-y-0.5 transition-all duration-300"
             >
               Read My Blog
             </Button>
