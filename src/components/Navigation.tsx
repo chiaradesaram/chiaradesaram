@@ -45,6 +45,16 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      // If already on home page, scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // If on another page, navigate to home
+      navigate('/');
+    }
+  };
+
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
@@ -55,7 +65,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button
-            onClick={() => navigate('/')}
+            onClick={handleLogoClick}
             className={`text-xl font-bold transition-colors ${
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}
