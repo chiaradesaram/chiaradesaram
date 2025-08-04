@@ -8,7 +8,7 @@ const Testimonials = () => {
       name: "Asheley Wardell",
       title: "Associate Director, Practice Solutions, Legal Technology, Simpson Thacher & Bartlett LLP",
       image: "/placeholder.svg",
-      quote: "Chiara has a special talent for figuring out the best way to take in data, organize it, identify themes and potential opportunities, and share her findings with a variety of audience members. Somehow she gets every excited to get to work! Her attention to detail and thoughtfulness inspire confidence and her ability to look at problems from all different angles provides for transformational ideas. Chiara is a bright light on any team she interacts with! I hope our paths cross again in the future!"
+      quote: "Chiara has a special talent for figuring out the best way to take in data, organize it, identify themes and potential opportunities, and share her findings with a variety of audience members. Somehow she gets everyone excited to get to work! Her attention to detail and thoughtfulness inspire confidence and her ability to look at problems from all different angles provides for transformational ideas. Chiara is a bright light on any team she interacts with! I hope our paths cross again in the future!"
     },
     {
       id: 2,
