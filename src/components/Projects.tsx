@@ -143,10 +143,15 @@ const Projects = () => {
 
           <div className="text-center mt-12">
             <p className="text-slate-600 mb-6">
-              Interested in seeing more details about these projects?
+              Want to learn more about my insights, methodologies, and industry learnings?
             </p>
-            <Button variant="outline" size="lg" className="bg-white text-slate-700 border-slate-300 hover:bg-slate-50 hover:border-slate-400">
-              View Full Portfolio
+            <Button 
+              variant="hero" 
+              size="lg" 
+              onClick={() => window.location.href = '/blog'}
+              className="hero-gradient text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
+            >
+              Read My Blog
             </Button>
           </div>
         </div>
