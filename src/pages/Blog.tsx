@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
 
 const Blog = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
@@ -54,6 +55,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
         <div className="container mx-auto max-w-4xl">
