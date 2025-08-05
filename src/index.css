@@ -303,6 +303,79 @@ All colors MUST be HSL.
   }
 }
 
+/* Wave movement keyframes */
+@keyframes wave-slow {
+  0%, 100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  25% {
+    transform: translateX(-20px) translateY(-10px) scale(1.02);
+  }
+  50% {
+    transform: translateX(-30px) translateY(0) scale(1);
+  }
+  75% {
+    transform: translateX(-20px) translateY(10px) scale(0.98);
+  }
+}
+
+@keyframes wave-medium {
+  0%, 100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  33% {
+    transform: translateX(25px) translateY(-15px) scale(1.01);
+  }
+  66% {
+    transform: translateX(-15px) translateY(5px) scale(0.99);
+  }
+}
+
+@keyframes wave-fast {
+  0%, 100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  50% {
+    transform: translateX(-40px) translateY(-20px) scale(1.03);
+  }
+}
+
+@keyframes wave-reverse {
+  0%, 100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  25% {
+    transform: translateX(30px) translateY(8px) scale(0.97);
+  }
+  50% {
+    transform: translateX(50px) translateY(0) scale(1);
+  }
+  75% {
+    transform: translateX(30px) translateY(-8px) scale(1.02);
+  }
+}
+
+@keyframes wave-subtle {
+  0%, 100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  50% {
+    transform: translateX(-60px) translateY(-5px) scale(1.01);
+  }
+}
+
+@keyframes wave-gentle {
+  0%, 100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  33% {
+    transform: translateX(40px) translateY(3px) scale(0.99);
+  }
+  66% {
+    transform: translateX(-20px) translateY(-3px) scale(1.01);
+  }
+}
+
 /* Animation utilities */
 .animate-float {
   animation: float 6s ease-in-out infinite;
@@ -349,6 +422,31 @@ All colors MUST be HSL.
 
 .animate-marquee-contained {
   animation: marquee-contained 22s linear infinite;
+}
+
+/* Wave Animation Classes */
+.animate-wave-slow {
+  animation: wave-slow 20s ease-in-out infinite;
+}
+
+.animate-wave-medium {
+  animation: wave-medium 15s ease-in-out infinite;
+}
+
+.animate-wave-fast {
+  animation: wave-fast 10s ease-in-out infinite;
+}
+
+.animate-wave-reverse {
+  animation: wave-reverse 25s ease-in-out infinite;
+}
+
+.animate-wave-subtle {
+  animation: wave-subtle 30s ease-in-out infinite;
+}
+
+.animate-wave-gentle {
+  animation: wave-gentle 35s ease-in-out infinite;
 }
 
 .animate-pulse-slow {

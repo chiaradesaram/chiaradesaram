@@ -9,42 +9,58 @@ const Hero = () => {
   };
   const skills = ["Business Analysis", "User Research", "Process Optimization", "Product Management", "Product Operations", "Customer Experience", "Business Transformation"];
   return <section className="relative min-h-screen overflow-hidden pt-32 pb-20 flex items-center">
-      {/* Wave Background */}
+      {/* Animated 3D Wave Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Base gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/95"></div>
         
-        {/* Wave layers */}
+        {/* Animated Wave layers */}
         <div className="absolute inset-0">
-          {/* First wave layer - most prominent */}
-          <div className="absolute inset-0">
-            <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-              <path d="M0,800 C300,600 600,650 900,550 C1050,500 1150,550 1200,500 L1200,800 Z" 
-                    fill="url(#wave1)" opacity="0.4"/>
+          {/* First wave layer - most prominent with movement */}
+          <div className="absolute inset-0 animate-wave-slow">
+            <svg className="absolute bottom-0 left-0 w-[120%] h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+              <path d="M0,800 C300,500 600,550 900,450 C1050,400 1150,450 1200,400 L1200,800 Z" 
+                    fill="url(#wave1)" opacity="0.5"/>
             </svg>
           </div>
           
-          {/* Second wave layer */}
-          <div className="absolute inset-0">
-            <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-              <path d="M0,800 C200,620 500,580 800,620 C950,640 1100,600 1200,620 L1200,800 Z" 
-                    fill="url(#wave2)" opacity="0.3"/>
+          {/* Second wave layer - medium movement */}
+          <div className="absolute inset-0 animate-wave-medium">
+            <svg className="absolute bottom-0 left-0 w-[110%] h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+              <path d="M0,800 C200,520 500,480 800,520 C950,540 1100,500 1200,520 L1200,800 Z" 
+                    fill="url(#wave2)" opacity="0.4"/>
             </svg>
           </div>
           
-          {/* Third wave layer */}
-          <div className="absolute inset-0">
-            <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-              <path d="M0,800 C400,660 700,600 1000,660 C1100,680 1150,660 1200,670 L1200,800 Z" 
-                    fill="url(#wave3)" opacity="0.25"/>
+          {/* Third wave layer - faster movement */}
+          <div className="absolute inset-0 animate-wave-fast">
+            <svg className="absolute bottom-0 left-0 w-[115%] h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+              <path d="M0,800 C400,560 700,500 1000,560 C1100,580 1150,560 1200,570 L1200,800 Z" 
+                    fill="url(#wave3)" opacity="0.3"/>
             </svg>
           </div>
           
-          {/* Fourth wave layer - top accent */}
-          <div className="absolute inset-0">
-            <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-              <path d="M0,800 C150,720 450,680 750,720 C900,740 1050,700 1200,720 L1200,800 Z" 
-                    fill="url(#wave4)" opacity="0.2"/>
+          {/* Fourth wave layer - reverse movement */}
+          <div className="absolute inset-0 animate-wave-reverse">
+            <svg className="absolute bottom-0 left-0 w-[125%] h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+              <path d="M0,800 C150,620 450,580 750,620 C900,640 1050,600 1200,620 L1200,800 Z" 
+                    fill="url(#wave4)" opacity="0.25"/>
+            </svg>
+          </div>
+          
+          {/* Fifth wave layer - subtle dim background */}
+          <div className="absolute inset-0 animate-wave-subtle">
+            <svg className="absolute bottom-0 left-0 w-[130%] h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+              <path d="M0,800 C250,680 550,640 850,680 C980,700 1120,680 1200,690 L1200,800 Z" 
+                    fill="url(#wave5)" opacity="0.15"/>
+            </svg>
+          </div>
+          
+          {/* Sixth wave layer - very dim top layer */}
+          <div className="absolute inset-0 animate-wave-gentle">
+            <svg className="absolute bottom-0 left-0 w-[140%] h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+              <path d="M0,800 C180,720 480,700 780,720 C920,730 1080,710 1200,720 L1200,800 Z" 
+                    fill="url(#wave6)" opacity="0.1"/>
             </svg>
           </div>
         </div>
@@ -53,21 +69,29 @@ const Hero = () => {
         <svg width="0" height="0">
           <defs>
             <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.8" />
-              <stop offset="50%" stopColor="hsl(var(--secondary))" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
+              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.9" />
+              <stop offset="50%" stopColor="hsl(var(--secondary))" stopOpacity="0.7" />
+              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.4" />
             </linearGradient>
             <linearGradient id="wave2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="hsl(var(--secondary))" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.2" />
+              <stop offset="0%" stopColor="hsl(var(--secondary))" stopOpacity="0.7" />
+              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
             </linearGradient>
             <linearGradient id="wave3" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="hsl(var(--muted))" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.15" />
+              <stop offset="0%" stopColor="hsl(var(--muted))" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.2" />
             </linearGradient>
             <linearGradient id="wave4" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="hsl(var(--secondary))" stopOpacity="0.1" />
+              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="hsl(var(--secondary))" stopOpacity="0.15" />
+            </linearGradient>
+            <linearGradient id="wave5" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="hsl(var(--secondary))" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="hsl(var(--muted))" stopOpacity="0.1" />
+            </linearGradient>
+            <linearGradient id="wave6" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="hsl(var(--muted))" stopOpacity="0.2" />
+              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.05" />
             </linearGradient>
           </defs>
         </svg>
