@@ -73,7 +73,7 @@ const About = () => {
     "Curiosity and a growth mindset",
     "Clarity in fast-moving environments", 
     "Real user needs at the core",
-    "Open, collaborative problem-solving"
+    "A love for innovation and creativity"
   ];
   
   return <section id="about" className="py-20 bg-gray-50 text-gray-900">
