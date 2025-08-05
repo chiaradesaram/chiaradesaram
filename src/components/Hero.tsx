@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Download, ArrowDown, Sparkles } from "lucide-react";
+import { Mail, Download, ArrowDown } from "lucide-react";
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({
@@ -9,26 +9,55 @@ const Hero = () => {
   };
   const skills = ["Business Analysis", "User Research", "Process Optimization", "Product Management", "Product Operations", "Customer Experience", "Business Transformation"];
   return <section className="relative min-h-screen overflow-hidden pt-32 pb-20 flex items-center">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        {/* Main background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-muted/30"></div>
+      {/* Wave Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/90"></div>
         
-        {/* Floating orbs with coral/pink theme */}
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/15 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-secondary/12 rounded-full blur-2xl animate-float" style={{
-        animationDelay: '2s'
-      }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-primary/8 rounded-full blur-xl animate-glow-pulse"></div>
-        <div className="absolute top-3/4 right-1/3 w-20 h-20 bg-secondary/10 rounded-full blur-lg animate-float" style={{
-        animationDelay: '4s'
-      }}></div>
+        {/* Wave layers */}
+        <div className="absolute inset-0">
+          {/* First wave layer */}
+          <div className="absolute inset-0 opacity-30">
+            <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+              <path d="M0,800 C300,700 600,750 900,650 C1050,600 1150,650 1200,600 L1200,800 Z" 
+                    fill="url(#wave1)" opacity="0.1"/>
+            </svg>
+          </div>
+          
+          {/* Second wave layer */}
+          <div className="absolute inset-0 opacity-20">
+            <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+              <path d="M0,800 C200,720 500,680 800,720 C950,740 1100,700 1200,720 L1200,800 Z" 
+                    fill="url(#wave2)" opacity="0.15"/>
+            </svg>
+          </div>
+          
+          {/* Third wave layer */}
+          <div className="absolute inset-0 opacity-15">
+            <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+              <path d="M0,800 C400,760 700,700 1000,760 C1100,780 1150,760 1200,770 L1200,800 Z" 
+                    fill="url(#wave3)" opacity="0.1"/>
+            </svg>
+          </div>
+        </div>
         
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
-        backgroundSize: '50px 50px'
-      }}></div>
+        {/* SVG Gradients */}
+        <svg width="0" height="0">
+          <defs>
+            <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="hsl(var(--secondary))" stopOpacity="0.1" />
+            </linearGradient>
+            <linearGradient id="wave2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="hsl(var(--secondary))" stopOpacity="0.2" />
+              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.05" />
+            </linearGradient>
+            <linearGradient id="wave3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="hsl(var(--muted))" stopOpacity="0.1" />
+              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.03" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
 
       {/* Content */}
@@ -46,9 +75,8 @@ const Hero = () => {
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
                   <span className="text-foreground">Chiara</span>
                   <br />
-                  <span className="text-gradient relative">
+                  <span className="text-gradient">
                     de Saram
-                    <Sparkles className="absolute -top-2 -right-8 w-6 h-6 text-primary animate-pulse" />
                   </span>
                 </h1>
               </div>
@@ -110,13 +138,7 @@ const Hero = () => {
           animationFillMode: 'both'
         }}>
             <div className="relative">
-              
-              
-              {/* Floating accent elements */}
-              <div className="absolute -top-2 -right-2 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-glow-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-secondary/15 rounded-full blur-2xl animate-float" style={{
-              animationDelay: '1s'
-            }}></div>
+              {/* Content placeholder for future image */}
             </div>
           </div>
         </div>
