@@ -12,31 +12,39 @@ const Hero = () => {
       {/* Wave Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/95"></div>
         
         {/* Wave layers */}
         <div className="absolute inset-0">
-          {/* First wave layer */}
-          <div className="absolute inset-0 opacity-30">
+          {/* First wave layer - most prominent */}
+          <div className="absolute inset-0">
             <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-              <path d="M0,800 C300,700 600,750 900,650 C1050,600 1150,650 1200,600 L1200,800 Z" 
-                    fill="url(#wave1)" opacity="0.1"/>
+              <path d="M0,800 C300,600 600,650 900,550 C1050,500 1150,550 1200,500 L1200,800 Z" 
+                    fill="url(#wave1)" opacity="0.4"/>
             </svg>
           </div>
           
           {/* Second wave layer */}
-          <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0">
             <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-              <path d="M0,800 C200,720 500,680 800,720 C950,740 1100,700 1200,720 L1200,800 Z" 
-                    fill="url(#wave2)" opacity="0.15"/>
+              <path d="M0,800 C200,620 500,580 800,620 C950,640 1100,600 1200,620 L1200,800 Z" 
+                    fill="url(#wave2)" opacity="0.3"/>
             </svg>
           </div>
           
           {/* Third wave layer */}
-          <div className="absolute inset-0 opacity-15">
+          <div className="absolute inset-0">
             <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-              <path d="M0,800 C400,760 700,700 1000,760 C1100,780 1150,760 1200,770 L1200,800 Z" 
-                    fill="url(#wave3)" opacity="0.1"/>
+              <path d="M0,800 C400,660 700,600 1000,660 C1100,680 1150,660 1200,670 L1200,800 Z" 
+                    fill="url(#wave3)" opacity="0.25"/>
+            </svg>
+          </div>
+          
+          {/* Fourth wave layer - top accent */}
+          <div className="absolute inset-0">
+            <svg className="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+              <path d="M0,800 C150,720 450,680 750,720 C900,740 1050,700 1200,720 L1200,800 Z" 
+                    fill="url(#wave4)" opacity="0.2"/>
             </svg>
           </div>
         </div>
@@ -45,16 +53,21 @@ const Hero = () => {
         <svg width="0" height="0">
           <defs>
             <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="hsl(var(--secondary))" stopOpacity="0.1" />
+              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.8" />
+              <stop offset="50%" stopColor="hsl(var(--secondary))" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
             </linearGradient>
             <linearGradient id="wave2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="hsl(var(--secondary))" stopOpacity="0.2" />
-              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.05" />
+              <stop offset="0%" stopColor="hsl(var(--secondary))" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.2" />
             </linearGradient>
             <linearGradient id="wave3" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="hsl(var(--muted))" stopOpacity="0.1" />
-              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.03" />
+              <stop offset="0%" stopColor="hsl(var(--muted))" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.15" />
+            </linearGradient>
+            <linearGradient id="wave4" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="hsl(var(--secondary))" stopOpacity="0.1" />
             </linearGradient>
           </defs>
         </svg>
