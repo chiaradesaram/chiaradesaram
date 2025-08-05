@@ -160,18 +160,16 @@ const About = () => {
           </div>
 
           {/* What I Value Section */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">What I Value</h3>
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800">What I Value</h3>
+            <div className="grid md:grid-cols-2 gap-3">
               {values.map((value, index) => (
                 <div 
                   key={index} 
-                  className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300 group"
+                  className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300 group"
                 >
-                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-orange-200 transition-colors duration-300">
-                    <span className="text-orange-600 font-semibold text-sm">{index + 1}</span>
-                  </div>
-                  <p className="text-gray-700 leading-relaxed">{value}</p>
+                  <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0 group-hover:bg-orange-500 transition-colors duration-300"></div>
+                  <p className="text-gray-700 leading-relaxed text-sm">{value}</p>
                 </div>
               ))}
             </div>
