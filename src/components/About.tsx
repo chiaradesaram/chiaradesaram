@@ -66,7 +66,7 @@ const About = () => {
     "Data and insights to guide decision-making and prioritisation", 
     "A focus on outcomes, making impact clear and measurable",
     "A natural drive to connect the right people and get things moving",
-    "A love for technology, always exploring better ways to work and solve problems"
+    "A love for innovation and creativity"
   ];
 
   const values = [
