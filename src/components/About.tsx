@@ -94,7 +94,7 @@ const About = () => {
                   Over the past 8 years in tech, I've worked across industries and company sizes, from early-stage startups to global enterprises, in varying roles spanning business analysis, customer experience, product operations, and user research.
                 </p>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  Before moving into tech, I came from an economics and finance background. This mix has shaped a unique perspective in the way that I think: bringing a blend of analytical thinking, structured problem-solving, and creative exploration. As I've moved through different domains, tools, and technologies, my way of thinking has continued to evolve, driven by curiosity, adaptability, and a desire to build better.
+                  Before moving into tech, I came from an economics and finance background. This mix has shaped my perspective: bringing a blend of analytical thinking, structured problem-solving, and creative exploration. As I've moved through different domains, tools, and technologies, my way of thinking has continued to evolve, driven by curiosity, adaptability, and a desire to build better.
                 </p>
               </div>
             </div>
