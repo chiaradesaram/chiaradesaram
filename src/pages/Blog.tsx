@@ -91,7 +91,7 @@ const Blog = () => {
             }`}
           >
             {/* Temporary Coming Soon Overlay */}
-            <div className="absolute inset-0 z-50 flex items-center justify-center bg-background/90 backdrop-blur-sm rounded-lg">
+            <div className="absolute inset-0 z-50 flex items-start justify-center pt-16 bg-background/90 backdrop-blur-sm rounded-lg">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-6">
                   <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,7 +102,7 @@ const Blog = () => {
                   Coming Soon
                 </h3>
                 <p className="text-muted-foreground text-lg max-w-md">
-                  I'm working on exciting content for you. Check back soon for insights on UX research, service design, and process improvement.
+                  I'm working on exciting content for you. Check back soon for insights on all things product and CX.
                 </p>
               </div>
             </div>
