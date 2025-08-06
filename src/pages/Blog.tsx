@@ -86,11 +86,28 @@ const Blog = () => {
         <div className="container mx-auto max-w-4xl">
           <div
             ref={postsRef}
-            className={`transition-all duration-700 delay-200 ${
+            className={`relative transition-all duration-700 delay-200 ${
               postsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="space-y-12 max-w-2xl mx-auto">
+            {/* Temporary Coming Soon Overlay */}
+            <div className="absolute inset-0 z-50 flex items-center justify-center bg-background/90 backdrop-blur-sm rounded-lg">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-6">
+                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+                  Coming Soon
+                </h3>
+                <p className="text-muted-foreground text-lg max-w-md">
+                  I'm working on exciting content for you. Check back soon for insights on UX research, service design, and process improvement.
+                </p>
+              </div>
+            </div>
+            
+            <div className="space-y-12 max-w-2xl mx-auto opacity-30">
               {blogPosts.map((post, index) => (
                 <Card 
                   key={post.id} 
