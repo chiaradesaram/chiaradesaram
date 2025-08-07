@@ -196,7 +196,7 @@ const Hero = () => {
                 className="glass-card px-8 py-4 text-lg border-primary/20 hover:border-primary/40 hover:bg-primary/10 transition-all duration-300"
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/Chiara-de-Saram-CV.pdf';
+                  link.href = 'https://drive.google.com/uc?export=download&id=1JfX2IaHz3h6Ag94QDDulmf5TZbmRiEll';
                   link.download = 'Chiara-de-Saram-CV.pdf';
                   link.click();
                 }}
