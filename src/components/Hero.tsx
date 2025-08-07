@@ -190,7 +190,17 @@ const Hero = () => {
                 <Mail className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform" />
                 Get In Touch
               </Button>
-              <Button variant="outline" size="lg" className="glass-card px-8 py-4 text-lg border-primary/20 hover:border-primary/40 hover:bg-primary/10 transition-all duration-300">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="glass-card px-8 py-4 text-lg border-primary/20 hover:border-primary/40 hover:bg-primary/10 transition-all duration-300"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/Chiara-de-Saram-CV.pdf';
+                  link.download = 'Chiara-de-Saram-CV.pdf';
+                  link.click();
+                }}
+              >
                 <Download className="mr-3 h-5 w-5" />
                 Download CV
               </Button>
