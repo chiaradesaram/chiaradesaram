@@ -195,12 +195,7 @@ const Hero = () => {
                 size="lg" 
                 className="glass-card px-8 py-4 text-lg border-primary/20 hover:border-primary/40 hover:bg-primary/10 transition-all duration-300"
                 onClick={() => {
-                  const cvPath = `/Chiara-de-Saram-CV.pdf?v=${Date.now()}`;
-                  console.log('Downloading CV from:', cvPath);
-                  const link = document.createElement('a');
-                  link.href = cvPath;
-                  link.download = 'Chiara-de-Saram-CV.pdf';
-                  link.click();
+                  window.open('https://drive.google.com/file/d/1JfX2IaHz3h6Ag94QDDulmf5TZbmRiEll/view?usp=sharing', '_blank');
                 }}
               >
                 <Download className="mr-3 h-5 w-5" />
