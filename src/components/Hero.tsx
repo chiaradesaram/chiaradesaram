@@ -169,7 +169,10 @@ const Hero = () => {
                   <Badge 
                     key={skill} 
                     variant="secondary" 
-                    className={`px-4 py-2 text-sm bg-slate-700/80 text-slate-200 border border-slate-600/50 hover:bg-slate-600/80 hover:border-slate-500/60 transition-all duration-300 backdrop-blur-sm opacity-0 animate-[slide-up_0.6s_ease-out_${1.2 + index * 0.1}s_forwards,scale-in_0.4s_ease-out_${1.2 + index * 0.1}s_forwards]`}
+                    className="px-4 py-2 text-sm bg-slate-700/80 text-slate-200 border border-slate-600/50 hover:bg-slate-600/80 hover:border-slate-500/60 transition-all duration-300 backdrop-blur-sm opacity-0"
+                    style={{
+                      animation: `slide-up 0.6s ease-out ${1.2 + index * 0.1}s forwards, scale-in 0.4s ease-out ${1.2 + index * 0.1}s forwards`
+                    }}
                   >
                     {skill}
                   </Badge>
