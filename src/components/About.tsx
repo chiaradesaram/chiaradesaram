@@ -80,7 +80,10 @@ const About = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 
+              className="text-4xl md:text-5xl font-bold mb-6 opacity-0"
+              style={{ animation: "fade-in 1s ease-out 0.2s forwards" }}
+            >
               About <span className="text-gradient">Me</span>
             </h2>
           </div>
@@ -88,12 +91,21 @@ const About = () => {
           {/* About Me Content with Stats */}
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             {/* About Me Text */}
-            <div className="space-y-6">
+            <div 
+              className="space-y-6 opacity-0"
+              style={{ animation: "slide-up 0.8s ease-out 0.4s forwards" }}
+            >
               <div className="space-y-4">
-                <p className="text-gray-600 leading-relaxed text-lg">
+                <p 
+                  className="text-gray-600 leading-relaxed text-lg opacity-0"
+                  style={{ animation: "fade-in 0.8s ease-out 0.6s forwards" }}
+                >
                   Over the past 8 years in tech, I've worked across industries and company sizes, from early-stage startups to global enterprises, in varying roles spanning business analysis, customer experience, product operations, and user research.
                 </p>
-                <p className="text-gray-600 leading-relaxed text-lg">
+                <p 
+                  className="text-gray-600 leading-relaxed text-lg opacity-0"
+                  style={{ animation: "fade-in 0.8s ease-out 0.8s forwards" }}
+                >
                   Before moving into tech, I came from an economics and finance background. This mix has shaped my perspective: bringing a blend of analytical thinking, structured problem-solving, and creative exploration. As I've moved through different domains, tools, and technologies, my way of thinking has continued to evolve, driven by curiosity, adaptability, and a desire to build better.
                 </p>
               </div>
@@ -104,9 +116,12 @@ const About = () => {
               {stats.map((stat, index) => (
                 <div 
                   key={index} 
-                  className={`bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 ${
+                  className={`bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 opacity-0 transform translate-x-8 ${
                     index === 2 ? 'p-4' : 'p-6'
                   }`}
+                  style={{ 
+                    animation: `slide-in-right 0.6s ease-out ${1.0 + index * 0.2}s forwards, scale-in 0.4s ease-out ${1.0 + index * 0.2}s forwards` 
+                  }}
                 >
                   <div className="flex items-center gap-4">
                     <div className={`font-bold text-primary ${
@@ -135,19 +150,38 @@ const About = () => {
 
           {/* How I Work Section */}
           <div className="mb-16">
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-semibold mb-6 text-gray-800">How I Work</h3>
+            <div 
+              className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto opacity-0 transform translate-y-8"
+              style={{ animation: "slide-up 0.8s ease-out 1.6s forwards" }}
+            >
+              <h3 
+                className="text-2xl font-semibold mb-6 text-gray-800 opacity-0"
+                style={{ animation: "fade-in 0.6s ease-out 1.8s forwards" }}
+              >
+                How I Work
+              </h3>
               <div className="space-y-6">
-                <p className="text-gray-600 leading-relaxed">
+                <p 
+                  className="text-gray-600 leading-relaxed opacity-0"
+                  style={{ animation: "fade-in 0.6s ease-out 2.0s forwards" }}
+                >
                   I believe the best products come from teams that are curious, collaborative, and committed to deeply understanding their users. I love helping teams come together to explore problems, generate ideas, and iterate on thoughtful solutions, always with a focus on outcomes and measurable impact.
                 </p>
                 <div>
-                  <p className="text-gray-700 font-medium mb-4">My approach combines:</p>
+                  <p 
+                    className="text-gray-700 font-medium mb-4 opacity-0"
+                    style={{ animation: "fade-in 0.6s ease-out 2.2s forwards" }}
+                  >
+                    My approach combines:
+                  </p>
                   <div className="space-y-3">
                     {workingApproach.map((approach, index) => (
                       <div 
                         key={index} 
-                        className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300"
+                        className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300 opacity-0 transform translate-x-4"
+                        style={{ 
+                          animation: `slide-in-right 0.5s ease-out ${2.4 + index * 0.1}s forwards` 
+                        }}
                       >
                         <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-700 leading-relaxed">{approach}</p>
@@ -160,13 +194,24 @@ const About = () => {
           </div>
 
           {/* What I Value Section */}
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4 text-gray-800">What I Value</h3>
+          <div 
+            className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 max-w-4xl mx-auto opacity-0 transform scale-95"
+            style={{ animation: "scale-in 0.8s ease-out 3.2s forwards" }}
+          >
+            <h3 
+              className="text-xl font-semibold mb-4 text-gray-800 opacity-0"
+              style={{ animation: "fade-in 0.6s ease-out 3.4s forwards" }}
+            >
+              What I Value
+            </h3>
             <div className="grid md:grid-cols-2 gap-3">
               {values.map((value, index) => (
                 <div 
                   key={index} 
-                  className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300 group"
+                  className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300 group opacity-0 transform translate-y-4"
+                  style={{ 
+                    animation: `slide-up 0.5s ease-out ${3.6 + index * 0.1}s forwards` 
+                  }}
                 >
                   <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0 group-hover:bg-orange-500 transition-colors duration-300"></div>
                   <p className="text-gray-700 leading-relaxed text-sm">{value}</p>

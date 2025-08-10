@@ -252,14 +252,6 @@ All colors MUST be HSL.
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 
 @keyframes glow-pulse {
   0%, 100% {
@@ -401,6 +393,16 @@ All colors MUST be HSL.
   }
   90% {
     transform: translate3d(0, -2px, 0);
+  }
+}
+
+/* Float animation for timeline items */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
   }
 }
 

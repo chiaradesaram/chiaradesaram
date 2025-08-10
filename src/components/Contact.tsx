@@ -54,7 +54,10 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 
+              className="text-4xl md:text-5xl font-bold mb-6 opacity-0 transform translate-y-8"
+              style={{ animation: "slide-up 0.8s ease-out 0.2s forwards, bounce 0.6s ease-out 1s forwards" }}
+            >
               Let's Work <span className="text-gradient">Together</span>
             </h2>
             
@@ -68,11 +71,20 @@ const Contact = () => {
             <div className="space-y-8">
               {/* Contact Methods */}
               <div>
-                <h3 className="text-xl font-semibold mb-6">Get in Touch</h3>
+                <h3 
+                  className="text-xl font-semibold mb-6 opacity-0"
+                  style={{ animation: "fade-in 0.6s ease-out 0.4s forwards" }}
+                >
+                  Get in Touch
+                </h3>
                 <div className="space-y-4">
-                  {contactMethods.map((method, index) => <Card 
+                  {contactMethods.map((method, index) => (
+                    <Card 
                       key={index} 
-                      className="card-hover group cursor-pointer"
+                      className="card-hover group cursor-pointer opacity-0 transform scale-90"
+                      style={{ 
+                        animation: `scale-in 0.6s ease-out ${0.6 + index * 0.2}s forwards, bounce 0.4s ease-out ${1.2 + index * 0.2}s forwards` 
+                      }}
                       onClick={() => window.open(method.action, '_blank')}
                     >
                       <CardContent className="p-4">
@@ -87,7 +99,8 @@ const Contact = () => {
                           </div>
                         </div>
                       </CardContent>
-                    </Card>)}
+                    </Card>
+                  ))}
                 </div>
               </div>
 
@@ -95,7 +108,10 @@ const Contact = () => {
               
 
               {/* Availability */}
-              <Card className="bg-primary/5 border-primary/20">
+              <Card 
+                className="bg-primary/5 border-primary/20 opacity-0 transform translate-y-6"
+                style={{ animation: "slide-up 0.8s ease-out 1.8s forwards" }}
+              >
                 
               </Card>
             </div>

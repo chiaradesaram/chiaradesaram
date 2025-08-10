@@ -46,15 +46,24 @@ const Experience = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800">
+            <h2 
+              className="text-4xl md:text-5xl font-bold mb-6 text-slate-800 opacity-0 transform scale-90"
+              style={{ animation: "scale-in 1s ease-out 0.2s forwards, bounce 0.6s ease-out 0.8s forwards" }}
+            >
               My <span className="bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">Experience</span>
             </h2>
           </div>
 
           {/* Education Section - Compact */}
           <div className="mb-10">
-            <div className="bg-white/30 backdrop-blur-sm rounded-lg p-6 border-0 shadow-sm">
-              <h3 className="text-lg font-medium text-slate-700 mb-4 flex items-center gap-2">
+            <div 
+              className="bg-white/30 backdrop-blur-sm rounded-lg p-6 border-0 shadow-sm opacity-0 transform translate-y-6"
+              style={{ animation: "slide-up 0.8s ease-out 0.4s forwards" }}
+            >
+              <h3 
+                className="text-lg font-medium text-slate-700 mb-4 flex items-center gap-2 opacity-0"
+                style={{ animation: "fade-in 0.6s ease-out 0.6s forwards" }}
+              >
                 <div className="w-6 h-6 rounded-full bg-rose-100/80 flex items-center justify-center">
                   <div className="w-2 h-2 bg-rose-500 rounded-full"></div>
                 </div>
@@ -62,7 +71,11 @@ const Experience = () => {
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {education.map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
+                  <div 
+                    key={index} 
+                    className="flex items-start gap-3 opacity-0 transform translate-x-4"
+                    style={{ animation: `slide-in-right 0.6s ease-out ${0.8 + index * 0.2}s forwards` }}
+                  >
                     <div className="w-1 h-6 bg-gradient-to-b from-rose-300/60 to-transparent rounded-full mt-1 flex-shrink-0"></div>
                     <div className="flex-1">
                       <h4 className="font-medium text-slate-800 text-sm leading-tight">
@@ -82,9 +95,15 @@ const Experience = () => {
           </div>
 
           {/* Career Timeline with Industries */}
-          <Card className="group border-0 bg-white/40 backdrop-blur-sm hover:bg-white/50 transition-all duration-500 shadow-sm hover:shadow-md">
+          <Card 
+            className="group border-0 bg-white/40 backdrop-blur-sm hover:bg-white/50 transition-all duration-500 shadow-sm hover:shadow-md opacity-0 transform scale-95"
+            style={{ animation: "scale-in 0.8s ease-out 1.2s forwards" }}
+          >
             <CardHeader className="p-8">
-              <div className="flex items-center gap-3 mb-6">
+              <div 
+                className="flex items-center gap-3 mb-6 opacity-0"
+                style={{ animation: "slide-in-right 0.6s ease-out 1.4s forwards" }}
+              >
                 <div className="w-8 h-8 rounded-full bg-rose-100/80 flex items-center justify-center">
                   <Calendar className="h-4 w-4 text-rose-600" />
                 </div>
@@ -93,7 +112,13 @@ const Experience = () => {
               
               <div className="space-y-4">
                 {timeline.map((item, index) => (
-                  <div key={index} className="group/item p-4 rounded-lg bg-white/20 hover:bg-white/30 transition-all duration-300 hover:translate-x-1">
+                  <div 
+                    key={index} 
+                    className="group/item p-4 rounded-lg bg-white/20 hover:bg-white/30 transition-all duration-300 hover:translate-x-1 opacity-0 transform translate-y-4"
+                    style={{ 
+                      animation: `slide-up 0.6s ease-out ${1.6 + index * 0.15}s forwards, float 3s ease-in-out ${2.5 + index * 0.2}s infinite` 
+                    }}
+                  >
                     <div className="space-y-2">
                       <div className="text-xs font-medium text-rose-600 bg-rose-50 px-2 py-1 rounded-full inline-block">
                         {item.year}
@@ -121,14 +146,26 @@ const Experience = () => {
               </div>
 
               {/* Industries as small bullets at bottom */}
-              <div className="mt-8 pt-6 border-t border-rose-100/50">
-                <div className="flex items-center gap-2 mb-3">
+              <div 
+                className="mt-8 pt-6 border-t border-rose-100/50 opacity-0"
+                style={{ animation: "fade-in 0.8s ease-out 3.2s forwards" }}
+              >
+                <div 
+                  className="flex items-center gap-2 mb-3 opacity-0"
+                  style={{ animation: "slide-in-right 0.6s ease-out 3.4s forwards" }}
+                >
                   <Users className="h-3 w-3 text-rose-500" />
                   <span className="text-xs font-medium text-slate-600">Industries Served</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {industries.map((industry, index) => (
-                    <div key={index} className="flex items-center gap-1.5 bg-rose-50/50 px-2 py-1 rounded-full">
+                    <div 
+                      key={index} 
+                      className="flex items-center gap-1.5 bg-rose-50/50 px-2 py-1 rounded-full opacity-0 transform scale-90"
+                      style={{ 
+                        animation: `scale-in 0.4s ease-out ${3.6 + index * 0.1}s forwards` 
+                      }}
+                    >
                       <div className="w-1 h-1 bg-rose-400 rounded-full"></div>
                       <span className="text-xs text-slate-700">{industry}</span>
                     </div>
