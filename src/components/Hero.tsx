@@ -146,9 +146,17 @@ const Hero = () => {
               <div className="space-y-2">
                 <p className="text-lg text-muted-foreground font-medium tracking-wide opacity-0 animate-[slide-up_0.8s_ease-out_0.2s_forwards]">Hi there, I'm</p>
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
-                  <span className="text-foreground inline-block opacity-0 animate-[slide-up_0.8s_ease-out_0.4s_forwards,scale-in_0.6s_ease-out_0.4s_forwards]">Chiara</span>
+                  <span 
+                    className="text-foreground inline-block opacity-0"
+                    style={{ animation: "slide-up 0.8s ease-out 0.4s forwards, scale-in 0.6s ease-out 0.4s forwards" }}
+                  >
+                    Chiara
+                  </span>
                   <br />
-                  <span className="text-gradient inline-block opacity-0 animate-[slide-up_0.8s_ease-out_0.6s_forwards,scale-in_0.6s_ease-out_0.6s_forwards]">
+                  <span 
+                    className="text-gradient inline-block opacity-0"
+                    style={{ animation: "slide-up 0.8s ease-out 0.6s forwards, scale-in 0.6s ease-out 0.6s forwards" }}
+                  >
                     de Saram
                   </span>
                 </h1>
