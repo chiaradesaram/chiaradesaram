@@ -54,10 +54,7 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 
-              className="text-4xl md:text-5xl font-bold mb-6 opacity-0 transform translate-y-8"
-              style={{ animation: "slide-up 0.8s ease-out 0.2s forwards, bounce 0.6s ease-out 1s forwards" }}
-            >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-slide-up animate-stagger-2">
               Let's Work <span className="text-gradient">Together</span>
             </h2>
             
@@ -71,22 +68,16 @@ const Contact = () => {
             <div className="space-y-8">
               {/* Contact Methods */}
               <div>
-                <h3 
-                  className="text-xl font-semibold mb-6 opacity-0"
-                  style={{ animation: "fade-in 0.6s ease-out 0.4s forwards" }}
-                >
+                <h3 className="text-xl font-semibold mb-6 animate-fade-in animate-stagger-4">
                   Get in Touch
                 </h3>
                 <div className="space-y-4">
                   {contactMethods.map((method, index) => (
-                    <Card 
-                      key={index} 
-                      className="card-hover group cursor-pointer opacity-0 transform scale-90"
-                      style={{ 
-                        animation: `scale-in 0.6s ease-out ${0.6 + index * 0.2}s forwards, bounce 0.4s ease-out ${1.2 + index * 0.2}s forwards` 
-                      }}
-                      onClick={() => window.open(method.action, '_blank')}
-                    >
+                     <Card 
+                       key={index} 
+                       className={`glass-card group cursor-pointer animate-scale-in hover-glow ${index === 0 ? 'animate-stagger-1' : 'animate-stagger-2'}`}
+                       onClick={() => window.open(method.action, '_blank')}
+                     >
                       <CardContent className="p-4">
                         <div className="flex items-start gap-3">
                           <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -108,10 +99,7 @@ const Contact = () => {
               
 
               {/* Availability */}
-              <Card 
-                className="bg-primary/5 border-primary/20 opacity-0 transform translate-y-6"
-                style={{ animation: "slide-up 0.8s ease-out 1.8s forwards" }}
-              >
+              <Card className="bg-primary/5 border-primary/20 animate-slide-up animate-stagger-5">
                 
               </Card>
             </div>
