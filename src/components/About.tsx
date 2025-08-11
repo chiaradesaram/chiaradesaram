@@ -80,9 +80,10 @@ const About = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-delay-2 opacity-0">
-              About <span className="text-gradient">Me</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-bounce">
+              <span style={{animation: 'fadeIn 2s ease-in-out'}}>About</span> <span className="text-gradient animate-pulse">Me</span>
             </h2>
+            <div className="text-red-500 text-sm">Debug: Animation test - you should see bouncing and pulsing</div>
           </div>
 
           {/* About Me Content with Stats */}

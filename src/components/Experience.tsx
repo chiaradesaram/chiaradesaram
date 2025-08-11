@@ -46,9 +46,10 @@ const Experience = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800 animate-scale-in-delay-2 opacity-0">
-              My <span className="bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">Experience</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800 animate-spin">
+              My <span className="bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent animate-pulse">Experience</span>
             </h2>
+            <div className="text-red-500 text-sm">Debug: Should see spinning and pulsing</div>
           </div>
 
           {/* Education Section - Compact */}

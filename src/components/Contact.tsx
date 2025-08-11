@@ -54,9 +54,10 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-slide-up-delay-1 opacity-0">
-              Let's Work <span className="text-gradient">Together</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-ping">
+              Let's Work <span className="text-gradient animate-bounce">Together</span>
             </h2>
+            <div className="text-red-500 text-sm">Debug: Should see ping and bounce effects</div>
             
           </div>
 
