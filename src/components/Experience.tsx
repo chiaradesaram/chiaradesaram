@@ -46,7 +46,7 @@ const Experience = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800 animate-scale-in animate-stagger-2">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-800 animate-scale-in-delay-2 opacity-0">
               My <span className="bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">Experience</span>
             </h2>
           </div>

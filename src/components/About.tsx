@@ -80,7 +80,7 @@ const About = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in animate-stagger-2">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-delay-2 opacity-0">
               About <span className="text-gradient">Me</span>
             </h2>
           </div>
@@ -88,7 +88,7 @@ const About = () => {
           {/* About Me Content with Stats */}
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             {/* About Me Text */}
-            <div className="space-y-6 animate-slide-up animate-stagger-4">
+            <div className="space-y-6 animate-slide-up-delay-2 opacity-0">
               <div className="space-y-4">
                 <p className="text-gray-600 leading-relaxed text-lg animate-fade-in animate-stagger-3">
                   Over the past 8 years in tech, I've worked across industries and company sizes, from early-stage startups to global enterprises, in varying roles spanning business analysis, customer experience, product operations, and user research.
