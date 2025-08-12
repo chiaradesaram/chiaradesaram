@@ -123,16 +123,12 @@ const About = () => {
                       )}
                       {index === 2 && (
                         <div className="text-gray-500 mt-1">
-                          <div className="flex flex-wrap gap-1 md:hidden">
-                            <span>Banking</span>
-                            <span>•</span>
-                            <span>Legal</span>
-                            <span>•</span>
-                            <span>Compliance</span>
-                            <span>•</span>
-                            <span>Telecommunications</span>
-                            <span>•</span>
-                            <span>FMCG</span>
+                          <div className="md:hidden space-y-1">
+                            <div>Banking</div>
+                            <div>Legal</div>
+                            <div>Compliance</div>
+                            <div>Telecommunications</div>
+                            <div>FMCG</div>
                           </div>
                           <div className="hidden md:block">
                             Banking • Legal • Compliance • Telecommunications • FMCG
