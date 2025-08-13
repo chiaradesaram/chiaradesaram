@@ -10,7 +10,7 @@ const Hero = () => {
     });
   };
 
-  const { displayText: typewriterText, isComplete } = useTypewriter("Hi there, I'm Chiara de Saram", 80, 500);
+  const { displayText: typewriterText, isComplete } = useTypewriter("Chiara de Saram", 80, 800);
   const skills = ["Business Analysis", "User Research", "Process Optimization", "Product Management", "Product Operations", "Customer Experience", "Business Transformation"];
 
   return (
@@ -146,6 +146,7 @@ const Hero = () => {
             {/* Main heading with typewriter effect */}
             <div className="space-y-6">
               <div className="space-y-2">
+                <p className="text-lg text-muted-foreground font-medium tracking-wide opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]">Hi there, I'm</p>
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight min-h-[1.2em]">
                   <span className="text-foreground">
                     {typewriterText}
