@@ -206,23 +206,6 @@ const Blog = () => {
                   
                   <CardContent className="relative p-6 pt-0">
                     <div className="space-y-4">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="text-sm font-medium text-muted-foreground">Tech Stack</span>
-                        <div className="h-px flex-1 bg-border" />
-                      </div>
-                      
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {project.tech.map((tech) => (
-                          <Badge 
-                            key={tech} 
-                            variant="outline" 
-                            className="text-xs px-3 py-1 bg-background/50 text-foreground border border-border hover:bg-muted hover:border-primary/40 transition-all duration-200"
-                          >
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                      
                       <a 
                         href={project.url} 
                         target="_blank" 
