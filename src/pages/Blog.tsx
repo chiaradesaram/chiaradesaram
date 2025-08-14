@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Sparkles, Zap, Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import tailsUpImage from "@/assets/project-tailsup.jpg";
+import compoundLabImage from "@/assets/project-compoundlab.jpg";
 
 const Blog = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
@@ -20,45 +22,35 @@ const Blog = () => {
       category: "Sustainability",
       tech: ["React", "Supabase", "Tailwind"],
       url: "https://localbasket.lovable.app",
-      gradient: "from-green-500 to-emerald-600",
+      gradient: "from-emerald-400 to-emerald-600",
       icon: "🥗",
       bgPattern: "organic"
     },
     {
       id: 2,
-      name: "TaskFlow Pro",
-      description: "An intelligent task management system with AI-powered priority suggestions and team collaboration features.",
-      problem: "Eliminates productivity bottlenecks by automatically organizing tasks and optimizing team workflows.",
-      category: "Productivity",
-      tech: ["React", "AI Integration", "Real-time Sync"],
-      url: "https://taskflow-pro.lovable.app",
-      gradient: "from-blue-500 to-indigo-600",
-      icon: "✅",
-      bgPattern: "geometric"
+      name: "TailsUp",
+      description: "Connects users with verified animal rescues, volunteer opportunities, and donation channels. Every donation is tracked, every organization is verified, every impact is measured. Features a novel supply chain connecting restaurants/hotels with excess food to animal charities.",
+      problem: "People want to help animals but don't know where to start or which organizations to trust. Lack of transparency in charity donations, fragmented volunteering opportunities, and food waste from businesses that could benefit animal rescues.",
+      category: "Social Impact",
+      tech: ["React", "Donation Tracking", "Verification System"],
+      url: "#",
+      gradient: "from-emerald-500 to-teal-600",
+      icon: "🐾",
+      bgPattern: "organic",
+      image: tailsUpImage
     },
     {
       id: 3,
-      name: "MoodSpace",
-      description: "A mental wellness companion app that tracks mood patterns and provides personalized mindfulness exercises.",
-      problem: "Makes mental health support accessible through data-driven insights and personalized wellness recommendations.",
-      category: "Wellness",
-      tech: ["React", "Data Visualization", "PWA"],
-      url: "https://moodspace.lovable.app",
-      gradient: "from-purple-500 to-pink-600",
-      icon: "🧘‍♀️",
-      bgPattern: "waves"
-    },
-    {
-      id: 4,
-      name: "QuickPoll",
-      description: "Real-time polling and survey platform for instant feedback collection with beautiful data visualization.",
-      problem: "Streamlines decision-making processes by enabling rapid feedback collection and instant result analysis.",
-      category: "Engagement",
-      tech: ["React", "Real-time", "Charts"],
-      url: "https://quickpoll.lovable.app",
-      gradient: "from-orange-500 to-red-600",
-      icon: "📊",
-      bgPattern: "ripples"
+      name: "CompoundLab",
+      description: "Teaches personal finance through interactive video tutorials, compound interest calculators, mortgage calculators, and retirement planning tools. Users can compare bank accounts, investment options, and build personalized financial portfolios with educational guidance.",
+      problem: "Financial illiteracy leaves people unprepared for major life decisions like buying homes, saving for retirement, or choosing investments. Complex financial concepts are often poorly explained, and people lack practical tools to experiment with different scenarios before making real financial commitments.",
+      category: "FinTech",
+      tech: ["React", "Financial Calculators", "Educational Tools"],
+      url: "#",
+      gradient: "from-teal-400 to-cyan-600",
+      icon: "💰",
+      bgPattern: "geometric",
+      image: compoundLabImage
     }
   ];
 
@@ -157,7 +149,15 @@ const Blog = () => {
                 >
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-5">
-                    <div className={`w-full h-full bg-gradient-to-br ${project.gradient}`} />
+                    {project.image ? (
+                      <img 
+                        src={project.image} 
+                        alt={project.name}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className={`w-full h-full bg-gradient-to-br ${project.gradient}`} />
+                    )}
                   </div>
                   
                   {/* Animated gradient border */}
