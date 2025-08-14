@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,6 +10,10 @@ import tailsUpImage from "@/assets/project-tailsup.jpg";
 import compoundLabImage from "@/assets/project-compoundlab.jpg";
 
 const Blog = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
   const { ref: postsRef, isVisible: postsVisible } = useScrollReveal();
   const { ref: blogRef, isVisible: blogVisible } = useScrollReveal();
