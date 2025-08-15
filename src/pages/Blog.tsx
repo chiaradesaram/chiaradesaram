@@ -9,6 +9,8 @@ import Navigation from "@/components/Navigation";
 import tailsUpImage from "@/assets/project-tailsup.jpg";
 import compoundLabImage from "@/assets/project-compoundlab.jpg";
 import localBasketImage from "@/assets/project-localbasket.jpg";
+import spanishBoostImage from "@/assets/project-spanishboost.jpg";
+import saxJamImage from "@/assets/project-saxjam.jpg";
 
 const Blog = () => {
   // Scroll to top when component mounts
@@ -23,7 +25,7 @@ const Blog = () => {
     {
       id: 1,
       name: "Local Basket",
-      description: "A food waste reduction platform connecting consumers with surplus food from local businesses.",
+      description: "A food waste reduction platform connecting consumers with surplus food from local businesses. (Prototype)",
       problem: "Transforms food waste from an environmental and economic burden into affordable, quality meals for consumers.",
       category: "Sustainability",
       tech: ["React", "Supabase", "Tailwind"],
@@ -36,11 +38,11 @@ const Blog = () => {
     {
       id: 2,
       name: "TailsUp",
-      description: "Connects users with verified animal rescues, volunteer opportunities, and donation channels. Every donation is tracked, every organization is verified, every impact is measured. Features a novel supply chain connecting restaurants/hotels with excess food to animal charities.",
+      description: "Connects users with verified animal rescues, volunteer opportunities, and donation channels. Every donation is tracked, every organization is verified, every impact is measured. Features a novel supply chain connecting restaurants/hotels with excess food to animal charities. (Prototype)",
       problem: "People want to help animals but don't know which organizations to trust or where to start, plus food wastage from businesses could be routed to animal rescues.",
       category: "Social Impact",
       tech: ["React", "Donation Tracking", "Verification System"],
-      url: "#",
+      url: "https://tailsup.lovable.app",
       gradient: "from-emerald-500 to-teal-600",
       icon: "🐾",
       bgPattern: "organic",
@@ -53,11 +55,37 @@ const Blog = () => {
       problem: "Financial illiteracy leaves people unprepared for major decisions like buying homes or retirement planning, with complex concepts poorly explained and no practical tools to test scenarios.",
       category: "FinTech",
       tech: ["React", "Financial Calculators", "Educational Tools"],
-      url: "#",
+      url: "https://compoundlab.lovable.app",
       gradient: "from-teal-400 to-cyan-600",
       icon: "💰",
       bgPattern: "geometric",
       image: compoundLabImage
+    },
+    {
+      id: 4,
+      name: "Spanish Boost",
+      description: "A Spanish learning tool with revision, translation features, and interactive quizzes for a more rounded learning approach than traditional apps.",
+      problem: "Built as a personal tool to help my own Spanish learning journey.",
+      category: "Education",
+      tech: ["React", "Language Learning", "Interactive Quizzes"],
+      url: "https://spanishboost.lovable.app",
+      gradient: "from-orange-400 to-red-600",
+      icon: "🇪🇸",
+      bgPattern: "geometric",
+      image: spanishBoostImage
+    },
+    {
+      id: 5,
+      name: "SaxJam",
+      description: "A saxophone learning tool with practice tools, technique exercises, and music theory lessons.",
+      problem: "Built as a personal tool to help my own saxophone learning journey. Free, quality resources were hard to find.",
+      category: "Music Education",
+      tech: ["React", "Music Theory", "Practice Tools"],
+      url: "https://saxjam.lovable.app",
+      gradient: "from-purple-400 to-indigo-600",
+      icon: "🎷",
+      bgPattern: "waves",
+      image: saxJamImage
     }
   ];
 
