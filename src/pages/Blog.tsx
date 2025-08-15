@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Sparkles, Zap, Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import ProjectIcon3D from "@/components/3d/ProjectIcon3D";
 import tailsUpImage from "@/assets/project-tailsup.jpg";
 import compoundLabImage from "@/assets/project-compoundlab.jpg";
 import localBasketImage from "@/assets/project-localbasket.jpg";
@@ -31,7 +32,7 @@ const Blog = () => {
       tech: ["React", "Supabase", "Tailwind"],
       url: "https://localbasket.lovable.app",
       gradient: "from-emerald-400 to-emerald-600",
-      icon: "🥗",
+      icon3d: "food",
       bgPattern: "organic",
       image: localBasketImage
     },
@@ -44,7 +45,7 @@ const Blog = () => {
       tech: ["React", "Donation Tracking", "Verification System"],
       url: "https://tailsup.lovable.app",
       gradient: "from-emerald-500 to-teal-600",
-      icon: "🐾",
+      icon3d: "animal",
       bgPattern: "organic",
       image: tailsUpImage
     },
@@ -57,7 +58,7 @@ const Blog = () => {
       tech: ["React", "Financial Calculators", "Educational Tools"],
       url: "https://compoundlab.lovable.app",
       gradient: "from-teal-400 to-cyan-600",
-      icon: "💰",
+      icon3d: "finance",
       bgPattern: "geometric",
       image: compoundLabImage
     },
@@ -70,7 +71,7 @@ const Blog = () => {
       tech: ["React", "Language Learning", "Interactive Quizzes"],
       url: "https://spanishboost.lovable.app",
       gradient: "from-orange-400 to-red-600",
-      icon: "🇪🇸",
+      icon3d: "language",
       bgPattern: "geometric",
       image: spanishBoostImage
     },
@@ -83,7 +84,7 @@ const Blog = () => {
       tech: ["React", "Music Theory", "Practice Tools"],
       url: "https://saxjam.lovable.app",
       gradient: "from-purple-400 to-indigo-600",
-      icon: "🎷",
+      icon3d: "music",
       bgPattern: "waves",
       image: saxJamImage
     }
@@ -201,14 +202,14 @@ const Blog = () => {
                   
                   <CardHeader className="relative p-6 pb-4">
                     <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="text-4xl animate-bounce">{project.icon}</div>
-                        <div>
-                          <Badge className={`bg-gradient-to-r ${project.gradient} text-white border-0 shadow-lg`}>
-                            {project.category}
-                          </Badge>
-                        </div>
+                    <div className="flex items-center gap-3">
+                      <ProjectIcon3D type={project.icon3d as any} />
+                      <div>
+                        <Badge className={`bg-gradient-to-r ${project.gradient} text-white border-0 shadow-lg`}>
+                          {project.category}
+                        </Badge>
                       </div>
+                    </div>
                       <a 
                         href={project.url} 
                         target="_blank" 
