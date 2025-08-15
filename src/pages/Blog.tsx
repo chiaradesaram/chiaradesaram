@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import tailsUpImage from "@/assets/project-tailsup.jpg";
 import compoundLabImage from "@/assets/project-compoundlab.jpg";
+import localBasketImage from "@/assets/project-localbasket.jpg";
 
 const Blog = () => {
   // Scroll to top when component mounts
@@ -29,7 +30,8 @@ const Blog = () => {
       url: "https://localbasket.lovable.app",
       gradient: "from-emerald-400 to-emerald-600",
       icon: "🥗",
-      bgPattern: "organic"
+      bgPattern: "organic",
+      image: localBasketImage
     },
     {
       id: 2,
