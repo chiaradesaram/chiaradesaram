@@ -168,6 +168,16 @@ const Blog = () => {
       {/* Vibe Projects */}
       <section className="pb-24 px-6">
         <div className="container mx-auto max-w-6xl">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+              Vibe Coded Prototypes
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Quick experiments and proof-of-concepts built to solve real problems
+            </p>
+          </div>
+          
           <div
             ref={postsRef}
             className={`transition-all duration-700 delay-200 ${
@@ -187,12 +197,12 @@ const Blog = () => {
                   <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`} />
                   <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${project.gradient} rounded-t-2xl`} />
                   
-                  <div className="flex items-stretch h-full min-h-[400px]">
+                  <div className="flex items-stretch h-full min-h-[320px]">
                     {/* Left Content Section */}
-                    <div className="flex-1 p-8 flex flex-col justify-between">
+                    <div className="flex-1 p-6 flex flex-col justify-between">
                       {/* Header */}
                       <div>
-                        <div className="flex items-center justify-between mb-6">
+                        <div className="flex items-center justify-between mb-4">
                           <Badge className={`bg-gradient-to-r ${project.gradient} text-white border-0 shadow-md text-sm px-3 py-1`}>
                             {project.category}
                           </Badge>
@@ -207,38 +217,30 @@ const Blog = () => {
                         </div>
                         
                         {/* Main Heading */}
-                        <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
+                        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3 leading-tight">
                           {project.description.split('.')[0]}
                         </h3>
                         
                         {/* App Name Label */}
-                        <div className="text-lg font-medium text-muted-foreground mb-6 opacity-80">
+                        <div className="text-base font-medium text-muted-foreground mb-4 opacity-80">
                           {project.name}
                         </div>
                         
                         {/* Description */}
-                        <p className="text-muted-foreground leading-relaxed text-base mb-6">
+                        <p className="text-muted-foreground leading-relaxed text-sm mb-4">
                           {project.problem}
                         </p>
                       </div>
                       
                       {/* Bottom Section */}
-                      <div className="space-y-4">
-                        <div className="flex flex-wrap gap-2">
-                          {project.tech.map((tech) => (
-                            <span key={tech} className="text-xs px-2 py-1 bg-muted/50 text-muted-foreground rounded-md border border-border/50">
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                        
+                      <div>
                         <a 
                           href={project.url} 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="block"
                         >
-                          <Button className="bg-card-foreground text-card hover:bg-card-foreground/90 border border-border hover:border-primary/40 transition-all duration-300 px-6 py-3 rounded-xl">
+                          <Button className="bg-card-foreground text-card hover:bg-card-foreground/90 border border-border hover:border-primary/40 transition-all duration-300 px-6 py-2 rounded-xl">
                             <span>View Project</span>
                             <ExternalLink className="w-4 h-4 ml-2" />
                           </Button>
@@ -247,7 +249,7 @@ const Blog = () => {
                     </div>
                     
                     {/* Right Visual Section */}
-                    <div className="w-80 relative">
+                    <div className="w-64 relative">
                       <div className="absolute inset-0 bg-gradient-to-l from-transparent to-card/20" />
                       <img 
                         src={project.image} 
