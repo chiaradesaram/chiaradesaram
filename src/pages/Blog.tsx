@@ -241,7 +241,7 @@ const Blog = () => {
                           className="block"
                         >
                           <Button className="bg-card-foreground text-card hover:bg-card-foreground/90 border border-border hover:border-primary/40 transition-all duration-300 px-6 py-2 rounded-xl">
-                            <span>View Project</span>
+                            <span>View App</span>
                             <ExternalLink className="w-4 h-4 ml-2" />
                           </Button>
                         </a>
