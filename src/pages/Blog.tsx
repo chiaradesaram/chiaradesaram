@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Sparkles, Zap, Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
-import ProjectIcon3D from "@/components/3d/ProjectIcon3D";
+
 import tailsUpImage from "@/assets/project-tailsup.jpg";
 import compoundLabImage from "@/assets/project-compoundlab.jpg";
 import localBasketImage from "@/assets/project-localbasket.jpg";
@@ -174,87 +174,90 @@ const Blog = () => {
               postsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 gap-8">
               {vibeProjects.map((project, index) => (
                 <Card 
                   key={project.id} 
-                  className="group relative overflow-hidden border border-border bg-card hover:bg-card/50 hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                  className="group relative overflow-hidden border border-border bg-gradient-to-br from-card to-card/50 hover:from-card/80 hover:to-card/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 rounded-2xl"
                   style={{
                     animationDelay: `${index * 150}ms`
                   }}
                 >
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 opacity-5">
-                    {project.image ? (
+                  {/* Gradient border effect */}
+                  <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`} />
+                  <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${project.gradient} rounded-t-2xl`} />
+                  
+                  <div className="flex items-stretch h-full min-h-[400px]">
+                    {/* Left Content Section */}
+                    <div className="flex-1 p-8 flex flex-col justify-between">
+                      {/* Header */}
+                      <div>
+                        <div className="flex items-center justify-between mb-6">
+                          <Badge className={`bg-gradient-to-r ${project.gradient} text-white border-0 shadow-md text-sm px-3 py-1`}>
+                            {project.category}
+                          </Badge>
+                          <a 
+                            href={project.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="opacity-60 hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
+                          >
+                            <ExternalLink className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
+                          </a>
+                        </div>
+                        
+                        {/* Main Heading */}
+                        <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
+                          {project.description.split('.')[0]}
+                        </h3>
+                        
+                        {/* App Name Label */}
+                        <div className="text-lg font-medium text-muted-foreground mb-6 opacity-80">
+                          {project.name}
+                        </div>
+                        
+                        {/* Description */}
+                        <p className="text-muted-foreground leading-relaxed text-base mb-6">
+                          {project.problem}
+                        </p>
+                      </div>
+                      
+                      {/* Bottom Section */}
+                      <div className="space-y-4">
+                        <div className="flex flex-wrap gap-2">
+                          {project.tech.map((tech) => (
+                            <span key={tech} className="text-xs px-2 py-1 bg-muted/50 text-muted-foreground rounded-md border border-border/50">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                        
+                        <a 
+                          href={project.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="block"
+                        >
+                          <Button className="bg-card-foreground text-card hover:bg-card-foreground/90 border border-border hover:border-primary/40 transition-all duration-300 px-6 py-3 rounded-xl">
+                            <span>View Project</span>
+                            <ExternalLink className="w-4 h-4 ml-2" />
+                          </Button>
+                        </a>
+                      </div>
+                    </div>
+                    
+                    {/* Right Visual Section */}
+                    <div className="w-80 relative">
+                      <div className="absolute inset-0 bg-gradient-to-l from-transparent to-card/20" />
                       <img 
                         src={project.image} 
                         alt={project.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-r-2xl"
                       />
-                    ) : (
-                      <div className={`w-full h-full bg-gradient-to-br ${project.gradient}`} />
-                    )}
+                      {/* Overlay gradient for better text readability */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-10 rounded-r-2xl`} />
+                    </div>
                   </div>
-                  
-                  {/* Animated gradient border */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 -z-10 blur`} />
-                  <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${project.gradient}`} />
-                  
-                  <CardHeader className="relative p-6 pb-4">
-                    <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <ProjectIcon3D type={project.icon3d as any} />
-                      <div>
-                        <Badge className={`bg-gradient-to-r ${project.gradient} text-white border-0 shadow-lg`}>
-                          {project.category}
-                        </Badge>
-                      </div>
-                    </div>
-                      <a 
-                        href={project.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="group/link opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
-                      >
-                        <ExternalLink className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
-                      </a>
-                    </div>
-                    
-                    <CardTitle className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
-                      {project.name}
-                    </CardTitle>
-                    
-                    <p className="text-muted-foreground leading-relaxed mb-4">
-                      {project.description}
-                    </p>
-                    
-                    {/* Problem section with fun styling */}
-                    <div className="bg-muted/30 rounded-lg p-4 border border-border/50">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                        <span className="text-sm font-semibold text-foreground">Problem Solved</span>
-                      </div>
-                      <p className="text-sm text-muted-foreground italic">
-                        {project.problem}
-                      </p>
-                    </div>
-                  </CardHeader>
-                  
-                  <CardContent className="relative p-6 pt-0">
-                    <div className="space-y-4">
-                      <a 
-                        href={project.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="block w-full"
-                      >
-                        <Button className={`w-full bg-gradient-to-r ${project.gradient} hover:opacity-90 text-white border-0 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group/btn`}>
-                          <span>Try It Live</span>
-                          <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                        </Button>
-                      </a>
-                    </div>
-                  </CardContent>
                 </Card>
               ))}
             </div>
