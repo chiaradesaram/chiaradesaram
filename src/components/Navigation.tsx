@@ -24,6 +24,7 @@ const Navigation = () => {
     { label: 'Projects', href: '#projects', type: 'section' },
     { label: 'Experience', href: '#experience', type: 'section' },
     { label: 'Testimonials', href: '#testimonials', type: 'section' },
+    { label: 'Vibe Code', href: '/vibecode', type: 'page' },
     { label: 'Blog', href: '/blog', type: 'page' },
   ];
 
