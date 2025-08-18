@@ -102,7 +102,7 @@ const VibeCode = () => {
               <Zap className="w-8 h-8 text-secondary animate-bounce" />
             </div>
             <p className="text-xl text-muted-foreground max-w-2xl">
-              Quick experiments and proof-of-concepts built to solve real problems. Each one is a mini adventure in problem-solving.
+              These aren't polished apps — they're sketches, thoughts, and vibe-coded tools I built in my free time to explore problems that fascinate me.
             </p>
           </div>
         </div>

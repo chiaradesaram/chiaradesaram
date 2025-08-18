@@ -17,6 +17,7 @@ const VibeShowcase = () => {
       id: 1,
       name: "Local Basket",
       description: "A food waste reduction platform connecting consumers with surplus food from local businesses",
+      problem: "Food waste creates environmental and economic burden",
       category: "Sustainability",
       url: "https://localbasket.lovable.app",
       gradient: "from-emerald-400 to-emerald-600",
@@ -26,6 +27,7 @@ const VibeShowcase = () => {
       id: 2,
       name: "TailsUp",
       description: "Connects users with verified animal rescues, volunteer opportunities, and donation channels",
+      problem: "People want to help animals but don't know where to start",
       category: "Social Impact",
       url: "https://tailsup.lovable.app",
       gradient: "from-emerald-500 to-teal-600",
@@ -35,6 +37,7 @@ const VibeShowcase = () => {
       id: 3,
       name: "CompoundLab",
       description: "Teaches personal finance through interactive tutorials and compound interest calculators",
+      problem: "Financial illiteracy leaves people unprepared for major decisions",
       category: "FinTech",
       url: "https://compoundlab.lovable.app",
       gradient: "from-teal-400 to-cyan-600",
@@ -57,7 +60,7 @@ const VibeShowcase = () => {
               Vibe Code Experiments
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Quick prototypes solving real problems - each one a mini adventure in problem-solving
+              These aren't polished apps — they're sketches, thoughts, and vibe-coded tools I built in my free time to explore problems that fascinate me.
             </p>
           </div>
 
@@ -103,8 +106,11 @@ const VibeShowcase = () => {
                   <h3 className="text-lg font-bold text-foreground mb-2 leading-tight">
                     {project.name}
                   </h3>
+                  <div className="text-xs font-medium text-muted-foreground/80 mb-2">
+                    Problem being solved
+                  </div>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    {project.description}
+                    {project.problem}
                   </p>
                   <a 
                     href={project.url} 
