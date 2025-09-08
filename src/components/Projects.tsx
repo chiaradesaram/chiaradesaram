@@ -102,7 +102,7 @@ const Projects = () => {
                       : 'translate-y-8 opacity-0'
                   }`}
                   style={{
-                    transitionDelay: `${index * 150}ms`
+                    transitionDelay: `${index * 75}ms`
                   }}
                  >
                    <CardHeader className="pb-4">
