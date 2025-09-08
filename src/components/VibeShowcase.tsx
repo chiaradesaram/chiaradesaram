@@ -74,9 +74,9 @@ const VibeShowcase = () => {
               }}
               className="w-full max-w-5xl mx-auto"
             >
-              <CarouselContent className="-ml-2 md:-ml-4">
+              <CarouselContent>
                 {featuredProjects.map((project, index) => (
-                  <CarouselItem key={project.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem key={project.id} className="md:basis-1/2 lg:basis-1/3">
                     <Card 
                       className="group relative overflow-hidden border border-border bg-gradient-to-br from-card to-card/50 hover:from-card/80 hover:to-card/30 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 rounded-xl h-full"
                     >
