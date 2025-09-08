@@ -19,7 +19,7 @@ const Projects = () => {
   const projects = [{
     title: "CX Transformation for a Leading US Compliance & Legal Services Firm",
     categories: ["Product Discovery", "User Research", "CX Strategy", "Business Analysis", "Product Ops"],
-    description: "Partnered on a multi‑year transformation program within CX and Product Ops, taking customer experiences from early discovery through design, build, and continuous experimentation. Delivered new journeys, processes, and tools that improved experiences for thousands of customers.",
+    description: "Delivered new journeys, processes, and tools that hoped to improve experiences for thousands of customers.",
     tools: ["Journey Mapping", "Service Blueprinting", "CX Analysis", "Experimentation", "KPI/Metrics Design", "User Research", "Workshops", "Product Analytics", "Jobs to Be Done"],
     icon: TrendingUp,
     image: projectLegalBooks3D
