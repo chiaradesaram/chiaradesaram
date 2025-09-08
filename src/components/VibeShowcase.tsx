@@ -9,6 +9,8 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import tailsUpImage from "@/assets/project-tailsup.jpg";
 import compoundLabImage from "@/assets/project-compoundlab.jpg";
 import localBasketImage from "@/assets/project-localbasket.jpg";
+import saxJamImage from "@/assets/project-saxjam.jpg";
+import spanishBoostImage from "@/assets/project-spanishboost.jpg";
 
 const VibeShowcase = () => {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollReveal();
@@ -43,6 +45,26 @@ const VibeShowcase = () => {
       url: "https://compoundlab.lovable.app",
       gradient: "from-teal-400 to-cyan-600",
       image: compoundLabImage
+    },
+    {
+      id: 4,
+      name: "SaxJam",
+      description: "Interactive music learning platform with AI-powered feedback and jam sessions",
+      problem: "Learning music alone is isolating and lacks personalized feedback",
+      category: "Music Tech",
+      url: "https://saxjam.lovable.app",
+      gradient: "from-purple-400 to-pink-600",
+      image: saxJamImage
+    },
+    {
+      id: 5,
+      name: "SpanishBoost",
+      description: "Gamified Spanish learning with cultural immersion and conversation practice",
+      problem: "Traditional language apps lack cultural context and real conversation",
+      category: "EdTech",
+      url: "https://spanishboost.lovable.app",
+      gradient: "from-orange-400 to-red-600",
+      image: spanishBoostImage
     }
   ];
 
@@ -76,7 +98,7 @@ const VibeShowcase = () => {
             >
               <CarouselContent>
                 {featuredProjects.map((project, index) => (
-                  <CarouselItem key={project.id} className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem key={project.id} className="basis-full sm:basis-1/2 lg:basis-1/3">
                     <Card 
                       className="group relative overflow-hidden border border-border bg-gradient-to-br from-card to-card/50 hover:from-card/80 hover:to-card/30 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 rounded-xl h-full"
                     >
