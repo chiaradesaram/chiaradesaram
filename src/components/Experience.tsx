@@ -38,9 +38,17 @@ const Experience = () => {
     milestone: "Director, Lakpahana Handicrafts",
     subtitle: "Support Sri Lankan craftsmen through strategy, operations, and marketing in our family business"
   }, {
+    year: "2015",
+    milestone: "Equity Trading Intern, National Development Bank Securities",
+    subtitle: "Valued companies on the Colombo Stock Exchange using financial modelling and developed macroeconomic forecasts"
+  }, {
+    year: "2014",
+    milestone: "Audit Team Intern, Ernst and Young",
+    subtitle: "Audited in the Business Risk Service division"
+  }, {
     year: "2012-2015",
-    milestone: "Professional Foundation Years",
-    subtitle: "Gained diverse expertise through internships in corporate law (DL & F de Saram Attorneys at Law), financial auditing (Ernst & Young), and equity markets (NDB Securities)"
+    milestone: "Legal Intern, DL & F de Saram Attorneys at Law",
+    subtitle: "Assisted with corporate law, company incorporation, secretarial work, joint ventures, and litigation preparation"
   }];
   return <section id="experience" className="py-16" style={{background: 'linear-gradient(135deg, #EEEEEE 0%, #F2F2F2 50%, #F0F0F0 100%)'}}>
       <div className="container mx-auto px-6">
@@ -100,20 +108,7 @@ const Experience = () => {
                       </div>
                       <h4 className="font-medium text-slate-800 leading-snug text-sm">{item.milestone}</h4>
                       {item.subtitle && (
-                        <>
-                          {index === timeline.length - 1 ? (
-                            <div className="text-xs text-slate-600 leading-relaxed">
-                              <div className="mb-1">Gained diverse expertise through internships in:</div>
-                              <div className="ml-3 space-y-0.5">
-                                <div>• DL & F de Saram Attorneys at Law (corporate law)</div>
-                                <div>• Ernst & Young (financial auditing)</div>
-                                <div>• NDB Securities (stock trading)</div>
-                              </div>
-                            </div>
-                          ) : (
-                            <p className="text-xs text-slate-600 leading-relaxed">{item.subtitle}</p>
-                          )}
-                        </>
+                        <p className="text-xs text-slate-600 leading-relaxed">{item.subtitle}</p>
                       )}
                     </div>
                   </div>
