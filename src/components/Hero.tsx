@@ -231,7 +231,7 @@ const Hero = () => {
                 <img 
                   src="/lovable-uploads/cb69a83f-2833-415f-985f-217ce1ec8a62.png" 
                   alt="Chiara de Saram - Business Consultant" 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               {/* Subtle glow effect */}
