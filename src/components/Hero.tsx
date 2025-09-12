@@ -140,7 +140,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 w-full">
-        <div className="grid lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Left Content */}
           <div className="space-y-10">
             {/* Main heading with typewriter effect */}
@@ -227,7 +227,7 @@ const Hero = () => {
           {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:justify-end relative opacity-0 animate-[fade-in_1s_ease-out_0.1s_forwards,scale-in_0.8s_ease-out_0.1s_forwards]">
             <div className="relative">
-              <div className="w-72 h-96 rounded-[50%] overflow-hidden border-4 border-primary/20 shadow-2xl hover:border-primary/40 transition-all duration-500 hover:scale-105">
+              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl hover:border-primary/40 transition-all duration-500 hover:scale-105">
                 <img 
                   src="/lovable-uploads/cb69a83f-2833-415f-985f-217ce1ec8a62.png" 
                   alt="Chiara de Saram - Business Consultant" 
@@ -235,7 +235,7 @@ const Hero = () => {
                 />
               </div>
               {/* Subtle glow effect */}
-              <div className="absolute inset-0 rounded-[50%] bg-gradient-to-tr from-primary/10 to-transparent opacity-60 pointer-events-none"></div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/10 to-transparent opacity-60 pointer-events-none"></div>
             </div>
           </div>
         </div>
