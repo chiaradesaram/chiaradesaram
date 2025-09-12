@@ -224,10 +224,18 @@ const Hero = () => {
             )}
           </div>
 
-          {/* Right Content - Image aligned with content */}
+          {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:justify-end relative opacity-0 animate-[fade-in_1s_ease-out_0.1s_forwards,scale-in_0.8s_ease-out_0.1s_forwards]">
             <div className="relative">
-              {/* Content placeholder for future image */}
+              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl hover:border-primary/40 transition-all duration-500 hover:scale-105">
+                <img 
+                  src="/lovable-uploads/cb69a83f-2833-415f-985f-217ce1ec8a62.png" 
+                  alt="Chiara de Saram - Business Consultant" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/10 to-transparent opacity-60 pointer-events-none"></div>
             </div>
           </div>
         </div>
