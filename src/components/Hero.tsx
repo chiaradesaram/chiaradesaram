@@ -225,7 +225,7 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Profile Image */}
-          <div className="flex justify-center lg:justify-start relative opacity-0 animate-[fade-in_1s_ease-out_0.1s_forwards,scale-in_0.8s_ease-out_0.1s_forwards]">
+          <div className="flex justify-center lg:justify-start lg:ml-8 relative opacity-0 animate-[fade-in_1s_ease-out_0.1s_forwards,scale-in_0.8s_ease-out_0.1s_forwards]">
             <div className="relative">
               <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl hover:border-primary/40 transition-all duration-500 hover:scale-105">
                 <img 
