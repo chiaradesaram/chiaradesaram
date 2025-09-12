@@ -26,9 +26,9 @@ const Hero = () => {
           <div className="absolute inset-0 animate-wave-slow">
             <svg className="absolute bottom-0 left-0 w-[120%] h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
               <path d="M0,800 C300,500 600,550 900,450 C1050,400 1150,450 1200,400 L1200,800 Z" 
-                    fill="url(#wave1)" opacity="0.35"/>
+                    fill="url(#wave1)" opacity="0.45"/>
               <path d="M0,800 C300,505 600,555 900,455 C1050,405 1150,455 1200,405 L1200,800 Z" 
-                    fill="url(#wave1-shadow)" opacity="0.22"/>
+                    fill="url(#wave1-shadow)" opacity="0.32"/>
             </svg>
           </div>
           
@@ -36,9 +36,9 @@ const Hero = () => {
           <div className="absolute inset-0 animate-wave-medium">
             <svg className="absolute bottom-0 left-0 w-[110%] h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
               <path d="M0,800 C200,520 500,480 800,520 C950,540 1100,500 1200,520 L1200,800 Z" 
-                    fill="url(#wave2)" opacity="0.28"/>
+                    fill="url(#wave2)" opacity="0.38"/>
               <path d="M0,800 C200,525 500,485 800,525 C950,545 1100,505 1200,525 L1200,800 Z" 
-                    fill="url(#wave2-shadow)" opacity="0.16"/>
+                    fill="url(#wave2-shadow)" opacity="0.26"/>
             </svg>
           </div>
           
@@ -46,9 +46,9 @@ const Hero = () => {
           <div className="absolute inset-0 animate-wave-fast">
             <svg className="absolute bottom-0 left-0 w-[115%] h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
               <path d="M0,800 C400,560 700,500 1000,560 C1100,580 1150,560 1200,570 L1200,800 Z" 
-                    fill="url(#wave3)" opacity="0.24"/>
+                    fill="url(#wave3)" opacity="0.34"/>
               <path d="M0,800 C400,565 700,505 1000,565 C1100,585 1150,565 1200,575 L1200,800 Z" 
-                    fill="url(#wave3-highlight)" opacity="0.12"/>
+                    fill="url(#wave3-highlight)" opacity="0.22"/>
             </svg>
           </div>
           
@@ -56,9 +56,9 @@ const Hero = () => {
           <div className="absolute inset-0 animate-wave-reverse">
             <svg className="absolute bottom-0 left-0 w-[125%] h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
               <path d="M0,800 C150,620 450,580 750,620 C900,640 1050,600 1200,620 L1200,800 Z" 
-                    fill="url(#wave4)" opacity="0.19"/>
+                    fill="url(#wave4)" opacity="0.29"/>
               <path d="M0,800 C150,625 450,585 750,625 C900,645 1050,605 1200,625 L1200,800 Z" 
-                    fill="url(#wave4-highlight)" opacity="0.09"/>
+                    fill="url(#wave4-highlight)" opacity="0.19"/>
             </svg>
           </div>
           
@@ -66,7 +66,7 @@ const Hero = () => {
           <div className="absolute inset-0 animate-wave-subtle">
             <svg className="absolute bottom-0 left-0 w-[130%] h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
               <path d="M0,800 C250,680 550,640 850,680 C980,700 1120,680 1200,690 L1200,800 Z" 
-                    fill="url(#wave5)" opacity="0.15"/>
+                    fill="url(#wave5)" opacity="0.25"/>
             </svg>
           </div>
           
@@ -74,7 +74,7 @@ const Hero = () => {
           <div className="absolute inset-0 animate-wave-gentle">
             <svg className="absolute bottom-0 left-0 w-[140%] h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
               <path d="M0,800 C180,720 480,700 780,720 C920,730 1080,710 1200,720 L1200,800 Z" 
-                    fill="url(#wave6)" opacity="0.12"/>
+                    fill="url(#wave6)" opacity="0.22"/>
             </svg>
           </div>
         </div>
