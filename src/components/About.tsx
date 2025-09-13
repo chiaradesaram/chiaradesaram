@@ -169,16 +169,16 @@ const About = () => {
           </div>
 
           {/* What I Value Section */}
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4 text-gray-800">What I Value</h3>
-            <div className="grid md:grid-cols-2 gap-3">
+          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800">What I Value</h3>
+            <div className="grid md:grid-cols-2 gap-4">
               {values.map((value, index) => (
                 <div 
                   key={index} 
                   className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300 group"
                 >
                   <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0 group-hover:bg-orange-500 transition-colors duration-300"></div>
-                  <p className="text-gray-700 leading-relaxed text-sm">{value}</p>
+                  <p className="text-gray-700 leading-relaxed">{value}</p>
                 </div>
               ))}
             </div>
