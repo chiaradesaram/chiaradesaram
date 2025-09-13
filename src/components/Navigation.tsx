@@ -82,8 +82,8 @@ const Navigation = () => {
                 onClick={() => handleNavigation(item)}
                 className={`nav-link font-medium transition-all duration-300 relative group ${
                   isScrolled 
-                    ? 'text-gray-700 hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-600 hover:bg-clip-text hover:text-transparent' 
-                    : 'text-white hover:bg-gradient-to-r hover:from-pink-400 hover:to-pink-600 hover:bg-clip-text hover:text-transparent'
+                    ? 'text-gray-700 hover:bg-gradient-to-r hover:from-coral-500 hover:to-orange-600 hover:bg-clip-text hover:text-transparent' 
+                    : 'text-white hover:bg-gradient-to-r hover:from-coral-400 hover:to-coral-600 hover:bg-clip-text hover:text-transparent'
                 }`}
               >
                 {item.label}

@@ -20,10 +20,10 @@ All colors MUST be HSL.
     --popover: 220 13% 12%;
     --popover-foreground: 220 9% 96%;
 
-    /* Primary accent - Pinkish Coral */
-    --primary: 350 85% 65%;
+    /* Primary accent - Coral */
+    --primary: 15 85% 60%;
     --primary-foreground: 220 13% 9%;
-    --primary-glow: 350 85% 75%;
+    --primary-glow: 15 85% 70%;
 
     /* Secondary accent - Warm Coral */
     --secondary: 15 90% 68%;
