@@ -15,7 +15,7 @@ const Hero = () => {
   const skills = ["Business Analysis", "User Research", "Process Optimization", "Product Management", "Product Operations", "Customer Experience", "Business Transformation"];
 
   return (
-    <section className="relative min-h-screen overflow-hidden pt-32 pb-20 flex items-center">
+    <section className="relative min-h-screen overflow-hidden pt-20 pb-16 md:pt-32 md:pb-20 flex items-center">
       {/* Enhanced 3D Wave Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Base gradient with more depth */}
@@ -140,15 +140,15 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 w-full">
-        <div className="grid lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+      <div className="relative z-10 container mx-auto px-4 md:px-6 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center max-w-7xl mx-auto">
           {/* Left Content */}
-          <div className="space-y-10">
+          <div className="space-y-6 md:space-y-10 text-center lg:text-left">
             {/* Main heading with typewriter effect */}
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               <div className="space-y-2">
-                <p className="text-lg text-muted-foreground font-medium tracking-wide opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]">Hi there, I'm</p>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight min-h-[1.2em]">
+                <p className="text-sm md:text-lg text-muted-foreground font-medium tracking-wide opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]">Hi there, I'm</p>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-tight min-h-[1.2em]">
                   <span className="text-foreground">
                     {typewriterText}
                     <span className="animate-pulse">|</span>
@@ -157,7 +157,7 @@ const Hero = () => {
               </div>
               
               {isComplete && (
-                <p className="text-xl text-muted-foreground leading-relaxed max-w-xl opacity-0 animate-[fade-in_1s_ease-out_0.2s_forwards]">
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0 opacity-0 animate-[fade-in_1s_ease-out_0.2s_forwards]">
                   Insight‑driven and customer‑focused, blending 
                   <span className="text-primary font-medium"> product strategy</span>, 
                   <span className="text-primary font-medium"> business analysis</span>, and 
@@ -169,7 +169,7 @@ const Hero = () => {
             {/* Skills cloud with staggered animations */}
             {isComplete && (
               <div className="space-y-4">
-                <div className="flex flex-wrap gap-2 md:gap-3">
+                <div className="flex flex-wrap gap-2 md:gap-3 justify-center lg:justify-start">
                   {skills.map((skill, index) => (
                     <Badge 
                       key={skill} 
@@ -188,24 +188,24 @@ const Hero = () => {
             
             {/* CTA Buttons with dramatic entrance */}
             {isComplete && (
-              <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-4 md:pt-6 justify-center lg:justify-start">
                 <Button 
                   size="lg" 
                   onClick={() => scrollToSection("contact")} 
-                  className="group px-8 py-4 text-lg bg-primary hover:bg-primary/90 text-primary-foreground hover-glow transition-all duration-300 opacity-0 animate-[slide-in-right_0.8s_ease-out_1.4s_forwards,scale-in_0.6s_ease-out_1.4s_forwards] transform translate-x-8"
+                  className="group px-6 py-3 md:px-8 md:py-4 text-base md:text-lg bg-primary hover:bg-primary/90 text-primary-foreground hover-glow transition-all duration-300 opacity-0 animate-[slide-in-right_0.8s_ease-out_1.4s_forwards,scale-in_0.6s_ease-out_1.4s_forwards] transform translate-x-8"
                 >
-                  <Mail className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  <Mail className="mr-2 md:mr-3 h-4 w-4 md:h-5 md:w-5 group-hover:scale-110 transition-transform" />
                   Get In Touch
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="glass-card px-8 py-4 text-lg border-primary/20 hover:border-primary/40 hover:bg-primary/10 transition-all duration-300 opacity-0 animate-[slide-in-right_0.8s_ease-out_1.6s_forwards,scale-in_0.6s_ease-out_1.6s_forwards] transform translate-x-8"
+                  className="glass-card px-6 py-3 md:px-8 md:py-4 text-base md:text-lg border-primary/20 hover:border-primary/40 hover:bg-primary/10 transition-all duration-300 opacity-0 animate-[slide-in-right_0.8s_ease-out_1.6s_forwards,scale-in_0.6s_ease-out_1.6s_forwards] transform translate-x-8"
                   onClick={() => {
                     window.open("https://drive.google.com/file/d/1JfX2IaHz3h6Ag94QDDulmf5TZbmRiEll/view?usp=sharing", "_blank");
                   }}
                 >
-                  <Download className="mr-3 h-5 w-5" />
+                  <Download className="mr-2 md:mr-3 h-4 w-4 md:h-5 md:w-5" />
                   Download CV
                 </Button>
               </div>
@@ -213,7 +213,7 @@ const Hero = () => {
 
             {/* Scroll indicator with bounce entrance */}
             {isComplete && (
-              <div className="flex justify-center sm:justify-start pt-8">
+              <div className="flex justify-center lg:justify-start pt-6 md:pt-8">
                 <button 
                   onClick={() => scrollToSection("about")} 
                   className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group opacity-0 animate-[fade-in_0.8s_ease-out_2s_forwards,bounce_0.6s_ease-out_2.2s_forwards]"
@@ -226,9 +226,9 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Profile Image */}
-          <div className="flex justify-center ml-16 relative opacity-0 animate-[fade-in_1s_ease-out_0.1s_forwards,scale-in_0.8s_ease-out_0.1s_forwards]">
+          <div className="flex justify-center lg:ml-16 relative opacity-0 animate-[fade-in_1s_ease-out_0.1s_forwards,scale-in_0.8s_ease-out_0.1s_forwards] order-first lg:order-last">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl hover:border-primary/40 transition-all duration-500 hover:scale-105">
+              <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl hover:border-primary/40 transition-all duration-500 hover:scale-105">
                 <img 
                   src={chiaraProfile} 
                   alt="Chiara de Saram - Business Consultant" 
