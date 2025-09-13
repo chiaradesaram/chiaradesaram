@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Download, ArrowDown } from "lucide-react";
 import { useTypewriter } from "@/hooks/use-typewriter";
+import chiaraProfile from "@/assets/chiara-profile.png";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -229,7 +230,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl hover:border-primary/40 transition-all duration-500 hover:scale-105">
                 <img 
-                  src="/lovable-uploads/cb69a83f-2833-415f-985f-217ce1ec8a62.png" 
+                  src={chiaraProfile} 
                   alt="Chiara de Saram - Business Consultant" 
                   className="w-full h-full object-cover object-top"
                 />
