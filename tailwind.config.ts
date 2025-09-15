@@ -63,10 +63,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				coral: {
-					300: 'hsl(350 85% 75%)',
-					400: 'hsl(350 85% 65%)',
-					500: 'hsl(350 85% 65%)',
-					600: 'hsl(350 85% 55%)'
+					300: 'hsl(15 90% 78%)',
+					400: 'hsl(15 90% 68%)',
+					500: 'hsl(15 90% 68%)',
+					600: 'hsl(15 90% 58%)'
 				},
 				'blog-card': {
 					DEFAULT: 'hsl(var(--blog-card))',
