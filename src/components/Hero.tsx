@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Download, ArrowDown } from "lucide-react";
 import { useTypewriter } from "@/hooks/use-typewriter";
-import chiaraProfile from "@/assets/chiara-profile.png";
+import chiaraProfile from "@/assets/chiara-profile.jpg";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
