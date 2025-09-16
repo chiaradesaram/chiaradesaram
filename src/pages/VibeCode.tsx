@@ -130,7 +130,64 @@ const VibeCode = () => {
                   <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl pointer-events-none`} />
                   <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${project.gradient} rounded-t-2xl pointer-events-none`} />
                   
-                  <div className="flex items-stretch h-full min-h-[320px]">
+                  {/* Mobile Layout */}
+                  <div className="md:hidden">
+                    {/* Mobile Image Section */}
+                    <div className="relative h-48 overflow-hidden rounded-t-2xl">
+                      <img 
+                        src={project.image} 
+                        alt={project.name}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-10 pointer-events-none`} />
+                      <div className="absolute top-4 left-4">
+                        <Badge className={`bg-gradient-to-r ${project.gradient} text-white border-0 shadow-md text-sm px-3 py-1`}>
+                          {project.category}
+                        </Badge>
+                      </div>
+                      <a 
+                        href={project.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="absolute top-4 right-4 opacity-60 hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
+                      >
+                        <ExternalLink className="w-5 h-5 text-white drop-shadow-lg" />
+                      </a>
+                    </div>
+                    
+                    {/* Mobile Content Section */}
+                    <div className="p-6 space-y-4">
+                      <h3 className="text-xl font-bold text-foreground leading-tight">
+                        {project.description.split('.')[0]}
+                      </h3>
+                      
+                      <div className="text-sm font-medium text-muted-foreground opacity-80">
+                        {project.name}
+                      </div>
+                      
+                      <p className="text-muted-foreground leading-relaxed text-sm">
+                        {project.problem}
+                      </p>
+                      
+                      <Button
+                        asChild
+                        className="relative z-10 pointer-events-auto w-full bg-card-foreground text-card hover:bg-card-foreground/90 border border-border hover:border-primary/40 transition-all duration-300 px-6 py-2 rounded-xl"
+                      >
+                        <a 
+                          href={project.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          aria-label={`Open ${project.name} app in a new tab`}
+                        >
+                          <span>View App</span>
+                          <ExternalLink className="w-4 h-4 ml-2" />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+
+                  {/* Desktop Layout */}
+                  <div className="hidden md:flex items-stretch h-full min-h-[320px]">
                     {/* Left Content Section */}
                     <div className="flex-1 p-6 flex flex-col justify-between">
                       {/* Header */}
