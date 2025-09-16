@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ExternalLink, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { type CarouselApi } from "@/components/ui/carousel";
 
 import tailsUpImage from "@/assets/project-tailsup.jpg";
@@ -15,10 +14,16 @@ import saxJamImage from "@/assets/project-saxjam.jpg";
 import spanishBoostImage from "@/assets/project-spanishboost.jpg";
 
 const VibeShowcase = () => {
-  const { ref: sectionRef, isVisible: sectionVisible } = useScrollReveal();
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Immediate animation trigger
+    const timer = setTimeout(() => setIsLoaded(true), 50);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     if (!api) {
@@ -90,9 +95,8 @@ const VibeShowcase = () => {
     <section className="py-24 px-6 bg-gradient-to-br from-background via-muted/30 to-background">
       <div className="container mx-auto max-w-6xl">
         <div
-          ref={sectionRef}
-          className={`transition-all duration-700 ${
-            sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          className={`transition-all duration-500 ease-out ${
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
           {/* Section Header */}
