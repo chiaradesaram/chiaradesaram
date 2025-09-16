@@ -58,7 +58,7 @@ const VibeShowcase = () => {
     },
     {
       id: 5,
-      name: "SpanishBoost",
+      name: "Spanish Boost",
       description: "Gamified Spanish learning with cultural immersion and conversation practice",
       problem: "Traditional language apps lack cultural context and real conversation",
       category: "EdTech",
