@@ -90,10 +90,10 @@ const About = () => {
             {/* About Me Text */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <p className="text-gray-600 leading-relaxed text-base">
+                <p className="text-gray-600 leading-relaxed text-lg">
                   Over the past 8 years in tech, I've worked across industries and company sizes, from early-stage startups to global enterprises, in varying roles spanning business analysis, customer experience, product operations, and user research.
                 </p>
-                <p className="text-gray-600 leading-relaxed text-base">
+                <p className="text-gray-600 leading-relaxed text-lg">
                   Before moving into tech, I came from an economics and finance background. This mix has shaped my perspective: bringing a blend of analytical thinking, structured problem-solving, and creative exploration. As I've moved through different domains, tools, and technologies, my way of thinking has continued to evolve, driven by curiosity, adaptability, and a desire to build better.
                 </p>
               </div>
@@ -145,13 +145,13 @@ const About = () => {
           {/* How I Work Section */}
           <div className="mb-16">
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
-              <h3 className="text-xl font-semibold mb-6 text-gray-800">How I Work</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-gray-800">How I Work</h3>
               <div className="space-y-6">
-                <p className="text-gray-600 leading-relaxed text-sm">
+                <p className="text-gray-600 leading-relaxed">
                   I believe the best products come from teams that are curious, collaborative, and committed to deeply understanding their users. I love helping teams come together to explore problems, generate ideas, and iterate on thoughtful solutions, always with a focus on outcomes and measurable impact.
                 </p>
                 <div>
-                  <p className="text-gray-700 font-medium mb-4 text-sm">My approach combines:</p>
+                  <p className="text-gray-700 font-medium mb-4">My approach combines:</p>
                   <div className="space-y-3">
                     {workingApproach.map((approach, index) => (
                       <div 
@@ -159,7 +159,7 @@ const About = () => {
                         className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300"
                       >
                         <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-                        <p className="text-gray-700 leading-relaxed text-sm">{approach}</p>
+                        <p className="text-gray-700 leading-relaxed">{approach}</p>
                       </div>
                     ))}
                   </div>
@@ -170,7 +170,7 @@ const About = () => {
 
           {/* What I Value Section */}
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold mb-6 text-gray-800">What I Value</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800">What I Value</h3>
             <div className="grid md:grid-cols-2 gap-4">
               {values.map((value, index) => (
                 <div 
@@ -178,7 +178,7 @@ const About = () => {
                   className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300 group"
                 >
                   <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0 group-hover:bg-orange-500 transition-colors duration-300"></div>
-                  <p className="text-gray-700 leading-relaxed text-sm">{value}</p>
+                  <p className="text-gray-700 leading-relaxed">{value}</p>
                 </div>
               ))}
             </div>
