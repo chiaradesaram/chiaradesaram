@@ -140,20 +140,21 @@ const VibeShowcase = () => {
                         <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
                           {project.problem}
                         </p>
-                        <a 
-                          href={project.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="block mt-auto"
+                        <Button 
+                          asChild 
+                          size="sm" 
+                          className="w-full bg-card-foreground text-card hover:bg-card-foreground/90 border border-border hover:border-primary/40 transition-all duration-300 rounded-lg mt-auto"
                         >
-                          <Button 
-                            size="sm" 
-                            className="w-full bg-card-foreground text-card hover:bg-card-foreground/90 border border-border hover:border-primary/40 transition-all duration-300 rounded-lg"
+                          <a 
+                            href={project.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            aria-label={`Open ${project.name} app in a new tab`}
                           >
                             <span>View App</span>
                             <ExternalLink className="w-3 h-3 ml-2" />
-                          </Button>
-                        </a>
+                          </a>
+                        </Button>
                       </div>
                     </Card>
                   </CarouselItem>

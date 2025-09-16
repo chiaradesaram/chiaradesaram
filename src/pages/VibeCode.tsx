@@ -167,17 +167,20 @@ const VibeCode = () => {
                       
                       {/* Bottom Section */}
                       <div>
-                        <a 
-                          href={project.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="block"
+                        <Button
+                          asChild
+                          className="bg-card-foreground text-card hover:bg-card-foreground/90 border border-border hover:border-primary/40 transition-all duration-300 px-6 py-2 rounded-xl"
                         >
-                          <Button className="bg-card-foreground text-card hover:bg-card-foreground/90 border border-border hover:border-primary/40 transition-all duration-300 px-6 py-2 rounded-xl">
+                          <a 
+                            href={project.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            aria-label={`Open ${project.name} app in a new tab`}
+                          >
                             <span>View App</span>
                             <ExternalLink className="w-4 h-4 ml-2" />
-                          </Button>
-                        </a>
+                          </a>
+                        </Button>
                       </div>
                     </div>
                     
