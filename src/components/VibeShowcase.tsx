@@ -2,9 +2,11 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { ExternalLink, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { useCallback, useEffect, useState } from "react";
+import { type CarouselApi } from "@/components/ui/carousel";
 
 import tailsUpImage from "@/assets/project-tailsup.jpg";
 import compoundLabImage from "@/assets/project-compoundlab.jpg";
@@ -14,6 +16,22 @@ import spanishBoostImage from "@/assets/project-spanishboost.jpg";
 
 const VibeShowcase = () => {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollReveal();
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
   const featuredProjects = [
     {
@@ -90,6 +108,7 @@ const VibeShowcase = () => {
           {/* Project Carousel */}
           <div className="relative mb-12">
             <Carousel
+              setApi={setApi}
               opts={{
                 align: "start",
                 loop: true,
@@ -163,6 +182,44 @@ const VibeShowcase = () => {
               <CarouselPrevious className="hidden md:flex -left-12 lg:-left-16" />
               <CarouselNext className="hidden md:flex -right-12 lg:-right-16" />
             </Carousel>
+
+            {/* Mobile Navigation Indicators */}
+            <div className="md:hidden mt-6 flex items-center justify-center gap-4">
+              {/* Navigation Arrows */}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => api?.scrollPrev()}
+                className="w-8 h-8 p-0 text-muted-foreground hover:text-foreground"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </Button>
+              
+              {/* Dots Indicator */}
+              <div className="flex items-center gap-2">
+                {Array.from({ length: count }, (_, index) => (
+                  <button
+                    key={index}
+                    className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+                      index === current - 1 
+                        ? "bg-primary" 
+                        : "bg-muted-foreground/30"
+                    }`}
+                    onClick={() => api?.scrollTo(index)}
+                  />
+                ))}
+              </div>
+
+              {/* Navigation Arrows */}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => api?.scrollNext()}
+                className="w-8 h-8 p-0 text-muted-foreground hover:text-foreground"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
 
           {/* View More Button */}
