@@ -127,8 +127,8 @@ const VibeCode = () => {
                   }}
                 >
                   {/* Gradient border effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`} />
-                  <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${project.gradient} rounded-t-2xl`} />
+                  <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl pointer-events-none`} />
+                  <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${project.gradient} rounded-t-2xl pointer-events-none`} />
                   
                   <div className="flex items-stretch h-full min-h-[320px]">
                     {/* Left Content Section */}
@@ -169,7 +169,7 @@ const VibeCode = () => {
                       <div>
                         <Button
                           asChild
-                          className="bg-card-foreground text-card hover:bg-card-foreground/90 border border-border hover:border-primary/40 transition-all duration-300 px-6 py-2 rounded-xl"
+                          className="relative z-10 pointer-events-auto bg-card-foreground text-card hover:bg-card-foreground/90 border border-border hover:border-primary/40 transition-all duration-300 px-6 py-2 rounded-xl"
                         >
                           <a 
                             href={project.url} 
@@ -186,14 +186,14 @@ const VibeCode = () => {
                     
                     {/* Right Visual Section */}
                     <div className="w-64 relative">
-                      <div className="absolute inset-0 bg-gradient-to-l from-transparent to-card/20" />
+                      <div className="absolute inset-0 bg-gradient-to-l from-transparent to-card/20 pointer-events-none" />
                       <img 
                         src={project.image} 
                         alt={project.name}
                         className="w-full h-full object-cover rounded-r-2xl"
                       />
                       {/* Overlay gradient for better text readability */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-10 rounded-r-2xl`} />
+                      <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-10 rounded-r-2xl pointer-events-none`} />
                     </div>
                   </div>
                 </Card>

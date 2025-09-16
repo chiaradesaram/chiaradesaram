@@ -103,8 +103,8 @@ const VibeShowcase = () => {
                       className="group relative overflow-hidden border border-border bg-gradient-to-br from-card to-card/50 hover:from-card/80 hover:to-card/30 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 rounded-xl h-full"
                     >
                       {/* Gradient border effect */}
-                      <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-xl`} />
-                      <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${project.gradient} rounded-t-xl`} />
+                      <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-xl pointer-events-none`} />
+                      <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${project.gradient} rounded-t-xl pointer-events-none`} />
                       
                       {/* Image */}
                       <div className="relative h-48 overflow-hidden">
@@ -113,7 +113,7 @@ const VibeShowcase = () => {
                           alt={project.name}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
-                        <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-20 rounded-t-xl`} />
+                        <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-20 rounded-t-xl pointer-events-none`} />
                         <div className="absolute top-4 left-4">
                           <Badge className={`bg-gradient-to-r ${project.gradient} text-white border-0 shadow-md text-xs px-2 py-1`}>
                             {project.category}
@@ -143,7 +143,7 @@ const VibeShowcase = () => {
                         <Button 
                           asChild 
                           size="sm" 
-                          className="w-full bg-card-foreground text-card hover:bg-card-foreground/90 border border-border hover:border-primary/40 transition-all duration-300 rounded-lg mt-auto"
+                          className="relative z-10 pointer-events-auto w-full bg-card-foreground text-card hover:bg-card-foreground/90 border border-border hover:border-primary/40 transition-all duration-300 rounded-lg mt-auto"
                         >
                           <a 
                             href={project.url} 
