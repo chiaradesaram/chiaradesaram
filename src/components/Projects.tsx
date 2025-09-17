@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, TrendingUp, Users, Zap, Target, BarChart3, Search } from "lucide-react";
-import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 // Import 3D project images
 import projectLegalBooks3D from "@/assets/project-legal-books-3d.jpg";
@@ -87,56 +86,52 @@ const Projects = () => {
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => {
-            const Icon = project.icon;
-            const ProjectCard = () => {
-              const { ref, isVisible } = useScrollReveal({ 
-                threshold: 0.2,
-                rootMargin: '-50px'
-              });
+              const Icon = project.icon;
               
               return (
                 <Card 
-                  ref={ref}
-                  className={`group h-full transition-all duration-700 border border-slate-200/60 bg-white hover:bg-gray-50 hover:border-slate-300/60 shadow-sm hover:shadow-md transform ${
-                    isVisible 
-                      ? 'translate-y-0 opacity-100' 
-                      : 'translate-y-8 opacity-0'
-                  }`}
-                  style={{
-                    transitionDelay: `${index * 75}ms`
-                  }}
-                 >
-                   <CardHeader className="pb-4">
-                     {/* Project Image */}
-                     <div className="mb-4 rounded-lg overflow-hidden">
-                       <img 
-                         src={project.image} 
-                         alt={project.title}
-                         className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
-                       />
-                     </div>
-                     
-                     <div className="flex items-center gap-3 mb-4">
-                       <div className="w-10 h-10 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center">
-                         <Icon className="h-5 w-5 text-slate-600" />
-                       </div>
-                       {/* Small, subtle category badges */}
-                       <div className="flex flex-wrap gap-1">
-                         {project.categories.slice(0, 2).map((category, catIndex) => <Badge key={catIndex} variant="secondary" className="text-xs px-2 py-0.5 bg-slate-100 text-slate-600 border border-slate-200">
-                             {category}
-                           </Badge>)}
-                         {project.categories.length > 2 && <Badge variant="secondary" className="text-xs px-2 py-0.5 bg-slate-100 text-slate-600 border border-slate-200">
-                             +{project.categories.length - 2}
-                           </Badge>}
-                       </div>
-                     </div>
-                     
-                     {/* Emphasized Project Title */}
-                     <CardTitle className="text-xl leading-tight text-slate-800 font-bold mb-3">
-                       {project.title}
-                     </CardTitle>
-                   </CardHeader>
-                  
+                  key={index}
+                  className="group h-full border border-slate-200/60 bg-white hover:bg-gray-50 hover:border-slate-300/60 shadow-sm hover:shadow-md transition-colors duration-200"
+                >
+                  <CardHeader className="pb-4">
+                    {/* Project Image */}
+                    <div className="mb-4 rounded-lg overflow-hidden bg-slate-100">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
+                        loading={index < 3 ? "eager" : "lazy"}
+                        fetchPriority={index < 3 ? "high" : "auto"}
+                        decoding="async"
+                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      />
+                    </div>
+                    
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center">
+                        <Icon className="h-5 w-5 text-slate-600" />
+                      </div>
+                      {/* Small, subtle category badges */}
+                      <div className="flex flex-wrap gap-1">
+                        {project.categories.slice(0, 2).map((category, catIndex) => (
+                          <Badge key={catIndex} variant="secondary" className="text-xs px-2 py-0.5 bg-slate-100 text-slate-600 border border-slate-200">
+                            {category}
+                          </Badge>
+                        ))}
+                        {project.categories.length > 2 && (
+                          <Badge variant="secondary" className="text-xs px-2 py-0.5 bg-slate-100 text-slate-600 border border-slate-200">
+                            +{project.categories.length - 2}
+                          </Badge>
+                        )}
+                      </div>
+                    </div>
+                    
+                    {/* Emphasized Project Title */}
+                    <CardTitle className="text-xl leading-tight text-slate-800 font-bold mb-3">
+                      {project.title}
+                    </CardTitle>
+                  </CardHeader>
+                 
                   <CardContent className="pt-0 flex flex-col justify-between flex-1">
                     <div className="space-y-4 mb-6">
                       <p className="text-slate-600 text-sm leading-relaxed">
@@ -149,22 +144,19 @@ const Projects = () => {
                           Tools & Methods
                         </span>
                         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                          {project.tools.map((tool, toolIndex) => <div key={toolIndex} className="flex items-center gap-2">
+                          {project.tools.map((tool, toolIndex) => (
+                            <div key={toolIndex} className="flex items-center gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-rose-400 flex-shrink-0"></div>
                               <span className="text-xs text-slate-600">{tool}</span>
-                            </div>)}
+                            </div>
+                          ))}
                         </div>
                       </div>
                     </div>
-
-                    
                   </CardContent>
                 </Card>
               );
-            };
-            
-            return <ProjectCard key={index} />;
-          })}
+            })}
           </div>
 
           <div className="text-center mt-12">
