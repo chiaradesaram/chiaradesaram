@@ -98,11 +98,7 @@ const VibeShowcase = () => {
   return (
     <section className="py-24 px-6 bg-gradient-to-br from-background via-muted/30 to-background">
       <div className="container mx-auto max-w-6xl">
-        <div
-          className={`transition-all duration-500 ease-out ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-        >
+        <div className="opacity-100 translate-y-0">
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">
