@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ExternalLink, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -17,13 +18,8 @@ const VibeShowcase = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    // Immediate animation trigger
-    const timer = setTimeout(() => setIsLoaded(true), 50);
-    return () => clearTimeout(timer);
-  }, []);
+  const [loaded, setLoaded] = useState<Record<number, boolean>>({});
+  const isLoaded = true;
 
   useEffect(() => {
     if (!api) {
@@ -91,6 +87,14 @@ const VibeShowcase = () => {
     }
   ];
 
+  useEffect(() => {
+    // Prefetch non-initial project images to make swiping feel instant
+    featuredProjects.slice(1).forEach((p) => {
+      const img = new Image();
+      img.src = p.image as string;
+    });
+  }, []);
+
   return (
     <section className="py-24 px-6 bg-gradient-to-br from-background via-muted/30 to-background">
       <div className="container mx-auto max-w-6xl">
@@ -131,10 +135,23 @@ const VibeShowcase = () => {
                       
                       {/* Image */}
                       <div className="relative h-48 overflow-hidden">
-                        <img 
-                          src={project.image} 
-                          alt={project.name}
+                        {!loaded[project.id] && (
+                          <Skeleton className="absolute inset-0 z-10 rounded-t-xl" />
+                        )}
+                        <img
+                          src={project.image}
+                          alt={`${project.name} app preview`}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          loading={index === 0 ? "eager" : "lazy"}
+                          decoding="async"
+                          onLoad={() =>
+                            setLoaded((prev) => ({ ...prev, [project.id]: true }))
+                          }
+                          onError={() =>
+                            setLoaded((prev) => ({ ...prev, [project.id]: true }))
+                          }
+                          draggable={false}
+                          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         />
                         <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-20 rounded-t-xl pointer-events-none`} />
                         <div className="absolute top-4 left-4">
@@ -142,9 +159,9 @@ const VibeShowcase = () => {
                             {project.category}
                           </Badge>
                         </div>
-                        <a 
-                          href={project.url} 
-                          target="_blank" 
+                        <a
+                          href={project.url}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="absolute top-4 right-4 opacity-60 hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
                         >
