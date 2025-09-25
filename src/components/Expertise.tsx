@@ -13,7 +13,7 @@ const Expertise = () => {
   }, {
     icon: BarChart3,
     title: "Business Analysis / Product Management",
-    description: "Translating business needs into actionable requirements and solutions",
+    description: "Translating customer needs and business goals into technology-driven solutions.",
     tools: ["Stakeholder Interviews", "Process Mapping", "User Story Writing", "Prioritization", "Product Discovery", "Roadmapping", "OKRs & KPI Setting", "Competitor & Market Analysis"]
   }, {
     icon: Search,
