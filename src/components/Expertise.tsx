@@ -12,7 +12,7 @@ const Expertise = () => {
     tools: ["Customer Journey Mapping", "Service Blueprinting", "Experience Redesign", "Personas", "Cross‑functional Alignment", "KPI & Metrics", "Journey Prioritization Frameworks"]
   }, {
     icon: BarChart3,
-    title: "Business Analysis",
+    title: "Business Analysis / Product Management",
     description: "Translating business needs into actionable requirements and solutions",
     tools: ["Stakeholder Interviews", "Process Mapping", "User Story Writing", "Prioritization", "Product Discovery", "Roadmapping", "OKRs & KPI Setting", "Competitor & Market Analysis"]
   }, {
