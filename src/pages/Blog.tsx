@@ -71,9 +71,7 @@ const Blog = () => {
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent mb-6">
               Insights & Resources
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl">
-              Deep dives into UX research, service design, and process improvement methodologies.
-            </p>
+            
           </div>
         </div>
       </section>
