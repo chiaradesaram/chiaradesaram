@@ -13,6 +13,7 @@ import compoundLabImage from "@/assets/project-compoundlab.jpg";
 import localBasketImage from "@/assets/project-localbasket.jpg";
 import saxJamImage from "@/assets/project-saxjam.jpg";
 import spanishBoostImage from "@/assets/project-spanishboost.jpg";
+import simplyLaunchImage from "@/assets/project-simplylaunch.jpg";
 
 const VibeShowcase = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -47,6 +48,16 @@ const VibeShowcase = () => {
     },
     {
       id: 2,
+      name: "SimplyLaunch",
+      description: "Simplifies starting a business in Sri Lanka with easy-to-use tools, guides, and resources",
+      problem: "Early-stage entrepreneurs struggle to find clear guidance and tools on starting a business in Sri Lanka",
+      category: "Business",
+      url: "https://simplylaunch.lovable.app",
+      gradient: "from-blue-400 to-green-600",
+      image: simplyLaunchImage
+    },
+    {
+      id: 3,
       name: "TailsUp",
       description: "Connects users with verified animal rescues, volunteer opportunities, and donation channels",
       problem: "People want to help animals but don't know where to start",
@@ -56,7 +67,7 @@ const VibeShowcase = () => {
       image: tailsUpImage
     },
     {
-      id: 3,
+      id: 4,
       name: "CompoundLab",
       description: "Teaches personal finance through interactive tutorials and compound interest calculators",
       problem: "Financial illiteracy leaves people unprepared for major decisions",
@@ -66,7 +77,7 @@ const VibeShowcase = () => {
       image: compoundLabImage
     },
     {
-      id: 4,
+      id: 5,
       name: "SaxJam",
       description: "Interactive music learning platform with AI-powered feedback and jam sessions",
       problem: "Learning music alone is isolating and lacks personalized feedback",
@@ -76,7 +87,7 @@ const VibeShowcase = () => {
       image: saxJamImage
     },
     {
-      id: 5,
+      id: 6,
       name: "Spanish Boost",
       description: "Gamified Spanish learning with cultural immersion and conversation practice",
       problem: "Traditional language apps lack cultural context and real conversation",
