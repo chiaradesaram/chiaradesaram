@@ -47,7 +47,7 @@ const StatsSection = ({ stats }: { stats: Array<{ number: string; label: string;
 
 const About = () => {
   const stats = [{
-    number: "8+",
+    number: "7",
     label: "Years",
     subtitle: "Experience"
   }, {
