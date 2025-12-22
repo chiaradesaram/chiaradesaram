@@ -2,49 +2,39 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Zap, Target, Users } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-const StatsSection = ({ stats }: { stats: Array<{ number: string; label: string; subtitle: string }> }) => {
-  const { ref, isVisible } = useScrollReveal({ threshold: 0.3 });
-  
-  return (
-    <div className="mb-16">
-      <div 
-        ref={ref}
-        className={`bg-white rounded-2xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto transition-all duration-700 transform ${
-          isVisible 
-            ? 'translate-y-0 opacity-100 scale-100' 
-            : 'translate-y-12 opacity-0 scale-95'
-        }`}
-      >
+const StatsSection = ({
+  stats
+}: {
+  stats: Array<{
+    number: string;
+    label: string;
+    subtitle: string;
+  }>;
+}) => {
+  const {
+    ref,
+    isVisible
+  } = useScrollReveal({
+    threshold: 0.3
+  });
+  return <div className="mb-16">
+      <div ref={ref} className={`bg-white rounded-2xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto transition-all duration-700 transform ${isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-12 opacity-0 scale-95'}`}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {stats.map((stat, index) => (
-            <div 
-              key={index} 
-              className={`text-center relative transition-all duration-500 transform ${
-                isVisible 
-                  ? 'translate-y-0 opacity-100' 
-                  : 'translate-y-6 opacity-0'
-              }`}
-              style={{
-                transitionDelay: isVisible ? `${index * 200}ms` : '0ms'
-              }}
-            >
-              {index > 0 && (
-                <div className="hidden md:block absolute -left-4 top-1/2 transform -translate-y-1/2 w-px h-12 bg-gray-200"></div>
-              )}
+          {stats.map((stat, index) => <div key={index} className={`text-center relative transition-all duration-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'}`} style={{
+          transitionDelay: isVisible ? `${index * 200}ms` : '0ms'
+        }}>
+              {index > 0 && <div className="hidden md:block absolute -left-4 top-1/2 transform -translate-y-1/2 w-px h-12 bg-gray-200"></div>}
               <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                 {stat.number}
               </div>
               <div className="text-gray-700 font-medium">
                 {stat.label && <span>{stat.label} </span>}
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 const About = () => {
   const stats = [{
     number: "7",
@@ -59,23 +49,8 @@ const About = () => {
     label: "",
     subtitle: "Scale Range"
   }];
-
-  const workingApproach = [
-    "Analytical thinking to map businesses, processes, and user journeys",
-    "A strong foundation in discovery and user research to uncover real needs and opportunities",
-    "Data and insights to guide decision-making and prioritisation", 
-    "A focus on outcomes, making impact clear and measurable",
-    "A natural drive to connect the right people and get things moving",
-    "A love for innovation and creativity"
-  ];
-
-  const values = [
-    "Curiosity and a growth mindset",
-    "Clarity in fast-moving environments", 
-    "Real user needs at the core",
-    "Open, collaborative problem-solving"
-  ];
-  
+  const workingApproach = ["Analytical thinking to map businesses, processes, and user journeys", "A strong foundation in discovery and user research to uncover real needs and opportunities", "Data and insights to guide decision-making and prioritisation", "A focus on outcomes, making impact clear and measurable", "A natural drive to connect the right people and get things moving", "A love for innovation and creativity"];
+  const values = ["Curiosity and a growth mindset", "Clarity in fast-moving environments", "Real user needs at the core", "Open, collaborative problem-solving"];
   return <section id="about" className="py-20 bg-gray-50 text-gray-900">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
@@ -93,36 +68,23 @@ const About = () => {
                 <p className="text-gray-600 leading-relaxed text-lg">
                   I began my career in economics and banking before moving into tech, drawn by its pace of innovation and the chance to solve real problems at pace. Over the past 7+ years, I've delivered solutions across digital transformation, customer experience, and process redesign, working with organisations from startups to Fortune 500 companies. My analytical mindset and structured problem-solving, combined with a drive for creative exploration, shape how I approach challenges and build well-designed, meaningful solutions.
                 </p>
-                <p className="text-gray-600 leading-relaxed text-lg">
-                  Before moving into tech, I came from an economics and finance background. This mix has shaped my perspective: bringing a blend of analytical thinking, structured problem-solving, and creative exploration. As I've moved through different domains, tools, and technologies, my way of thinking has continued to evolve, driven by curiosity, adaptability, and a desire to build better.
-                </p>
+                
               </div>
             </div>
 
             {/* Stats Cards */}
             <div className="space-y-4">
-              {stats.map((stat, index) => (
-                <div 
-                  key={index} 
-                  className={`bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 ${
-                    index === 2 ? 'p-4' : 'p-6'
-                  }`}
-                >
+              {stats.map((stat, index) => <div key={index} className={`bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 ${index === 2 ? 'p-4' : 'p-6'}`}>
                   <div className="flex items-center gap-4">
-                    <div className={`font-bold text-primary ${
-                      index === 2 ? 'text-lg' : 'text-3xl'
-                    }`}>
+                    <div className={`font-bold text-primary ${index === 2 ? 'text-lg' : 'text-3xl'}`}>
                       {index === 2 ? 'Startups to Fortune 500' : stat.number}
                     </div>
                     <div>
-                      {index !== 2 && (
-                        <div className="font-medium text-gray-700">
+                      {index !== 2 && <div className="font-medium text-gray-700">
                           {stat.label && <span>{stat.label} </span>}
                           <span className="text-gray-500">{stat.subtitle}</span>
-                        </div>
-                      )}
-                      {index === 2 && (
-                        <div className="text-gray-500 mt-1">
+                        </div>}
+                      {index === 2 && <div className="text-gray-500 mt-1">
                           <div className="md:hidden space-y-1">
                             <div>Banking</div>
                             <div>Legal</div>
@@ -133,12 +95,10 @@ const About = () => {
                           <div className="hidden md:block">
                             Banking • Legal • Compliance • Telecommunications • FMCG
                           </div>
-                        </div>
-                      )}
+                        </div>}
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
 
@@ -153,15 +113,10 @@ const About = () => {
                 <div>
                   <p className="text-gray-700 font-medium mb-4">My approach combines:</p>
                   <div className="space-y-3">
-                    {workingApproach.map((approach, index) => (
-                      <div 
-                        key={index} 
-                        className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300"
-                      >
+                    {workingApproach.map((approach, index) => <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300">
                         <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-700 leading-relaxed">{approach}</p>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
               </div>
@@ -172,15 +127,10 @@ const About = () => {
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto">
             <h3 className="text-2xl font-semibold mb-6 text-gray-800">What I Value</h3>
             <div className="grid md:grid-cols-2 gap-4">
-              {values.map((value, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300 group"
-                >
+              {values.map((value, index) => <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300 group">
                   <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0 group-hover:bg-orange-500 transition-colors duration-300"></div>
                   <p className="text-gray-700 leading-relaxed">{value}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
