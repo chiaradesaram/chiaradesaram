@@ -59,7 +59,7 @@ const Projects = () => {
     icon: BarChart3,
     image: projectMobilePortal3D
   }, {
-    title: "Fintech App Development for a Santander‑Backed Startup",
+    title: "Fintech App Development for a Santander owned Startup",
     categories: ["Business Analysis", "Customer Experience"],
     description: "Supported the creation of a money‑management app for SMEs, leading credit risk testing, defining operational procedures, gathering CRM and notification requirements, and testing prototypes for invoice financing features.",
     tools: ["Requirements Elicitation", "Credit Risk Testing", "Pricing Analysis", "Market Research", "Process Design"],
