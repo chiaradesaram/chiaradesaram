@@ -66,7 +66,7 @@ const About = () => {
             <div className="space-y-6">
               <div className="space-y-4">
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  I began my career in economics and banking before moving into tech, drawn by its pace of innovation and the chance to solve real problems at pace. Over the past 7+ years, I've delivered solutions across digital transformation, customer experience, and process redesign, working with organisations from startups to Fortune 500 companies. My analytical mindset and structured problem-solving, combined with a drive for creative exploration, shape how I approach challenges and build well-designed, meaningful solutions.
+                  I began my career in economics and banking before moving into tech, drawn by its pace of innovation and the chance to solve real problems at pace. Over the past 7+ years, I've delivered solutions across digital transformation, customer experience, and process redesign for organisations ranging from startups to Fortune 500 companies. My analytical mindset and structured problem-solving, combined with a drive for creative exploration, shape how I approach challenges and deliver well-designed, meaningful solutions.
                 </p>
                 
               </div>
