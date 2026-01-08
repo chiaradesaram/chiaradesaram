@@ -158,10 +158,10 @@ const Hero = () => {
               
               {isComplete && (
                 <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0 opacity-0 animate-[fade-in_1s_ease-out_0.2s_forwards]">
-                  Insight‑driven and customer‑focused, blending 
-                  <span className="text-primary font-medium"> product strategy</span>, 
-                  <span className="text-primary font-medium"> business analysis</span>, and 
-                  <span className="text-primary font-medium"> user research</span> to craft solutions that matter.
+                  Product-minded and customer-focused, combining 
+                  <span className="text-primary font-medium"> strategy</span>, 
+                  <span className="text-primary font-medium"> discovery</span>, and 
+                  <span className="text-primary font-medium"> delivery</span> to build meaningful solutions.
                 </p>
               )}
             </div>
