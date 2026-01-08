@@ -27,7 +27,7 @@ const Experience = () => {
     subtitle: "Business analysis and transformation initiatives for clients from Medium to Fortune 500 companies"
   }, {
     year: "2018-2019",
-    milestone: "Technology Intern, Asto Digital (Santander UK)",
+    milestone: "Technology Intern, Santander UK (Subsidiary Asto Digital)",
     subtitle: "Supported building a banking app for SMEs that provided money management tools"
   }, {
     year: "2016-2017",
