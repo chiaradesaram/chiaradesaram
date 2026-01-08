@@ -202,7 +202,7 @@ const Hero = () => {
                   size="lg" 
                   className="glass-card px-6 py-3 md:px-8 md:py-4 text-base md:text-lg border-primary/20 hover:border-primary/40 hover:bg-primary/10 transition-all duration-300 opacity-0 animate-[slide-in-right_0.8s_ease-out_1.6s_forwards,scale-in_0.6s_ease-out_1.6s_forwards] transform translate-x-8"
                   onClick={() => {
-                    window.open("https://drive.google.com/file/d/1vlrEIk-9x-Bb3RNqid9m-qP8RrcHEV4H/view?usp=sharing", "_blank");
+                    window.open("https://drive.google.com/file/d/1USxt9qGh5eLbM5m_0DOgiMJSUJOLUaL5/view?usp=sharing", "_blank");
                   }}
                 >
                   <Download className="mr-2 md:mr-3 h-4 w-4 md:h-5 md:w-5" />
