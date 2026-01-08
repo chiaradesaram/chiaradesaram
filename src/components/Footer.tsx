@@ -69,7 +69,7 @@ const Footer = () => {
           <div className="border-t border-gray-700 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="text-sm text-gray-400">
-                <span>© 2024 Chiara de Saram. All rights reserved.</span>
+                <span>© 2026 Chiara de Saram. All rights reserved.</span>
               </div>
               
               <Button variant="ghost" onClick={scrollToTop} className="text-gray-300 hover:text-white hover:bg-white/10">
