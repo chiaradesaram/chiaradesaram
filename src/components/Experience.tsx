@@ -34,9 +34,9 @@ const Experience = () => {
     milestone: "Private Equity Economic Analyst, Asia Capital PLC",
     subtitle: "Built econometric models and provided strategic insights to international investors"
   }, {
-    year: "2016-Present",
-    milestone: "Director, Lakpahana Handicrafts",
-    subtitle: "Support Sri Lankan craftsmen through strategy, operations, and marketing in our family business"
+  year: "2016-Present",
+    milestone: "Social Enterprise Advisor, Lakpahana Handicrafts Pvt Ltd",
+    subtitle: "Guidance on product curation, operations, and market positioning to support Sri Lankan craftspeople and preserve traditional handicrafts"
   }, {
     year: "2015",
     milestone: "Equity Trading Intern, National Development Bank Securities",
